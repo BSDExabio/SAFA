@@ -1,16 +1,18 @@
 
 import sys
-import argparse
 import time
-import copy
-import platform
-from pathlib import Path
-import logging
-import csv
-import pandas
 import pickle
-import MDAnalysis
+import argparse
+import platform
+import logging
+from uuid import uuid4
+from pathlib import Path
+import pandas
+import csv
 from io import StringIO
+import copy
+
+import MDAnalysis
 from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio.Blast import NCBIXML
 
@@ -18,7 +20,6 @@ import dask
 import dask.config
 from distributed import Client, Worker, as_completed, get_worker
 
-# codes housed in structural_DLFA repo
 import rcsb_query
 import uniprot_query
 
@@ -322,16 +323,25 @@ def _blast_aln(structure_seq,uniprotid_seq,blastp_path,ids):
     worker = get_worker()
     seq_aln_dict = {}
     return_code = -9999
+    
+    # unfortunately need to write fasta files for blastp to run
+    # query will always be the PDBID_CHAINID structure's sequence
+    # subject will always be the uniprot flat file's sequence
+    # if files cannot be written, then this task will return
     try:
-        # unfortunately need to write fasta files for blastp to run
-        # query will always be the PDBID_CHAINID structure's sequence
-        # subject will always be the uniprot flat file's sequence
-        with open(f'{worker.id}_query.fasta','w') as fsta:
+        aln_uuid = working_dir + str(uuid4())
+        with open(f'{aln_uuid}_query.fasta','w') as fsta:
             fsta.write(f">query\n{structure_seq}")
-        with open(f'{worker.id}_sbjct.fasta','w') as fsta:
+        with open(f'{aln_uuid}_sbjct.fasta','w') as fsta:
             fsta.write(f"{uniprotid_seq}")
+    except Exception as e:
+        print(f'failed to write the fasta files needed for the blastp alignment. Exception: {e}', file=sys.stdout, flush=True)
+        stop_time = time.time()
+        return 3, seq_aln_dict, ids, platform.node(), worker.id, start_time, stop_time, return_code
 
-        xml_output = NcbiblastpCommandline(query=f'{worker.id}_query.fasta',subject=f'{worker.id}_sbjct.fasta',cmd=blastp_path,outfmt=5)()[0]
+    # run the blastp alignment
+    try:
+        xml_output = NcbiblastpCommandline(query=f'{aln_uuid}_query.fasta',subject=f'{aln_uuid}_sbjct.fasta',cmd=blastp_path,outfmt=5)()[0]
         blast_record = NCBIXML.read(StringIO(xml_output))
         seq_aln_dict['query_start'] = blast_record.alignments[0].hsps[0].query_start
         seq_aln_dict['query_end']   = blast_record.alignments[0].hsps[0].query_end
@@ -343,10 +353,12 @@ def _blast_aln(structure_seq,uniprotid_seq,blastp_path,ids):
         seq_aln_dict['bits']        = blast_record.alignments[0].hsps[0].bits
         seq_aln_dict['n_gaps']      = blast_record.alignments[0].hsps[0].gaps
         return_code = 0        
-        
     except Exception as e:
-        print(f'failed to run the blastp alignment. Exception: {e}', file=sys.stdout, flush=True)
+        print(f'the blastp alignment failed. Exception: {e}', file=sys.stdout, flush=True)
 
+    # remove the fasta files created for this task
+    os.remove(f'{aln_uuid}_query.fasta')
+    os.remove(f'{aln_uuid}_sbjct.fasta')
     stop_time = time.time()
     return 3, seq_aln_dict, ids, platform.node(), worker.id, start_time, stop_time, return_code
 
