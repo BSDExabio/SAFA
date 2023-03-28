@@ -11,6 +11,7 @@ import pandas
 import csv
 from io import StringIO
 import copy
+import os
 
 import MDAnalysis
 from Bio.Blast.Applications import NcbiblastpCommandline
@@ -329,7 +330,7 @@ def _blast_aln(structure_seq,uniprotid_seq,blastp_path,ids):
     # subject will always be the uniprot flat file's sequence
     # if files cannot be written, then this task will return
     try:
-        aln_uuid = working_dir + str(uuid4())
+        aln_uuid = str(uuid4())
         with open(f'{aln_uuid}_query.fasta','w') as fsta:
             fsta.write(f">query\n{structure_seq}")
         with open(f'{aln_uuid}_sbjct.fasta','w') as fsta:
@@ -377,7 +378,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # start dask client.
-    client = Client(timeout=5000,name='AlignmentTaskMgr')
+    client = Client(name='AlignmentTaskMgr')    # timeout=5000,
 
     # set up the main logger file and list all relevant parameters.
     main_logger = setup_logger('tskmgr_logger', args.tskmgr_log_file)
@@ -413,6 +414,8 @@ if __name__ == '__main__':
     # dictionary within which the pdbid_chainid key will map to the UniProt Accession ID value
     # if a pdbid_chainid does not have an associated UniprotID then a None object will be left instead
     pdbid_to_uniprot_dict= {}
+    #with open('/home/russ/Projects/PDB70_database/rbd_work/full_pdb70_2022_03_13-2023_03_24/pdbid_to_uniprotid_map.pkl','rb') as pkl_in:
+    #    pdbid_to_uniprot_dict = pickle.load(pkl_in)
     
     # list within which uniprotid strings will be stored that were successfully queried.
     uniprotid_list = []
@@ -421,6 +424,9 @@ if __name__ == '__main__':
     # will be a dictionary of dictionaries, because there are many fields/types of information
     # in the Uniprot flat files. 
     uniprot_metadata_dict= {}
+    #with open('/home/russ/Projects/PDB70_database/rbd_work/full_pdb70_2022_03_13-2023_03_24/uniprot_metadata.pkl','rb') as pkl_in:
+    #    uniprot_metadata_dict = pickle.load(pkl_in)
+    #uniprotid_list = list(uniprot_metadata_dict.keys())
 
     ### do the thing; step0 and step1 are independent of each other
     step0_futures = client.map(_parse_pdb_file, pdb_files)
@@ -440,13 +446,10 @@ if __name__ == '__main__':
 
         ### handling step 0 results:
         # store parsed structure results in the structure_metadata_dict object
-        # if successful, append the pdbid_chainid string to pdbid_chainid_seqs
-        # list that will be used later on (step 3)
         if task_num == 0:
             if return_code == 0:
                 structure_metadata_dict.update(results)
                 main_logger.info(f'The structure file associated with {query_string} has been parsed. Return code: {return_code}. Took {stop-start} seconds.')
-                pdbid_chainid_seqs.append(query_string)
                 new_future = client.submit(_query_rcsb,query_string)
                 ac.add(new_future)
             else:
@@ -506,25 +509,26 @@ if __name__ == '__main__':
 
     #NOTE: temporary sanity checking...
     # save dictionary of pdbid_Chainid metadata dictionary
-    with open('pdbid_chainid_metadata.pkl', 'wb') as out:
+    with open('pdbid_chainid_structure_info.pkl', 'wb') as out:
         pickle.dump(structure_metadata_dict,out)
 
     main_logger.info(f'Beginning to run blastp alignments between structure and uniprot sequences to get residue index mapping. {time.time()}')
     task3_futures = []
     # only loop over pdbid_chainids that were successfully parsed by step 0
-    for pdbid_chainid in pdbid_chainid_seqs:
-        uniprotid = pdbid_to_uniprot_dict[pdbid_chainid]
+    for pdbid_uniprot in pdbid_to_uniprot_dict.items():
+        pdbid_chainid = pdbid_uniprot[0]
+        uniprotid     = pdbid_uniprot[1]
         # check to see that the pdbid_chainid maps to a real uniprotid
         ### and
         ### check to see if the 'struct_seq' key is present in the 
         ### structure_metadata_dict subdictionary #UNNECESSARY
-        if uniprotid: #and 'struct_seq' in structure_metadata_dict[pdbid_chainid].keys():
+        if pdbid_uniprot[1]:
             main_logger.info(f'{pdbid_chainid} maps to {uniprotid}. Submitting a blastp task to align the two sequences.')
             # submit a task to run the _blast_aln function, aligning structure
             # sequence to the respective UniProt flat file's sequence
             struct_seq = structure_metadata_dict[pdbid_chainid]['struct_seq']
             uniprot_seq = uniprot_metadata_dict[uniprotid]['sequence']
-            new_future = client.submit(_blast_aln, struct_seq, uniprot_seq, args.blastp_path, [pdbid_chainid,uniprotid],pure=False)
+            new_future = client.submit(_blast_aln, struct_seq, uniprot_seq, args.blastp_path, pdbid_uniprot, pure=False)
             task3_futures.append(new_future)
 
     task3_ac = as_completed(task3_futures)
@@ -562,8 +566,8 @@ if __name__ == '__main__':
                 # expected format is either e.g. "49" or "49..63"
                 try:
                     flat_file_resindex = [int(index) for index in feature[1].split('..')]
-                # sometimes you might see e.g. "?..49" or "<49", we'll ignore 
-                # these features for now
+                # sometimes you might see e.g. "?..49" or "<49", we gonna ignore
+                # these features
                 except:
                     main_logger.info(f'{uniprotid}: {feature} was not parsed.')
                     continue
@@ -595,6 +599,6 @@ if __name__ == '__main__':
 
     # close log files and shut down the cluster.
     timings_file.close()
+    client.close()
     main_logger.info(f'Done. Shutting down the cluster. Time: {time.time()}')
     clean_logger(main_logger)
-

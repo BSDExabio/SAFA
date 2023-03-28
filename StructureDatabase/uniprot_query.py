@@ -24,7 +24,7 @@ dictionary_namespace = {'entry_name': '',           # ID line
                         'taxon':'',                 # OC line
                         'taxon_id':'',              # OX line
                         'database_references': [],  # DR lines
-                        'primary_evidence': [],     # PE line
+                        'primary_evidence': '',     # PE line
                         'keywords': [],             # KW lines
                         'features': [],             # FT lines
                         'sequence': '>',            # SQ and blank lines afterwards
@@ -69,14 +69,13 @@ def request_uniprot_metadata(accession_id):
                     uni_dict['sequence_date'] = datetime.datetime.strptime(dt,'%d-%b-%Y').strftime('%Y-%m-%d')
                 elif 'entry version' in line:
                     uni_dict['modified_date'] = datetime.datetime.strptime(dt,'%d-%b-%Y').strftime('%Y-%m-%d')
-            # parse the description lines; potential to over-simplify, not gathering 'includes', 'contains', 'fragments' info cause its not interesting :P 
-            # one description string per line
+            # parse the description lines; gathering all DE lines
             elif line[:2] == 'DE':
-                description = re.findall('(?<=Full\=)[^,;]*|(?<=Short\=)[^,;]*|(?<=EC\=)[^,;]*',line)
-                uni_dict['descriptions'].append(description)
-                # gathering any and all instances where  EC ids are presented
+                #description = re.findall('(?<=Full\=)[^,;]*|(?<=Short\=)[^,;]*|(?<=EC\=)[^,;]*',line)
+                uni_dict['descriptions'].append(line[2:].strip())
+                # gathering DE line instances where  EC IDs are reported
                 if 'EC=' in line:
-                    uni_dict['ecIDs'].append(description)
+                    uni_dict['ecIDs'] += re.findall('(?<=EC\=)[^,;\s]*',line)
             # parse the gene name line(s)
             # multiple names or synonyms possible per line
             elif line[:2] == 'GN':
@@ -91,16 +90,17 @@ def request_uniprot_metadata(accession_id):
                 uni_dict['organelle_loc'] += line[5:].strip()
             # parse the database reference lines
             # these DR lines are extremely diverse in format and content... 
-            # got lazy with regex and just parsing into a list of lists
+            # got lazy with regex and just parsing into a list of lists, just 
+            # separating by the semicolon delimiter used for these lines;
             # 0th element of each sublist will be the database name
             # further elements are accession ids or other metadata
             elif line[:2] == 'DR':
                 dr = [elem.strip() for elem in re.findall('[^;\n]+',line[5:].rstrip('.'))]
                 uni_dict['database_references'].append(dr)
             # parse the primary evidence line
-            # just get the number since this is uniform
+            # just get the number, always 6th character in line
             elif line[:2] == 'PE':
-                uni_dict['primary_evidence'].append(line[5])
+                uni_dict['primary_evidence'] = line[5]
             # parse the KW lines
             # following similar lazy behavior as DR lines since keywords can be 
             # very diverse in format/length
