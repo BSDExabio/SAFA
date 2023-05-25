@@ -78,6 +78,8 @@ import dask
 import dask.config
 from distributed import Client, Worker, as_completed, get_worker
 
+from USalignParser.usalign_parser import parse_usalign_file, threshold_comparison
+
 #######################################
 ### LOGGING FUNCTIONS
 #######################################
@@ -190,7 +192,7 @@ def submit_pipeline(alignments, script, working_dir, scoring_metric, cutoff_thre
             # put this text stream through the parser
             # hard coding the aln_algo as '' because we are not interested in 
             # the residue mapping at the present
-            parsed_results = usalign_parser.parse_usalign_file(stdout_file,'')[0]
+            parsed_results = parse_usalign_file(stdout_file,'')[0]
             # save alignment results as a key-value in the results_dict
             # key: string with format of path/to/protein1 '|' path/to/protein2
             # value: list, [TMscore1, TMscore2, RMSD, SeqIDAli, Len1, Len2, 
@@ -217,7 +219,7 @@ def submit_pipeline(alignments, script, working_dir, scoring_metric, cutoff_thre
             # check to see if the alignment's quantitative results pass the 
             # cutoff. if they do, then append the standard out string to the
             # results_dict[key] list. Otherwise, move on.
-            cutoff_bool = usalign_parser.threshold_comparison(parsed_results,ranking_metric,cutoff_threshold)
+            cutoff_bool = threshold_comparison(parsed_results,ranking_metric,cutoff_threshold)
             if cutoff_bool:
                 results_dict[key].append(stdout_string)
         except Exception as e:
