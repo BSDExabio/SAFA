@@ -5,12 +5,17 @@
 """
 import time
 from pathlib import Path
+import numpy as np
 import pandas as pd
 import re
 
 
 def parse_usalign_file(file_object,alignment_type):
     """ Parse a USalign alignment file
+
+    #BUG: regex to get struct1 and struct2 expect local or global paths that 
+          include some slashes... so this propagates to the alignment workflow 
+          where the list files need to include the paths... grumble
 
     INPUT:
     :param file_object: file object that can be read. many methods of creating 
@@ -144,13 +149,13 @@ def threshold_comparison(results_dict,ranking_metric_string,metric_cutoff):
     elif ranking_metric_string.upper() == 'TMSCORE2' and results_dict['TMscore2'] > metric_cutoff:
         return_value = 1
     
-    elif ranking_metric_string.upper() == 'MAXTMSCORE' and max(results_dict['TMscore1'],results_dict['TMscore2']) > metric_cutoff:
+    elif ranking_metric_string.upper() == 'MAXTMSCORE' and np.max([results_dict['TMscore1'],results_dict['TMscore2']]) > metric_cutoff:
         return_value = 1
     
-    elif ranking_metric_string.upper() == 'MINTMSCORE' and min(results_dict['TMscore1'],results_dict['TMscore2']) > metric_cutoff:
+    elif ranking_metric_string.upper() == 'MINTMSCORE' and np.min([results_dict['TMscore1'],results_dict['TMscore2']]) > metric_cutoff:
         return_value = 1
     
-    elif ranking_metric_string.upper() == 'AVGTMSCORE' and sum(results_dict['TMscore1'],results_dict['TMscore2'])/2. > metric_cutoff:
+    elif ranking_metric_string.upper() == 'AVGTMSCORE' and np.mean([results_dict['TMscore1'],results_dict['TMscore2']]) > metric_cutoff:
         return_value = 1
     
     else:
@@ -160,18 +165,68 @@ def threshold_comparison(results_dict,ranking_metric_string,metric_cutoff):
 
 
 if __name__ == '__main__':
-    # test harness for parsers
-    # NOTE: NEED TO APPLY THE THRESHOLD FUNCTION AND ACTUALLY IMPLEMENT SOME ASSERTS ETC
-    with open('/home/russ/Projects/ornl_DLFA/structural_alignment_codes/USalign_results/3cna_2pel_usalign_tmalign.log','r') as log_file:
-        result_dict, start, stop, return_code = parse_tmalign_score_file(log_file,'None')
+    import json
+    
+    #####################################
+    # test harness for parse_usalign_file
+    #####################################
+    # parsing log file for SQ method where the translational and rotational 
+    # matrix is not saved
+    with open('./examples/3cnaA_to_2pelA_USalign_SQ_noTransRotMat.log','r') as log_file:
+        result_dict, start, stop, return_code = parse_usalign_file(log_file,'None')
+    with open('./examples/parsed_3cnaA_to_2pelA_USalign_SQ_noTransRotMat.log','w') as file_out:
+        json.dump(result_dict,file_out)
+    assert result_dict == {'struct1': './3cna_rcsb.pdb', 'struct1_chainID': 'A', 'TMscore1': 0.47057, 'Len1': 237.0, 'd0_1': 5.71, 'struct2': './2pel_rcsb.pdb', 'struct2_chainID': 'A', 'TMscore2': 0.48028, 'Len2': 232.0, 'd0_2': 5.65, 'LenAligned': 118.0, 'RMSD': 1.63, 'SeqIDAli': 0.432}, 'Error in parsing ./examples/parsed_3cnaA_to_2pelA_USalign_SQ_noTransRotMat.log'
 
-    with open('/home/russ/Projects/ornl_DLFA/structural_alignment_codes/USalign_results/3cna_2pel_usalign_cp.log','r') as log_file:
-        result_dict, start, stop, return_code = parse_tmalign_score_file(log_file,'CP')
+    # parsing log file for SQ method where the translational and rotational 
+    # matrix is saved
+    with open('./examples/3cnaA_to_2pelA_USalign_SQ.log','r') as log_file:
+        result_dict, start, stop, return_code = parse_usalign_file(log_file,'None')
+    assert np.sum(result_dict['trans_vector'] - np.array([29.61731488,  4.98254133, 36.53334062])) < 1e-5, f"Error in parsing the translational vector in ./examples/3cnaA_to_2pelA_USalign_SQ.log"
+    assert np.sum(result_dict['rot_matrix'] - np.array([[ 0.08032842, -0.11836715,  0.98971539],[ 0.99614362, -0.02561858, -0.08391407],[ 0.03528777,  0.99263936,  0.11585278]])) < 1e-5, 'Error in parsing the rotational matrix in ./examples/3cnaA_to_2pelA_USalign_SQ.log'
 
-    with open('/home/russ/Projects/ornl_DLFA/structural_alignment_codes/USalign_results/3cna_2pel_usalign_sNS.log','r') as log_file:
-        result_dict, start, stop, return_code = parse_tmalign_score_file(log_file,'sNS')
+    # parsing log file for CP method where the translational and rotational 
+    # matrix as well as the mapping section are saved
+    with open('./examples/3cnaA_to_2pelA_USalign_CP.log','r') as log_file:
+        result_dict, start, stop, return_code = parse_usalign_file(log_file,'CP')
+    assert result_dict['map_1_to_2']['123'] == ('1', 'THR', 'ALA'), 'Error in parsing alignment mapping section in ./examples/3cnaA_to_2pelA_USalign_CP.log'
+    assert result_dict['map_1_to_2']['118'] == ('232', 'ASN', 'THR'), 'Error in parsing alignment mapping section in ./examples/3cnaA_to_2pelA_USalign_CP.log'
 
-    with open('/home/russ/Projects/ornl_DLFA/structural_alignment_codes/USalign_results/3cna_2pel_usalign_fNS.log','r') as log_file:
-        result_dict, start, stop, return_code = parse_tmalign_score_file(log_file,'fNS')
+    # parsing log file for sNS method where the translational and rotational
+    # matrix as well as the mapping section are saved
+    with open('./examples/3cnaA_to_2pelA_USalign_sNS.log','r') as log_file:
+        result_dict, start, stop, return_code = parse_usalign_file(log_file,'sNS')
+    assert result_dict['map_1_to_2']['123'] == ('1', 'THR', 'ALA', 0.42), 'Error in parsing alignment mapping section in ./examples/3cnaA_to_2pelA_USalign_sNS.log'
+    assert result_dict['map_1_to_2']['118'] == ('232', 'ASN', 'THR', 1.994), 'Error in parsing alignment mapping section in ./examples/3cnaA_to_2pelA_USalign_sNS.log'
+
+    # parsing log file for fNS method where the translational and rotational
+    # matrix as well as the mapping section are saved
+    with open('./examples/3cnaA_to_2pelA_USalign_fNS.log','r') as log_file:
+        result_dict, start, stop, return_code = parse_usalign_file(log_file,'fNS')
+    assert result_dict['map_1_to_2']['123'] == ('1', 'THR', 'ALA', 0.494), 'Error in parsing alignment mapping section in ./examples/3cnaA_to_2pelA_USalign_fNS.log'
+    assert result_dict['map_1_to_2']['118'] == ('232', 'ASN', 'THR', 1.99), 'Error in parsing alignment mapping section in ./examples/3cnaA_to_2pelA_USalign_fNS.log'
+
+    #######################################
+    # test harness for threshold_comparison
+    #######################################
+    # using result_dict from the fNS alignment
+    test_boolean = threshold_comparison(result_dict,'TMscore1',0.7)
+    assert test_boolean, 'error in comparing TMscore1 in ./examples/3cnaA_to_2pelA_USalign_fNS.log against threshold value of 0.7'
+    
+    test_boolean = threshold_comparison(result_dict,'tMsCoRe1',1.0)
+    assert not test_boolean, 'error in comparing TMscore1 in ./examples/3cnaA_to_2pelA_USalign_fNS.log against threshold value of 1.0'
+
+    test_boolean = threshold_comparison(result_dict,'tMsCoRe2',0.7)
+    assert test_boolean, 'error in comparing TMscore2 in ./examples/3cnaA_to_2pelA_USalign_fNS.log against threshold value of 0.7'
+
+    test_boolean = threshold_comparison(result_dict,'avgtmscore',0.7)
+    assert test_boolean, 'error in comparing AvgTMscore in ./examples/3cnaA_to_2pelA_USalign_fNS.log against threshold value of 0.7'
+
+    test_boolean = threshold_comparison(result_dict,'mintmscore',0.7)
+    assert test_boolean, 'error in comparing MinTMscore in ./examples/3cnaA_to_2pelA_USalign_fNS.log against threshold value of 0.7'
+
+    test_boolean = threshold_comparison(result_dict,'maxtmscore',0.7)
+    assert test_boolean, 'error in comparing MaxTMscore in ./examples/3cnaA_to_2pelA_USalign_fNS.log against threshold value of 0.7'
 
     pass
+

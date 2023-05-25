@@ -1,0 +1,9 @@
+## StructuralAlignmentWorkflow
+Version 1.0.1
+
+A dask.distributed workflow code to automate the structural alignment of a
+library of structures against a library of structures. This code was used to
+automate the structural alignment for functional annotation reported in
+(CITE). 
+
+
