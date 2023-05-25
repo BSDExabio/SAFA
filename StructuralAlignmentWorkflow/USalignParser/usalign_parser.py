@@ -172,11 +172,11 @@ if __name__ == '__main__':
     #####################################
     # parsing log file for SQ method where the translational and rotational 
     # matrix is not saved
-    with open('./examples/3cnaA_to_2pelA_USalign_SQ_noTransRotMat.log','r') as log_file:
+    with open('./examples/3cnaA_to_2pelA_USalign_SQ_noTRMatrix.log','r') as log_file:
         result_dict, start, stop, return_code = parse_usalign_file(log_file,'None')
-    with open('./examples/parsed_3cnaA_to_2pelA_USalign_SQ_noTransRotMat.log','w') as file_out:
+    with open('./examples/parsed_3cnaA_to_2pelA_USalign_SQ_noTRMatrix.log','w') as file_out:
         json.dump(result_dict,file_out)
-    assert result_dict == {'struct1': './3cna_rcsb.pdb', 'struct1_chainID': 'A', 'TMscore1': 0.47057, 'Len1': 237.0, 'd0_1': 5.71, 'struct2': './2pel_rcsb.pdb', 'struct2_chainID': 'A', 'TMscore2': 0.48028, 'Len2': 232.0, 'd0_2': 5.65, 'LenAligned': 118.0, 'RMSD': 1.63, 'SeqIDAli': 0.432}, 'Error in parsing ./examples/parsed_3cnaA_to_2pelA_USalign_SQ_noTransRotMat.log'
+    assert result_dict == {'struct1': './3cna_rcsb.pdb', 'struct1_chainID': 'A', 'TMscore1': 0.47057, 'Len1': 237.0, 'd0_1': 5.71, 'struct2': './2pel_rcsb.pdb', 'struct2_chainID': 'A', 'TMscore2': 0.48028, 'Len2': 232.0, 'd0_2': 5.65, 'LenAligned': 118.0, 'RMSD': 1.63, 'SeqIDAli': 0.432}, 'Error in parsing ./examples/parsed_3cnaA_to_2pelA_USalign_SQ_noTRMatrix.log'
 
     # parsing log file for SQ method where the translational and rotational 
     # matrix is saved
