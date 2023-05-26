@@ -9,3 +9,8 @@ Bash and python scripts to download .pdb files from the RCSB database and gather
 5) Run a BlastP sequence alignment analysis to map the UniProtKB sequence to the structure sequence. Once this map is made, feature elements from the UniProtKB flat files can be transferred to the structure's residues. 
 
 
+## BlastP Installation Instructions:
+
+
+
+

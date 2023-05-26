@@ -1,0 +1,211 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/1914_A.pdb:A (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/1914_A.pdb:A
+Length of Structure_1: 171 residues
+Length of Structure_2: 171 residues
+
+Aligned length= 171, RMSD=   0.00, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 1.00000 (normalized by length of Structure_1: L=171, d0=4.88)
+TM-score= 1.00000 (normalized by length of Structure_2: L=171, d0=4.88)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+MVLLESEQFLTELTRLFQKCRSSGSVFITLKKYDEGLEPAENKCLLRATDGKRKISTVVSSKEVNKFQMAYSNLLRANMDGLKKRAQGGEQKLFQTWEEFSRAAEKLYLADPMKVRVVLKYRHVDGNLCIKVTDDLVCLVYRTDQAQDVKKIEKFHSQLMRLMVAKESRNV
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+MVLLESEQFLTELTRLFQKCRSSGSVFITLKKYDEGLEPAENKCLLRATDGKRKISTVVSSKEVNKFQMAYSNLLRANMDGLKKRAQGGEQKLFQTWEEFSRAAEKLYLADPMKVRVVLKYRHVDGNLCIKVTDDLVCLVYRTDQAQDVKKIEKFHSQLMRLMVAKESRNV
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  MET A2001 	 CA  MET A2001 	    0.000
+ CA  VAL A2002 	 CA  VAL A2002 	    0.000
+ CA  LEU A2003 	 CA  LEU A2003 	    0.000
+ CA  LEU A2004 	 CA  LEU A2004 	    0.000
+ CA  GLU A2005 	 CA  GLU A2005 	    0.000
+ CA  SER A2006 	 CA  SER A2006 	    0.000
+ CA  GLU A2007 	 CA  GLU A2007 	    0.000
+ CA  GLN A2008 	 CA  GLN A2008 	    0.000
+ CA  PHE A2009 	 CA  PHE A2009 	    0.000
+ CA  LEU A2010 	 CA  LEU A2010 	    0.000
+ CA  THR A2011 	 CA  THR A2011 	    0.000
+ CA  GLU A2012 	 CA  GLU A2012 	    0.000
+ CA  LEU A2013 	 CA  LEU A2013 	    0.000
+ CA  THR A2014 	 CA  THR A2014 	    0.000
+ CA  ARG A2015 	 CA  ARG A2015 	    0.000
+ CA  LEU A2016 	 CA  LEU A2016 	    0.000
+ CA  PHE A2017 	 CA  PHE A2017 	    0.000
+ CA  GLN A2018 	 CA  GLN A2018 	    0.000
+ CA  LYS A2019 	 CA  LYS A2019 	    0.000
+ CA  CYS A2020 	 CA  CYS A2020 	    0.000
+ CA  ARG A2021 	 CA  ARG A2021 	    0.000
+ CA  SER A2022 	 CA  SER A2022 	    0.000
+ CA  SER A2023 	 CA  SER A2023 	    0.000
+ CA  GLY A2024 	 CA  GLY A2024 	    0.000
+ CA  SER A2025 	 CA  SER A2025 	    0.000
+ CA  VAL A2026 	 CA  VAL A2026 	    0.000
+ CA  PHE A2027 	 CA  PHE A2027 	    0.000
+ CA  ILE A2028 	 CA  ILE A2028 	    0.000
+ CA  THR A2029 	 CA  THR A2029 	    0.000
+ CA  LEU A2030 	 CA  LEU A2030 	    0.000
+ CA  LYS A2031 	 CA  LYS A2031 	    0.000
+ CA  LYS A2032 	 CA  LYS A2032 	    0.000
+ CA  TYR A2033 	 CA  TYR A2033 	    0.000
+ CA  ASP A2034 	 CA  ASP A2034 	    0.000
+ CA  GLU A2047 	 CA  GLU A2047 	    0.000
+ CA  GLY A2048 	 CA  GLY A2048 	    0.000
+ CA  LEU A2049 	 CA  LEU A2049 	    0.000
+ CA  GLU A2050 	 CA  GLU A2050 	    0.000
+ CA  PRO A2051 	 CA  PRO A2051 	    0.000
+ CA  ALA A2052 	 CA  ALA A2052 	    0.000
+ CA  GLU A2053 	 CA  GLU A2053 	    0.000
+ CA  ASN A2054 	 CA  ASN A2054 	    0.000
+ CA  LYS A2055 	 CA  LYS A2055 	    0.000
+ CA  CYS A2056 	 CA  CYS A2056 	    0.000
+ CA  LEU A2057 	 CA  LEU A2057 	    0.000
+ CA  LEU A2058 	 CA  LEU A2058 	    0.000
+ CA  ARG A2059 	 CA  ARG A2059 	    0.000
+ CA  ALA A2060 	 CA  ALA A2060 	    0.000
+ CA  THR A2061 	 CA  THR A2061 	    0.000
+ CA  ASP A2062 	 CA  ASP A2062 	    0.000
+ CA  GLY A2063 	 CA  GLY A2063 	    0.000
+ CA  LYS A2064 	 CA  LYS A2064 	    0.000
+ CA  ARG A2065 	 CA  ARG A2065 	    0.000
+ CA  LYS A2066 	 CA  LYS A2066 	    0.000
+ CA  ILE A2067 	 CA  ILE A2067 	    0.000
+ CA  SER A2068 	 CA  SER A2068 	    0.000
+ CA  THR A2069 	 CA  THR A2069 	    0.000
+ CA  VAL A2070 	 CA  VAL A2070 	    0.000
+ CA  VAL A2071 	 CA  VAL A2071 	    0.000
+ CA  SER A2072 	 CA  SER A2072 	    0.000
+ CA  SER A2073 	 CA  SER A2073 	    0.000
+ CA  LYS A2074 	 CA  LYS A2074 	    0.000
+ CA  GLU A2075 	 CA  GLU A2075 	    0.000
+ CA  VAL A2076 	 CA  VAL A2076 	    0.000
+ CA  ASN A2077 	 CA  ASN A2077 	    0.000
+ CA  LYS A2078 	 CA  LYS A2078 	    0.000
+ CA  PHE A2079 	 CA  PHE A2079 	    0.000
+ CA  GLN A2080 	 CA  GLN A2080 	    0.000
+ CA  MET A2081 	 CA  MET A2081 	    0.000
+ CA  ALA A2082 	 CA  ALA A2082 	    0.000
+ CA  TYR A2083 	 CA  TYR A2083 	    0.000
+ CA  SER A2084 	 CA  SER A2084 	    0.000
+ CA  ASN A2085 	 CA  ASN A2085 	    0.000
+ CA  LEU A2086 	 CA  LEU A2086 	    0.000
+ CA  LEU A2087 	 CA  LEU A2087 	    0.000
+ CA  ARG A2088 	 CA  ARG A2088 	    0.000
+ CA  ALA A2089 	 CA  ALA A2089 	    0.000
+ CA  ASN A2090 	 CA  ASN A2090 	    0.000
+ CA  MET A2091 	 CA  MET A2091 	    0.000
+ CA  ASP A2092 	 CA  ASP A2092 	    0.000
+ CA  GLY A2093 	 CA  GLY A2093 	    0.000
+ CA  LEU A2094 	 CA  LEU A2094 	    0.000
+ CA  LYS A2095 	 CA  LYS A2095 	    0.000
+ CA  LYS A2096 	 CA  LYS A2096 	    0.000
+ CA  ARG A2097 	 CA  ARG A2097 	    0.000
+ CA  ALA A3001 	 CA  ALA A3001 	    0.000
+ CA  GLN A3002 	 CA  GLN A3002 	    0.000
+ CA  GLY A3003 	 CA  GLY A3003 	    0.000
+ CA  GLY A3004 	 CA  GLY A3004 	    0.000
+ CA  GLU A3005 	 CA  GLU A3005 	    0.000
+ CA  GLN A3006 	 CA  GLN A3006 	    0.000
+ CA  LYS A3007 	 CA  LYS A3007 	    0.000
+ CA  LEU A3008 	 CA  LEU A3008 	    0.000
+ CA  PHE A4004 	 CA  PHE A4004 	    0.000
+ CA  GLN A4005 	 CA  GLN A4005 	    0.000
+ CA  THR A4006 	 CA  THR A4006 	    0.000
+ CA  TRP A4007 	 CA  TRP A4007 	    0.000
+ CA  GLU A4008 	 CA  GLU A4008 	    0.000
+ CA  GLU A4009 	 CA  GLU A4009 	    0.000
+ CA  PHE A4010 	 CA  PHE A4010 	    0.000
+ CA  SER A4011 	 CA  SER A4011 	    0.000
+ CA  ARG A4012 	 CA  ARG A4012 	    0.000
+ CA  ALA A4013 	 CA  ALA A4013 	    0.000
+ CA  ALA A4014 	 CA  ALA A4014 	    0.000
+ CA  GLU A4015 	 CA  GLU A4015 	    0.000
+ CA  LYS A4016 	 CA  LYS A4016 	    0.000
+ CA  LEU A4017 	 CA  LEU A4017 	    0.000
+ CA  TYR A4018 	 CA  TYR A4018 	    0.000
+ CA  LEU A4019 	 CA  LEU A4019 	    0.000
+ CA  ALA A4020 	 CA  ALA A4020 	    0.000
+ CA  ASP A4021 	 CA  ASP A4021 	    0.000
+ CA  PRO A4022 	 CA  PRO A4022 	    0.000
+ CA  MET A4023 	 CA  MET A4023 	    0.000
+ CA  LYS A4024 	 CA  LYS A4024 	    0.000
+ CA  VAL A4025 	 CA  VAL A4025 	    0.000
+ CA  ARG A4026 	 CA  ARG A4026 	    0.000
+ CA  VAL A4027 	 CA  VAL A4027 	    0.000
+ CA  VAL A4028 	 CA  VAL A4028 	    0.000
+ CA  LEU A4029 	 CA  LEU A4029 	    0.000
+ CA  LYS A4030 	 CA  LYS A4030 	    0.000
+ CA  TYR A4031 	 CA  TYR A4031 	    0.000
+ CA  ARG A4032 	 CA  ARG A4032 	    0.000
+ CA  HIS A4033 	 CA  HIS A4033 	    0.000
+ CA  VAL A4034 	 CA  VAL A4034 	    0.000
+ CA  ASP A4035 	 CA  ASP A4035 	    0.000
+ CA  GLY A4036 	 CA  GLY A4036 	    0.000
+ CA  ASN A4037 	 CA  ASN A4037 	    0.000
+ CA  LEU A4038 	 CA  LEU A4038 	    0.000
+ CA  CYS A4039 	 CA  CYS A4039 	    0.000
+ CA  ILE A4040 	 CA  ILE A4040 	    0.000
+ CA  LYS A4041 	 CA  LYS A4041 	    0.000
+ CA  VAL A4042 	 CA  VAL A4042 	    0.000
+ CA  THR A4043 	 CA  THR A4043 	    0.000
+ CA  ASP A4044 	 CA  ASP A4044 	    0.000
+ CA  ASP A4045 	 CA  ASP A4045 	    0.000
+ CA  LEU A4046 	 CA  LEU A4046 	    0.000
+ CA  VAL A4047 	 CA  VAL A4047 	    0.000
+ CA  CYS A4048 	 CA  CYS A4048 	    0.000
+ CA  LEU A4049 	 CA  LEU A4049 	    0.000
+ CA  VAL A4050 	 CA  VAL A4050 	    0.000
+ CA  TYR A4051 	 CA  TYR A4051 	    0.000
+ CA  ARG A4052 	 CA  ARG A4052 	    0.000
+ CA  THR A4053 	 CA  THR A4053 	    0.000
+ CA  ASP A4054 	 CA  ASP A4054 	    0.000
+ CA  GLN A4055 	 CA  GLN A4055 	    0.000
+ CA  ALA A4056 	 CA  ALA A4056 	    0.000
+ CA  GLN A4057 	 CA  GLN A4057 	    0.000
+ CA  ASP A4058 	 CA  ASP A4058 	    0.000
+ CA  VAL A4059 	 CA  VAL A4059 	    0.000
+ CA  LYS A4060 	 CA  LYS A4060 	    0.000
+ CA  LYS A4061 	 CA  LYS A4061 	    0.000
+ CA  ILE A4062 	 CA  ILE A4062 	    0.000
+ CA  GLU A4063 	 CA  GLU A4063 	    0.000
+ CA  LYS A4064 	 CA  LYS A4064 	    0.000
+ CA  PHE A4065 	 CA  PHE A4065 	    0.000
+ CA  HIS A4066 	 CA  HIS A4066 	    0.000
+ CA  SER A4067 	 CA  SER A4067 	    0.000
+ CA  GLN A4068 	 CA  GLN A4068 	    0.000
+ CA  LEU A4069 	 CA  LEU A4069 	    0.000
+ CA  MET A4070 	 CA  MET A4070 	    0.000
+ CA  ARG A4071 	 CA  ARG A4071 	    0.000
+ CA  LEU A4072 	 CA  LEU A4072 	    0.000
+ CA  MET A4073 	 CA  MET A4073 	    0.000
+ CA  VAL A4074 	 CA  VAL A4074 	    0.000
+ CA  ALA A4075 	 CA  ALA A4075 	    0.000
+ CA  LYS A4076 	 CA  LYS A4076 	    0.000
+ CA  GLU A4077 	 CA  GLU A4077 	    0.000
+ CA  SER A4078 	 CA  SER A4078 	    0.000
+ CA  ARG A4079 	 CA  ARG A4079 	    0.000
+ CA  ASN A4080 	 CA  ASN A4080 	    0.000
+ CA  VAL A4081 	 CA  VAL A4081 	    0.000
+###############	###############	#########
+#Total CPU time is  0.07 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0      -0.0000000000   1.0000000000   0.0000000000  -0.0000000000
+1       0.0000000000  -0.0000000000   1.0000000000   0.0000000000
+2      -0.0000000000   0.0000000000  -0.0000000000   1.0000000000
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

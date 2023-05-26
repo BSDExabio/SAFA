@@ -1,0 +1,92 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/1A02_J.pdb:J (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/16VP_A.pdb:A
+Length of Structure_1: 52 residues
+Length of Structure_2: 311 residues
+
+Aligned length= 52, RMSD=   0.98, Seq_ID=n_identical/n_aligned= 0.077
+TM-score= 0.86456 (normalized by length of Structure_1: L=52, d0=2.33)
+TM-score= 0.16350 (normalized by length of Structure_2: L=311, d0=6.46)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+---------------------------------------------------------------------------------------------------RKRMRNRIAASKSRKRKLERIARLEEKVKTLKAQNSELASTANMLREQVAQL----------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                   ::::::::::::::::::::::::::::::::::::::::::::::::::::                                                                                                                                                                
+SRMPSPPMPVPPAALFNRLLDDLGFSAGPALCTMLDTWNEDLFSALPTNADLYRECKFLSTLPSDVVEWGDAYVPERTQIDIRAHGDVAFPTLPATRDGLGLYYEALSRFFHAELRAREESYRTVLANFCSALYRYLRASVRQLHRQAHMRGRDRDLGEMLRATIADRYYRETARLARVLFLHLYLFLTREILWAAYAEQMMRPDLFDCLCCDLESWRQLAGLFQPFMFVNGALTVRGVPIEARRLRELNHIREHLNLPLVRSAATEEPGAPLTTPPTLHGNQARASGYFMVLIRAKLDSYSSAAPRLSFL
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  ARG J 267 	 CA  LEU A 146 	    0.713
+ CA  LYS J 268 	 CA  GLY A 147 	    0.120
+ CA  ARG J 269 	 CA  LEU A 148 	    0.807
+ CA  MET J 270 	 CA  TYR A 149 	    1.041
+ CA  ARG J 271 	 CA  TYR A 150 	    0.992
+ CA  ASN J 272 	 CA  GLU A 151 	    0.660
+ CA  ARG J 273 	 CA  ALA A 152 	    0.776
+ CA  ILE J 274 	 CA  LEU A 153 	    0.290
+ CA  ALA J 275 	 CA  SER A 154 	    0.793
+ CA  ALA J 276 	 CA  ARG A 155 	    0.501
+ CA  SER J 277 	 CA  PHE A 156 	    0.334
+ CA  LYS J 278 	 CA  PHE A 157 	    0.454
+ CA  SER J 279 	 CA  HIS A 158 	    0.886
+ CA  ARG J 280 	 CA  ALA A 159 	    0.463
+ CA  LYS J 281 	 CA  GLU A 160 	    0.641
+ CA  ARG J 282 	 CA  LEU A 161 	    1.064
+ CA  LYS J 283 	 CA  ARG A 162 	    0.465
+ CA  LEU J 284 	 CA  ALA A 163 	    1.538
+ CA  GLU J 285 	 CA  ARG A 164 	    2.289
+ CA  ARG J 286 	 CA  GLU A 165 	    1.618
+ CA  ILE J 287 	 CA  GLU A 166 	    1.031
+ CA  ALA J 288 	 CA  SER A 167 	    1.393
+ CA  ARG J 289 	 CA  TYR A 168 	    1.197
+ CA  LEU J 290 	 CA  ARG A 169 	    0.819
+ CA  GLU J 291 	 CA  THR A 170 	    0.635
+ CA  GLU J 292 	 CA  VAL A 171 	    0.491
+ CA  LYS J 293 	 CA  LEU A 172 	    0.521
+ CA  VAL J 294 	 CA  ALA A 173 	    0.452
+ CA  LYS J 295 	 CA  ASN A 174 	    0.669
+ CA  THR J 296 	 CA  PHE A 175 	    1.058
+ CA  LEU J 297 	 CA  CYS A 176 	    1.048
+ CA  LYS J 298 	 CA  SER A 177 	    0.870
+ CA  ALA J 299 	 CA  ALA A 178 	    1.119
+ CA  GLN J 300 	 CA  LEU A 179 	    1.530
+ CA  ASN J 301 	 CA  TYR A 180 	    1.071
+ CA  SER J 302 	 CA  ARG A 181 	    1.152
+ CA  GLU J 303 	 CA  TYR A 182 	    1.566
+ CA  LEU J 304 	 CA  LEU A 183 	    1.296
+ CA  ALA J 305 	 CA  ARG A 184 	    0.797
+ CA  SER J 306 	 CA  ALA A 185 	    0.925
+ CA  THR J 307 	 CA  SER A 186 	    0.761
+ CA  ALA J 308 	 CA  VAL A 187 	    0.495
+ CA  ASN J 309 	 CA  ARG A 188 	    0.270
+ CA  MET J 310 	 CA  GLN A 189 	    0.487
+ CA  LEU J 311 	 CA  LEU A 190 	    0.426
+ CA  ARG J 312 	 CA  HIS A 191 	    0.538
+ CA  GLU J 313 	 CA  ARG A 192 	    1.044
+ CA  GLN J 314 	 CA  GLN A 193 	    0.615
+ CA  VAL J 315 	 CA  ALA A 194 	    0.769
+ CA  ALA J 316 	 CA  HIS A 195 	    1.096
+ CA  GLN J 317 	 CA  MET A 196 	    1.763
+ CA  LEU J 318 	 CA  ARG A 197 	    1.556
+###############	###############	#########
+#Total CPU time is  0.03 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0     -23.4620983993  -0.7184825327   0.3877164291   0.5774589343
+1      13.9280904359  -0.0278543421  -0.8455979563   0.5330930800
+2     -68.4097323762   0.6949870400   0.3669333276   0.6183469474
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

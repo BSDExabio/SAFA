@@ -15,7 +15,7 @@
 #			to $out.dat)
 
 # NOTE: avoid this line by adding the USalign executable within the python path/executable path when creating the environment
-USALIGN_HOME=/gpfs/alpine/bif135/proj-shared/rbd_work/USalign
+USALIGN_HOME=~/Apps/USalign
 
 query_struct=$(readlink -f $1) 
 target_struct=$(readlink -f $2)

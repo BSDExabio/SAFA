@@ -1,0 +1,147 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/3HDG_D.pdb:D (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/3V2B_A.pdb:A
+Length of Structure_1: 124 residues
+Length of Structure_2: 176 residues
+
+Aligned length= 107, RMSD=   3.49, Seq_ID=n_identical/n_aligned= 0.056
+TM-score= 0.57993 (normalized by length of Structure_1: L=124, d0=4.12)
+TM-score= 0.44546 (normalized by length of Structure_2: L=176, d0=4.95)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+-------G---K-----VHLFLIPLMLERLKILIVDD----TDAKEREWLSTII----------------------PSN-H-F-EVWSAGDKEEGERLFGLHA--P----ALKDVIITDGIRMP-LGGLEMLDRIKAG-G-A---------A-PYVIVISAMYFIKAIE-L-----FSEKPPEGRETDFHIKE
+       :   .     .::::..:::::::::::..    :::.:::::::::                      ::: : : :::::::::.:::::::::  :    :.::::::.::::: ::::::::::::: : :         . :::::::.:::::::: :                      
+YFQSMTAYEMKIGAITFQVATGDIATEQVDVIVNSTARTFNRKSGVSRAILEGAGQAVESECAVLAAQPHRDFIITPGGCLKCKIIIHVPGGKDVRKTVTSVLEECEQRKYTSVSLPAIGTGNAGKNPITVADNIIDAIVDFSSQHSTPSLKTVKVVIFQPELLNIFYDSMKKRDL-----------------
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  GLY D 102 	 CA  TYR A 275 	    4.239
+ CA  LYS D  80 	 CA  ILE A 279 	    6.218
+ CA  VAL D 103 	 CA AGLN A 285 	    5.045
+ CA  HIS D 104 	 CA  VAL A 286 	    2.538
+ CA  LEU D 105 	 CA  ALA A 287 	    1.696
+ CA  PHE D 106 	 CA  THR A 288 	    1.362
+ CA  LEU D 107 	 CA  GLY A 289 	    2.744
+ CA  ILE D 111 	 CA  ASP A 290 	    5.088
+ CA  PRO D 113 	 CA  ILE A 291 	    7.687
+ CA  LEU D 116 	 CA  ALA A 292 	    3.748
+ CA  MSE D 117 	 CA  THR A 293 	    1.635
+ CA  LEU D 120 	 CA  GLU A 294 	    1.799
+ CA  GLU D 121 	 CA AGLN A 295 	    2.041
+ CA  ARG D 124 	 CA  VAL A 296 	    3.384
+ CA  LEU D   9 	 CA  ASP A 297 	    1.187
+ CA  LYS D  10 	 CA  VAL A 298 	    1.972
+ CA  ILE D  11 	 CA  ILE A 299 	    1.957
+ CA  LEU D  12 	 CA  VAL A 300 	    1.357
+ CA  ILE D  13 	 CA  ASN A 301 	    1.965
+ CA  VAL D  14 	 CA  SER A 302 	    2.190
+ CA  ASP D  16 	 CA  THR A 303 	    5.739
+ CA  ASP D  17 	 CA  ALA A 304 	    8.089
+ CA  THR D  18 	 CA  ARG A 309 	    2.398
+ CA  ASP D  19 	 CA  LYS A 310 	    1.555
+ CA  ALA D  20 	 CA  SER A 311 	    2.465
+ CA  LYS D 109 	 CA  GLY A 312 	    8.149
+ CA  GLU D  15 	 CA  VAL A 313 	    4.547
+ CA  ARG D  21 	 CA  SER A 314 	    1.032
+ CA  GLU D  22 	 CA  ARG A 315 	    4.753
+ CA  TRP D  23 	 CA  ALA A 316 	    4.612
+ CA  LEU D  24 	 CA  ILE A 317 	    0.959
+ CA  SER D  25 	 CA  LEU A 318 	    3.583
+ CA  THR D  26 	 CA  GLU A 319 	    4.877
+ CA  ILE D  27 	 CA  GLY A 320 	    2.041
+ CA  ILE D  28 	 CA  ALA A 321 	    4.135
+ CA  PRO D  33 	 CA  PRO A 344 	    2.500
+ CA  SER D  29 	 CA  GLY A 345 	    2.140
+ CA  ASN D  30 	 CA  GLY A 346 	    1.534
+ CA  HIS D  31 	 CA  LEU A 348 	    3.157
+ CA  PHE D  32 	 CA  CYS A 350 	    2.375
+ CA  GLU D  34 	 CA  ILE A 352 	    1.751
+ CA  VAL D  35 	 CA  ILE A 353 	    0.841
+ CA  TRP D  36 	 CA  ILE A 354 	    1.692
+ CA  SER D  37 	 CA  HIS A 355 	    2.370
+ CA  ALA D  38 	 CA  VAL A 356 	    3.310
+ CA  GLY D  39 	 CA  PRO A 357 	    4.396
+ CA  ASP D  40 	 CA  GLY A 358 	    2.045
+ CA  LYS D  64 	 CA  GLY A 359 	    4.984
+ CA  GLU D  42 	 CA  LYS A 360 	    2.241
+ CA  GLU D  43 	 CA  ASP A 361 	    5.458
+ CA  GLY D  44 	 CA  VAL A 362 	    4.657
+ CA  GLU D  45 	 CA  ARG A 363 	    3.902
+ CA  ARG D  46 	 CA  LYS A 364 	    3.446
+ CA  LEU D  47 	 CA  THR A 365 	    3.156
+ CA  PHE D  48 	 CA  VAL A 366 	    2.082
+ CA  GLY D  49 	 CA  THR A 367 	    1.867
+ CA  LEU D  50 	 CA ASER A 368 	    1.718
+ CA  HIS D  51 	 CA  VAL A 369 	    2.640
+ CA  ALA D  52 	 CA  LEU A 370 	    0.928
+ CA  PRO D  53 	 CA  CYS A 373 	    4.878
+ CA  ALA D   8 	 CA  TYR A 378 	    4.819
+ CA  LEU D 128 	 CA  THR A 379 	    6.631
+ CA  LYS D 127 	 CA  SER A 380 	    4.759
+ CA  ASP D  54 	 CA  VAL A 381 	    1.915
+ CA  VAL D  55 	 CA  SER A 382 	    1.536
+ CA  ILE D  56 	 CA  LEU A 383 	    0.954
+ CA  ILE D  57 	 CA  PRO A 384 	    1.925
+ CA  THR D  58 	 CA  ALA A 385 	    2.562
+ CA  ASP D  59 	 CA  ILE A 386 	    5.361
+ CA  GLY D  41 	 CA  GLY A 387 	    3.502
+ CA  ILE D  60 	 CA  THR A 388 	    2.972
+ CA  ARG D  61 	 CA  GLY A 389 	    3.381
+ CA  MSE D  62 	 CA  ASN A 390 	    4.093
+ CA  PRO D  63 	 CA  ALA A 391 	    2.584
+ CA  LEU D  65 	 CA  LYS A 393 	    2.970
+ CA  GLY D  66 	 CA  ASN A 394 	    3.941
+ CA  GLY D  67 	 CA  PRO A 395 	    4.894
+ CA  LEU D  68 	 CA  ILE A 396 	    4.574
+ CA  GLU D  69 	 CA  THR A 397 	    2.218
+ CA  MSE D  70 	 CA  VAL A 398 	    2.409
+ CA  LEU D  71 	 CA  ALA A 399 	    2.859
+ CA  ASP D  72 	 CA  ASP A 400 	    1.028
+ CA  ARG D  73 	 CA  ASN A 401 	    1.280
+ CA  ILE D  74 	 CA  ILE A 402 	    2.370
+ CA  LYS D  75 	 CA  ILE A 403 	    0.910
+ CA  ALA D  76 	 CA  ASP A 404 	    2.017
+ CA  GLY D  77 	 CA  ALA A 405 	    3.481
+ CA  GLY D  78 	 CA  VAL A 407 	    0.233
+ CA  ALA D  79 	 CA  PHE A 409 	    4.907
+ CA  ALA D 129 	 CA  LYS A 419 	    8.115
+ CA  PRO D  81 	 CA  VAL A 421 	    2.074
+ CA  TYR D  82 	 CA  LYS A 422 	    0.954
+ CA  VAL D  83 	 CA  VAL A 423 	    0.905
+ CA  ILE D  84 	 CA  VAL A 424 	    0.259
+ CA  VAL D  85 	 CA  ILE A 425 	    1.155
+ CA  ILE D  86 	 CA  PHE A 426 	    2.209
+ CA  SER D  87 	 CA  GLN A 427 	    1.441
+ CA  ALA D  88 	 CA  PRO A 428 	    6.549
+ CA  MSE D  92 	 CA  GLU A 429 	    4.908
+ CA  TYR D  94 	 CA  LEU A 430 	    3.555
+ CA  PHE D  95 	 CA  LEU A 431 	    3.585
+ CA  ILE D  96 	 CA  ASN A 432 	    1.971
+ CA  LYS D  97 	 CA  ILE A 433 	    1.134
+ CA  ALA D  98 	 CA  PHE A 434 	    2.228
+ CA  ILE D  99 	 CA  TYR A 435 	    2.553
+ CA  GLU D 100 	 CA  ASP A 436 	    2.783
+ CA  LEU D 101 	 CA  MET A 438 	    3.496
+###############	###############	#########
+#Total CPU time is  0.14 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0      -7.9348237330  -0.5794595070   0.7689862341   0.2699756499
+1     -28.5758353459  -0.0322631067  -0.3526420897   0.9352019293
+2     -29.0816712334   0.8143621870   0.5332013957   0.2291516964
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

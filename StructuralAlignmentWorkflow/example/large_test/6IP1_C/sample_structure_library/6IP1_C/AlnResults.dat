@@ -1,0 +1,105 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/6IP1_C.pdb:C (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/6IP1_C.pdb:C
+Length of Structure_1: 65 residues
+Length of Structure_2: 65 residues
+
+Aligned length= 65, RMSD=   0.00, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 1.00000 (normalized by length of Structure_1: L=65, d0=2.77)
+TM-score= 1.00000 (normalized by length of Structure_2: L=65, d0=2.77)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+RADQLADESLESTRRMLQLVEESKDAGIRTLVMLDEQGEQLERIEEGMDQINKDMKEAEKNLTDL
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+RADQLADESLESTRRMLQLVEESKDAGIRTLVMLDEQGEQLERIEEGMDQINKDMKEAEKNLTDL
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  ARG C  17 	 CA  ARG C  17 	    0.000
+ CA  ALA C  18 	 CA  ALA C  18 	    0.000
+ CA  ASP C  19 	 CA  ASP C  19 	    0.000
+ CA  GLN C  20 	 CA  GLN C  20 	    0.000
+ CA  LEU C  21 	 CA  LEU C  21 	    0.000
+ CA  ALA C  22 	 CA  ALA C  22 	    0.000
+ CA  ASP C  23 	 CA  ASP C  23 	    0.000
+ CA  GLU C  24 	 CA  GLU C  24 	    0.000
+ CA  SER C  25 	 CA  SER C  25 	    0.000
+ CA  LEU C  26 	 CA  LEU C  26 	    0.000
+ CA  GLU C  27 	 CA  GLU C  27 	    0.000
+ CA  SER C  28 	 CA  SER C  28 	    0.000
+ CA  THR C  29 	 CA  THR C  29 	    0.000
+ CA  ARG C  30 	 CA  ARG C  30 	    0.000
+ CA  ARG C  31 	 CA  ARG C  31 	    0.000
+ CA  MET C  32 	 CA  MET C  32 	    0.000
+ CA  LEU C  33 	 CA  LEU C  33 	    0.000
+ CA  GLN C  34 	 CA  GLN C  34 	    0.000
+ CA  LEU C  35 	 CA  LEU C  35 	    0.000
+ CA  VAL C  36 	 CA  VAL C  36 	    0.000
+ CA  GLU C  37 	 CA  GLU C  37 	    0.000
+ CA  GLU C  38 	 CA  GLU C  38 	    0.000
+ CA  SER C  39 	 CA  SER C  39 	    0.000
+ CA  LYS C  40 	 CA  LYS C  40 	    0.000
+ CA  ASP C  41 	 CA  ASP C  41 	    0.000
+ CA  ALA C  42 	 CA  ALA C  42 	    0.000
+ CA  GLY C  43 	 CA  GLY C  43 	    0.000
+ CA  ILE C  44 	 CA  ILE C  44 	    0.000
+ CA  ARG C  45 	 CA  ARG C  45 	    0.000
+ CA  THR C  46 	 CA  THR C  46 	    0.000
+ CA  LEU C  47 	 CA  LEU C  47 	    0.000
+ CA  VAL C  48 	 CA  VAL C  48 	    0.000
+ CA  MET C  49 	 CA  MET C  49 	    0.000
+ CA  LEU C  50 	 CA  LEU C  50 	    0.000
+ CA  ASP C  51 	 CA  ASP C  51 	    0.000
+ CA  GLU C  52 	 CA  GLU C  52 	    0.000
+ CA  GLN C  53 	 CA  GLN C  53 	    0.000
+ CA  GLY C  54 	 CA  GLY C  54 	    0.000
+ CA  GLU C  55 	 CA  GLU C  55 	    0.000
+ CA  GLN C  56 	 CA  GLN C  56 	    0.000
+ CA  LEU C  57 	 CA  LEU C  57 	    0.000
+ CA  GLU C  58 	 CA  GLU C  58 	    0.000
+ CA  ARG C  59 	 CA  ARG C  59 	    0.000
+ CA  ILE C  60 	 CA  ILE C  60 	    0.000
+ CA  GLU C  61 	 CA  GLU C  61 	    0.000
+ CA  GLU C  62 	 CA  GLU C  62 	    0.000
+ CA  GLY C  63 	 CA  GLY C  63 	    0.000
+ CA  MET C  64 	 CA  MET C  64 	    0.000
+ CA  ASP C  65 	 CA  ASP C  65 	    0.000
+ CA  GLN C  66 	 CA  GLN C  66 	    0.000
+ CA  ILE C  67 	 CA  ILE C  67 	    0.000
+ CA  ASN C  68 	 CA  ASN C  68 	    0.000
+ CA  LYS C  69 	 CA  LYS C  69 	    0.000
+ CA  ASP C  70 	 CA  ASP C  70 	    0.000
+ CA  MET C  71 	 CA  MET C  71 	    0.000
+ CA  LYS C  72 	 CA  LYS C  72 	    0.000
+ CA  GLU C  73 	 CA  GLU C  73 	    0.000
+ CA  ALA C  74 	 CA  ALA C  74 	    0.000
+ CA  GLU C  75 	 CA  GLU C  75 	    0.000
+ CA  LYS C  76 	 CA  LYS C  76 	    0.000
+ CA  ASN C  77 	 CA  ASN C  77 	    0.000
+ CA  LEU C  78 	 CA  LEU C  78 	    0.000
+ CA  THR C  79 	 CA  THR C  79 	    0.000
+ CA  ASP C  80 	 CA  ASP C  80 	    0.000
+ CA  LEU C  81 	 CA  LEU C  81 	    0.000
+###############	###############	#########
+#Total CPU time is  0.01 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0      -0.0000000010   1.0000000000   0.0000000000  -0.0000000000
+1       0.0000000016  -0.0000000000   1.0000000000  -0.0000000000
+2      -0.0000000005   0.0000000000   0.0000000000   1.0000000000
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

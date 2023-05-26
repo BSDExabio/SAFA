@@ -106,17 +106,15 @@ fi
 ### Run the client task manager 
 ###
 echo "Running the client script"
-					  #--subdirectory-string USalign_ssi_lost_structures_pdb70_2022_03_19 \
-					  #--subdirectory-string USalign_ssi_scope2.08_astral_rbd \
 srun -n 1 -N 1 -c $nClientCores --cpu-bind=threads -w $PrimaryNode \
 	python3 ${SRC_DIR}/dask_tskmgr.py --scheduler-file $SCHEDULER_FILE \
 					  --query-pdb-list-file $QUERY_LIST \
 					  --target-pdb-list-file $TARGET_LIST \
 					  --script-path $SRC_DIR/runUSalign_sNS.sh \
 					  --working-dir ${RUN_DIR} \
-					  --subdirectory-string USalign_ssi_pdb70_2022_03_19 \
+					  --subdirectory-string USalign_sNS_pdb70_2022_03_19 \
 					  --timings-file timings.csv \
-					  --tskmgr-log-file tskmgr.log \
+					  --tskmgr-log-file tskmgr.log
 
 # shutting down dask scheduler and worker commands
 for pid in $dask_pids

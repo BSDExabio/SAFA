@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageColor
 import ast
 import math
 
-import usalign_parser
+from USalignParser.usalign_parser import parse_usalign_file, threshold_comparison
 
 pwd = sys.argv[1]
 pdb70_metadata_pkl_file = sys.argv[2]

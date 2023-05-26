@@ -1,0 +1,96 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/4LMS_C.pdb:C (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/4LMX_A.pdb:A
+Length of Structure_1: 68 residues
+Length of Structure_2: 61 residues
+
+Aligned length= 56, RMSD=   2.05, Seq_ID=n_identical/n_aligned= 0.321
+TM-score= 0.65903 (normalized by length of Structure_1: L=68, d0=2.86)
+TM-score= 0.71864 (normalized by length of Structure_2: L=61, d0=2.64)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+-KDQLRAPVVTIFDARGCKDHA-NKEYGKADECCVKVQMTPIKVADDAAALVLKECEL---ATPAGNENSLKG
+ ::::::::::::::::::::: .:::::.:::::::::::::::::::::::::::.               
+AMKDSKAPCVEVFDERDGCKAAGTQKASGDDGFCVKVSMKAIKMNAAEATSVTKNYNTKLL------------
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  LYS C   1 	 CA  MET A   2 	    0.873
+ CA  ASP C   2 	 CA  LYS A   3 	    1.959
+ CA  GLN C   4 	 CA  ASP A   5 	    1.568
+ CA  LEU C   5 	 CA  SER A   6 	    1.103
+ CA  ARG C   6 	 CA  LYS A   7 	    0.390
+ CA  ALA C   7 	 CA  ALA A   8 	    0.479
+ CA  PRO C   8 	 CA  PRO A   9 	    0.288
+ CA  VAL C   9 	 CA  CYS A  10 	    0.504
+ CA  VAL C  10 	 CA  VAL A  11 	    0.363
+ CA  THR C  11 	 CA  GLU A  12 	    0.528
+ CA  ILE C  12 	 CA  VAL A  13 	    0.647
+ CA  PHE C  13 	 CA  PHE A  14 	    0.514
+ CA  ASP C  14 	 CA  ASP A  15 	    1.021
+ CA  ALA C  15 	 CA  GLU A  16 	    1.137
+ CA  ARG C  16 	 CA  ARG A  17 	    0.789
+ CA  GLY C  17 	 CA  ASP A  18 	    0.952
+ CA  CYS C  18 	 CA  GLY A  19 	    2.981
+ CA  LYS C  19 	 CA  CYS A  20 	    2.367
+ CA  ASP C  20 	 CA  LYS A  21 	    2.882
+ CA  HIS C  21 	 CA  ALA A  22 	    2.081
+ CA  ALA C  22 	 CA  ALA A  23 	    4.677
+ CA  ASN C  23 	 CA  THR A  25 	    5.196
+ CA  LYS C  24 	 CA  GLN A  26 	    1.392
+ CA  GLU C  25 	 CA  LYS A  27 	    1.246
+ CA  TYR C  26 	 CA  ALA A  28 	    0.924
+ CA  GLY C  28 	 CA  SER A  29 	    3.687
+ CA  LYS C  30 	 CA  GLY A  30 	    3.480
+ CA  ALA C  34 	 CA  ASP A  31 	    5.736
+ CA  ASP C  37 	 CA  ASP A  32 	    2.592
+ CA  GLU C  38 	 CA  GLY A  33 	    0.626
+ CA  CYS C  39 	 CA  PHE A  34 	    0.627
+ CA  CYS C  40 	 CA  CYS A  35 	    0.391
+ CA  VAL C  41 	 CA  VAL A  36 	    0.386
+ CA  LYS C  42 	 CA  LYS A  37 	    0.554
+ CA  VAL C  43 	 CA  VAL A  38 	    0.379
+ CA  GLN C  44 	 CA  SER A  39 	    0.600
+ CA  MET C  45 	 CA  MET A  40 	    0.496
+ CA  THR C  46 	 CA  LYS A  41 	    0.495
+ CA  PRO C  47 	 CA  ALA A  42 	    0.192
+ CA  ILE C  48 	 CA  ILE A  43 	    0.709
+ CA  LYS C  49 	 CA  LYS A  44 	    1.236
+ CA  VAL C  50 	 CA AMET A  45 	    2.038
+ CA  ALA C  51 	 CA  ASN A  46 	    1.794
+ CA  ASP C  52 	 CA  ALA A  47 	    1.114
+ CA  ASP C  53 	 CA  ALA A  48 	    1.119
+ CA  ALA C  54 	 CA  GLU A  49 	    1.362
+ CA  ALA C  55 	 CA  ALA A  50 	    0.469
+ CA  ALA C  56 	 CA  THR A  51 	    0.310
+ CA  LEU C  57 	 CA  SER A  52 	    0.753
+ CA  VAL C  58 	 CA  VAL A  53 	    1.227
+ CA  LEU C  59 	 CA  THR A  54 	    1.115
+ CA  LYS C  60 	 CA  LYS A  55 	    1.075
+ CA  GLU C  61 	 CA  ASN A  56 	    1.185
+ CA  CYS C  62 	 CA  TYR A  57 	    1.555
+ CA  GLU C  65 	 CA  ASN A  58 	    1.623
+ CA  LEU C  63 	 CA  THR A  59 	    7.875
+###############	###############	#########
+#Total CPU time is  0.02 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0      10.2729724196  -0.1699307329  -0.5773451120   0.7986214170
+1     -23.2233458371  -0.4883148022   0.7532492578   0.4406406808
+2      38.4117876787  -0.8559627328  -0.3151002655  -0.4099263626
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

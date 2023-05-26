@@ -3,63 +3,60 @@
     of a set of target protein structures against a library of pdb structures.
     Save the alignments if so desired.
     USAGE: 
-        python3 dask_taskmgr.py [-h] --scheduler-file SCHEDULER_FILE 
-                                     --target-pdb-list-file INPUT_FILE 
-                                     --query-pdb-list-file LIB_DIR_PATH
-                                     --timings-file TIMINGS_FILE.csv 
-                                     --tskmgr-log-file TSKMGR.log
-                                     --script-path /path/to/dir/script.sh 
-                                     
-                                     OPTIONAL PARAMETERS:
-                                     --ranking-metric [avgTMscore,maxTMscore,
-                                                        TMscore1,TMscore2]
-                                     --metric-cutoff 0.7
-                                     
-                                     
-                                     # NOTE: add parameters to control saving files
-                                     --working-dir /path/to/dir/ 
-                                     --subdirectory-string DIRNAME
+        python3 dask_taskmgr.py [-h] --timings-file TIMINGS_FILE.csv \
+                                     --tskmgr-log-file TSKMGR.log \
+                                     --query-pdb-list-file LIB_DIR_PATH \
+                                     --target-pdb-list-file INPUT_FILE \
+                                     --script-path /path/to/dir/script.sh \
+                                     --subdirectory-string DIRNAME \
+                                     --scheduler-file SCHEDULER_FILE \
+                                     --working-dir /path/to/dir/ \
+                                     --scoring-metric [avgTMscore,maxTMscore, 
+                                                       MinTMscore,TMscore1,
+                                                       TMscore2] \
+                                     --cutoff-threshold 0.7 \
                                      
     INPUT: 
         -h, --help      show this help message and exit
-        --scheduler-file SCHEDULER_FILE, -s SCHEDULER_FILE
-                        dask scheduler file
-        --target-pdb-list-file INPUT_FILE, -inp INPUT_FILE
-                        list file that contains the paths and sequence lengths 
-                        of protein models
-        --query-pdb-list-file LIB_DIR_PATH, -lib LIB_DIR_PATH
-                        path to a directory within which a library of protein 
-                        models are held
         --timings-file TIMINGS_FILE.csv, -ts TIMINGS_FILE.csv 
                         CSV file for task processing timings
         --tskmgr-log-file TSKMGR.log, -log TSKMGR.log 
                         path for a file within which logging output for the 
                         workflow will be written
-        --ranking-metric COLUMN_NAME, -rank COLUMN_NAME
-                        string to set which column of the pandas dataframe to 
-                        rank the alignment hits with. options: 'avgTMscore', 
-                                                               'maxTMscore', 
-                                                               'TMscore1', 
-                                                               'TMscore2'
-        --metric-cutoff FLOAT_VALUE, -cutoff FLOAT_VALUE
-                        float value set to determine the ranking metric value 
-                        above which, alignment results will be saved.
+        --query-pdb-list-file LIB_DIR_PATH, -lib LIB_DIR_PATH
+                        path to a directory within which a library of protein 
+                        models are held
+        --target-pdb-list-file INPUT_FILE, -inp INPUT_FILE
+                        list file that contains the paths and sequence lengths 
+                        of protein models
         --script-path /path/to/dir/script.sh, -sp /path/to/dir/script.sh
                         full path to the script to be run within the subprocess
-       
-
-
+        --subdirectory-string DIRNAME, -sub DIRNAME
+                        string to be used for consistent naming of 
+                        subdirectories within which results files will be saved 
+                        for each query structure.
+        --scheduler-file SCHEDULER_FILE, -s SCHEDULER_FILE
+                        dask scheduler file; optional, default = None
         --working-dir /path/to/dir/, -wd /path/to/dir/
                         full path to the directory within which files will be 
-                        written
-        --subdirectory-string DIRNAME, -sub DIRNAME
-                        string to be used for consistent naming of subdirectories 
-                        within which results files will be saved for each query
-                        structure.
+                        written; optional, default = './'
+        --scoring-metric COLUMN_NAME, -metric COLUMN_NAME
+                        string to set which column of the pandas dataframe to 
+                        score the alignment hits with; optional, default = None
+                        options: 'avgTMscore', 
+                                 'maxTMscore',
+                                 'minTMscore',
+                                 'TMscore1', 
+                                 'TMscore2'
+        --cutoff-threshold FLOAT_VALUE, -thresh FLOAT_VALUE
+                        float value set to determine the scoring metric value 
+                        above which, alignment results will be saved, optional,
+                        default = None
 """
 
 import sys
 import time
+import io
 import pickle
 import argparse
 import platform
@@ -160,7 +157,7 @@ def submit_pipeline(alignments, script, working_dir, scoring_metric, cutoff_thre
     results_dict = {}
 
     # check to see if any scoring metric is considered
-    if scoring_metric not in ['TMscore1','TMscore2','MaxTMscore','MinTMscore', 'AvgTMscore']:
+    if scoring_metric.upper() not in ['TMSCORE1','TMSCORE2','MAXTMSCORE','MINTMSCORE', 'AVGTMSCORE']:
         scoring_bool = False
     # check to see if a cutoff_threshold is defined
     elif not cutoff_threshold:
@@ -219,7 +216,7 @@ def submit_pipeline(alignments, script, working_dir, scoring_metric, cutoff_thre
             # check to see if the alignment's quantitative results pass the 
             # cutoff. if they do, then append the standard out string to the
             # results_dict[key] list. Otherwise, move on.
-            cutoff_bool = threshold_comparison(parsed_results,ranking_metric,cutoff_threshold)
+            cutoff_bool = threshold_comparison(parsed_results,scoring_metric,cutoff_threshold)
             if cutoff_bool:
                 results_dict[key].append(stdout_string)
         except Exception as e:
@@ -235,7 +232,8 @@ def target_identifier(target_str):
     function to get an abbreviated string that will be used in the naming of 
     output directory paths
     """
-    return Path(target_str).parent.name
+    return Path(target_str).stem
+    #return Path(target_str).parent.name
 
 
 def query_identifier(query_str):
@@ -271,7 +269,7 @@ def post_analysis_pipeline(target_str, result_files_list, outputdir_str, subdir_
     # create subdirectory tree within which results associated with target_id 
     # will be written
     temp_path = Path(outputdir_str) / target_id / subdir_str
-    temp_path.mkdir(mode=0o777,parents=True,exist_ok=True)
+    temp_path.mkdir(parents=True,exist_ok=True)
     # open and write alignment results to file
     with open(str(temp_path) + '/alignment_results.dat','w') as out_file, open(str(temp_path) + '/alignment_results.log','w') as log_file:
         out_file.write(f'Query,TMscore1,TMscore2,RMSD,SeqIDAli,Len1,Len2,LenAligned\n')
@@ -286,26 +284,28 @@ def post_analysis_pipeline(target_str, result_files_list, outputdir_str, subdir_
             # eight element may be present that is the standard out from the 
             # alignment script
             for key, value in temp_results.items():
-                # check to see if the target string in the dictionary key;
+                query, target = key.split('|')
+                # check to see if the target_id in the dictionary key;
                 # if not, skip to the next key, value pair
-                if target_str not in key:
+                if target_id not in target:
                     continue
                 # check to see if the length of the value is 7
                 elif len(value) == 7:
-                    query_str = key.split('|')[0]
-                    query_id = query_identifier(query_str)
+                    query_id = query_identifier(query)
                     out_file.write(f'{query_id},{value[0]},{value[1]},{value[2]},{value[3]},{value[4]},{value[5]},{value[6]}\n')
                 # check to see if the length of the value is 8; elem[7] is the
                 # standard output from the alignment script; should include the
                 # atomic pairs for alignments as well as the translation and 
                 # rotation matrix to recreate the alignment
                 elif len(value) == 8:
-                    query_str = key.split('|')[0]
-                    query_id = query_identifier(query_str)
+                    query_id = query_identifier(query)
                     out_file.write(f'{query_id},{value[0]},{value[1]},{value[2]},{value[3]},{value[4]},{value[5]},{value[6]}\n')
-                    output_path = temp_path / query_id / 'AlnResults.dat'
-                    with open(str(output_path),'w') as result_file:
-                        result_file.write(value[7])
+                    # make a subsubsubdirectory associated with the query struct
+                    # save the standard out message from the alignment
+                    output_path = temp_path / query_id 
+                    output_path.mkdir(parents=True,exist_ok=True)
+                    with open(str(output_path / 'AlnResults.dat'),'w') as stdout_file:
+                        stdout_file.write(value[7])
                 # if all else fail, something went wrong...
                 else:
                     log_file.write( f"{key}, {value}, len(value) does not match expected length of results list. Something wrong with the USalign results?\n")
@@ -323,7 +323,7 @@ def post_analysis_pipeline(target_str, result_files_list, outputdir_str, subdir_
     elif sorted_by.upper() == 'AVGTMSCORE':
         df['avgTMscore'] = np.mean(df[['TMscore1','TMscore2']],axis=1)
     # check that sorted_by is one of the column names of the panda dataframe
-    elif: #sorted_by not in list(df.columns):
+    elif sorted_by.upper() not in ['TMSCORE1','TMSCORE2']: #sorted_by not in list(df.columns):
         print(f'{sort_by} not in pandas dataframe columns {list(df.columns)}. No ranked_alignment_results.dat file is written.', file=sys.stderr, flush=True)
         stop_time = time.time()
         return start_time, stop_time, target_str
@@ -345,7 +345,6 @@ if __name__ == '__main__':
     # read command line arguments.
     parser = argparse.ArgumentParser(description='Molecular dynamics simulation task manager')
     # essential parameters
-    parser.add_argument('--scheduler-file', '-s', required=True, help='dask scheduler file')
     parser.add_argument('--timings-file', '-ts', required=True, help='CSV file for protein processing timings')
     parser.add_argument('--tskmgr-log-file', '-log', required=True, help='string that will be used to store logging info for this run')
     parser.add_argument('--query-pdb-list-file', '-inp', required=True, help='list file that contains the paths and sequence lengths of protein models that are aligned to the target structures; the structural library')
@@ -353,6 +352,7 @@ if __name__ == '__main__':
     parser.add_argument('--script-path', '-sp', required=True, help='path that points to the script for the subprocess call')
     parser.add_argument('--subdirectory-string', '-sub', required=True, help='string to be used for consistent naming of subdirectories within which results files will be saved for each target structure.')
     # optional parameters
+    parser.add_argument('--scheduler-file', '-s', required=False, default=None, help='dask scheduler file')
     parser.add_argument('--working-dir', '-wd', required=False, default='./', help="path that points to the working directory for the output files; default = './'")
     parser.add_argument('--scoring-metric', '-metric', required=False, default=None, help='string used to denote which alignment column to rank structures by; default is empty')
     parser.add_argument('--cutoff-threshold', '-thresh', required=False, default=None, help='float value to be used to determine which alignments have high-verbosity results written to storage.')
@@ -383,7 +383,10 @@ if __name__ == '__main__':
     main_logger.info(f'Dask parameters:\n{dask_parameter_string}')
 
     # start dask client.
-    client = Client(scheduler_file=args.scheduler_file,timeout=5000,name='AlignmentTaskMgr')
+    if args.scheduler_file:
+        client = Client(scheduler_file=args.scheduler_file,timeout=5000,name='AlignmentTaskMgr')
+    else:
+        client = Client(timeout=5000,name='AlignmentTaskMgr')
    
     # set up timing log file.
     main_logger.info(f'Opening the timing file.')
@@ -430,7 +433,7 @@ if __name__ == '__main__':
         main_logger.info(f'The total number of alignments is relatively small. Running all alignments as individual tasks.')
         
         # do the thing.
-        alignments_list = list(itertools.product(sorted_query_list,sorted_target_list))
+        alignments_list = [[elem] for elem in list(itertools.product(sorted_query_list,sorted_target_list))]
         aln_futures = client.map(submit_pipeline, alignments_list, script = args.script_path, working_dir = args.working_dir, scoring_metric = args.scoring_metric, cutoff_threshold = args.cutoff_threshold, pure=False)
 
         # gather alignment results.
@@ -465,7 +468,7 @@ if __name__ == '__main__':
         # break the query_list into sublists
         query_sublists = [sorted_query_list[i::NUM_WORKERS*5] for i in range(NUM_WORKERS*5)]
         # approx how many structures in each sublist
-        nQueries_per_sublist = int(np.mean([len(sublist) for sublist in target_sublists]))
+        nQueries_per_sublist = int(np.mean([len(sublist) for sublist in query_sublists]))
         # calc the number of tasks, where tasks are now multiple alignments 
         nTasks = len(sorted_target_list)*len(query_sublists)
         main_logger.info(f'The total number of tasks is {nTasks:,} where each task is the alignment of multiple query structures to target structures. Average lengths of sublists is {nQueries_per_sublist}).')
@@ -475,7 +478,7 @@ if __name__ == '__main__':
 
             # do the thing.
             alignment_lists = [list(zip(query_sublist,[target]*len(query_sublists))) for query_sublist in query_sublists]
-            aln_futures = client.map(submit_pipeline, alignment_list, script = args.script_path, working_dir = args.working_dir, scoring_metric = args.scoring_metric, cutoff_threshold = args.cutoff_threshold, pure=False)
+            aln_futures = client.map(submit_pipeline, alignment_lists, script = args.script_path, working_dir = args.working_dir, scoring_metric = args.scoring_metric, cutoff_threshold = args.cutoff_threshold, pure=False)
             
             # gather target's alignment results.
             results_dict = {}
@@ -489,7 +492,7 @@ if __name__ == '__main__':
             with open(out,'wb') as out_file:
                 pickle.dump(results_dict,out_file)
     
-            post_analysis_pipeline(target, result_files_list = [out], outputdir_str = args.working_dir, subdir_str = args.subdirectory_string, sorted_by = args.scoring_metric, pure=False)
+            post_analysis_pipeline(target, result_files_list = [out], outputdir_str = args.working_dir, subdir_str = args.subdirectory_string, sorted_by = args.scoring_metric)
             main_logger.info(f'Finished running, collecting, and outputting alignment results for {target}. This took {time.time() - target_start} seconds.')
     
     # close log files and shut down the cluster.

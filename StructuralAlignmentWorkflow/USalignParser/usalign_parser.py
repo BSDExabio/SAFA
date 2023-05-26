@@ -3,6 +3,7 @@
     For parsing USalign alignment results
 
 """
+import sys
 import time
 from pathlib import Path
 import numpy as np
@@ -116,7 +117,7 @@ def parse_usalign_file(file_object,alignment_type):
             results['map_1_to_2'].update({temp[0][-4:].strip(): (temp[1][-4:].strip(),temp[0][4:7],temp[1][4:7],float(temp[2]))})
 
     else:
-        print(f"'{alignment_type}' not expected by parser function. Only returning alignment quantitative metrics. No mapping.")
+        print(f"'{alignment_type}' not expected by parser function. Only returning alignment quantitative metrics. No mapping.", file=sys.stderr, flush=True)
         stop_time = time.time()
         return results, start_time, stop_time, 1
 
@@ -140,7 +141,7 @@ def threshold_comparison(results_dict,ranking_metric_string,metric_cutoff):
                  cutoff or 1 otherwise
     """
     if ranking_metric_string.upper() not in ['TMSCORE1','TMSCORE2','MAXTMSCORE','MINTMSCORE','AVGTMSCORE']:
-        print(f'Unexpected ranking metric string {ranking_metric_string}. Returning False boolean.')
+        print(f'Unexpected ranking metric string {ranking_metric_string}. Returning False boolean.', file=sys.stderr, flush=True)
         return_value = 0
     
     elif ranking_metric_string.upper() == 'TMSCORE1' and results_dict['TMscore1'] > metric_cutoff:
