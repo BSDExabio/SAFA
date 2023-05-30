@@ -1,0 +1,89 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UNK_A.pdb:A (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/3HDD_B.pdb:B
+Length of Structure_1: 62 residues
+Length of Structure_2: 56 residues
+
+Aligned length= 49, RMSD=   2.24, Seq_ID=n_identical/n_aligned= 0.143
+TM-score= 0.52817 (normalized by length of Structure_1: L=62, d0=2.67)
+TM-score= 0.56005 (normalized by length of Structure_2: L=56, d0=2.48)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+----ALSPRDERTLVRKVINRPTTA-KDLVKMLEETTVSISTVKRVLYRHNLKG--SMVQGKRSARKLE
+    ::::::::::::::::::.:: ::::::::::::::::::::::::::::               
+RPRTAFSSEQLARLKREFNENRYLTERRRQQLSSELGLNEAQIKIWFQNKRAKIKK-------------
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  ALA A   1 	 CA  ALA B   7 	    3.640
+ CA  LEU A   5 	 CA  PHE B   8 	    2.971
+ CA  SER A   6 	 CA  SER B   9 	    1.531
+ CA  PRO A   7 	 CA  SER B  10 	    1.946
+ CA  ARG A   8 	 CA  GLU B  11 	    1.493
+ CA  ASP A   9 	 CA  GLN B  12 	    1.832
+ CA  GLU A  10 	 CA  LEU B  13 	    1.828
+ CA  ARG A  11 	 CA  ALA B  14 	    1.492
+ CA  THR A  12 	 CA  ARG B  15 	    1.257
+ CA  LEU A  13 	 CA  LEU B  16 	    0.384
+ CA  VAL A  14 	 CA  LYS B  17 	    1.884
+ CA  ARG A  15 	 CA  ARG B  18 	    2.996
+ CA  LYS A  16 	 CA  GLU B  19 	    2.312
+ CA  VAL A  17 	 CA  PHE B  20 	    0.353
+ CA  ILE A  19 	 CA  ASN B  21 	    1.792
+ CA  ASN A  20 	 CA  GLU B  22 	    1.447
+ CA  ARG A  22 	 CA  ASN B  23 	    2.595
+ CA  PRO A  21 	 CA  ARG B  24 	    3.227
+ CA  THR A  23 	 CA  TYR B  25 	    5.059
+ CA  THR A  24 	 CA  LEU B  26 	    1.327
+ CA  ALA A  25 	 CA  THR B  27 	    4.684
+ CA  LYS A  26 	 CA  ARG B  29 	    3.021
+ CA  ASP A  27 	 CA  ARG B  30 	    2.205
+ CA  LEU A  28 	 CA  ARG B  31 	    3.868
+ CA  VAL A  29 	 CA  GLN B  32 	    2.917
+ CA  LYS A  30 	 CA  GLN B  33 	    0.958
+ CA  MET A  31 	 CA  LEU B  34 	    3.290
+ CA  LEU A  32 	 CA  SER B  35 	    3.630
+ CA  GLU A  33 	 CA  SER B  36 	    1.698
+ CA  GLU A  34 	 CA  GLU B  37 	    3.204
+ CA  THR A  35 	 CA  LEU B  38 	    4.877
+ CA  THR A  37 	 CA  GLY B  39 	    2.195
+ CA  VAL A  39 	 CA  LEU B  40 	    1.216
+ CA  SER A  40 	 CA  ASN B  41 	    1.168
+ CA  ILE A  41 	 CA  GLU B  42 	    1.480
+ CA  SER A  42 	 CA  ALA B  43 	    1.477
+ CA  THR A  43 	 CA  GLN B  44 	    1.168
+ CA  VAL A  44 	 CA  ILE B  45 	    0.947
+ CA  LYS A  45 	 CA  LYS B  46 	    1.129
+ CA  ARG A  46 	 CA  ILE B  47 	    0.911
+ CA  VAL A  47 	 CA  TRP B  48 	    0.915
+ CA  LEU A  48 	 CA  PHE B  49 	    1.161
+ CA  TYR A  49 	 CA  GLN B  50 	    0.884
+ CA  ARG A  50 	 CA  ASN B  51 	    0.445
+ CA  HIS A  51 	 CA  LYS B  52 	    1.330
+ CA  ASN A  52 	 CA  ARG B  53 	    1.505
+ CA  LEU A  53 	 CA  ALA B  54 	    0.666
+ CA  LYS A  54 	 CA  LYS B  55 	    1.359
+ CA  GLY A  55 	 CA  ILE B  56 	    2.592
+###############	###############	#########
+#Total CPU time is  0.02 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0       7.8067349345  -0.2313637175  -0.1268800387  -0.9645580781
+1      39.2210091845  -0.4413086794  -0.8698977930   0.2202827255
+2     108.0609882220  -0.8670164241   0.4766332819   0.1452695249
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

@@ -1,0 +1,353 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/6IOZ_A.pdb:A (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/4LMP_A.pdb:A
+Length of Structure_1: 500 residues
+Length of Structure_2: 371 residues
+
+Aligned length= 313, RMSD=   5.72, Seq_ID=n_identical/n_aligned= 0.064
+TM-score= 0.45250 (normalized by length of Structure_1: L=500, d0=7.94)
+TM-score= 0.57350 (normalized by length of Structure_2: L=371, d0=6.99)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+--MGYSIRTDVLAAQYTVWFIVGFND--K-HIN---MLLIPRCVD---LA--FSN--GQGDYSL--DNAPGELADFFVDSDP-MQHDYGLAKNTHVRSLPGD-AP--D-LDP--YSYQAWDMQNIIDKAVAPSRVSFLTGRSTIPQYAQLATGGLPDSFKEN---ASGYVTMSVGKVFHPGS--DDSPYSWSF-PYHPSSEKYP------HN--TP-DKQSTEQAIQLLEKMFFLAVGYDKHPFVLDQVRLLSALDLKLNSTIIAFTDSVLSLIINLACLILLLFSFTAHPQDLF-QSNFLVSLRPPEG--YSQ-YPRP--SDI---VPP-P---QWNS-DNPEHV--EPGGWALE--LITLVPIPS-GYVNVLVGYKVRPIDQSQTTRLYDFNSYWRVHAGNFISETKTCRGPDGELHANLLCPVDVLDVPEGTLTHPFRYPKEFQKLYPLENRREDVQALNIDFQRKIRQSYASSYTGAGWAHPYVPRSLGEKPYLDPFDSMEPGRMDEFPTLAGLVPPRPSFHVELCRKNLKHFRPGNEPSLKDIIRPDEYFQLP
+  ....:::.::.:.......::..:  . ::.   .....:...   ..  ::.  :.::.:.  :..::...::.::.:: ::::.::..::.:...... .:  : ..:  :::.:::......:::::::::::::..::...:.::.:.:::..::.   ..:::::::::.::...  :..:::.:: ::::::....      ..  .: ..:..:::::::::::::::::::::::::::::::::::.:.:::::::.:::....::..::..:..::....... ...:::..:....  ..: .:::  :::   .:. :   ::.: .:.:::  ::::..:.  .:::::::: ::.                                                                                                                                                                                           
+MRVGIPTETKNNEFRVAITPAGVAELTRRGHEVLIQAGAGEGSAITDADFKAAGAQLVGTADQVWADADLLLKVKEPIAAEYGRLRHGQILFTFLHLAASRACTDALLDSGTTSIAYETVQTADGALPLLAPMSEVAGRLAAQVGAYHLMRTQGGRGVLMGGVPGVEPADVVVIGAGTAGYNAARIANGMGATVTVLDINIDKLRQLDAEFCGRIHTRYSSAYELEGAVKRADLVIGAVLVPGAKAPKLVSNSLVAHMKPGAVLVDIAIDQGGCFEGSRPTTYDHPTFAVHDTLFYCVANMPASVPKTSTYALTNATMPYVLELADHGWRAACRSNPALAKGLSTHEGALLSERVATDLGVPFTEPASVLA-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  MET A 488 	 CA  VAL A   3 	   10.846
+ CA  GLY A 489 	 CA  GLY A   4 	    9.000
+ CA  TYR A 490 	 CA  ILE A   5 	    6.182
+ CA  SER A 491 	 CA  PRO A   6 	    5.989
+ CA  ILE A 492 	 CA  THR A   7 	    3.153
+ CA  ARG A 493 	 CA  GLU A   8 	    1.536
+ CA  THR A 494 	 CA  THR A   9 	    0.732
+ CA  ASP A 496 	 CA  LYS A  10 	    7.548
+ CA  VAL A 401 	 CA  ASN A  11 	    4.631
+ CA  LEU A 400 	 CA  ASN A  12 	    2.922
+ CA  ALA A  77 	 CA  GLU A  13 	    6.697
+ CA  ALA A 462 	 CA  PHE A  14 	    3.434
+ CA  GLN A  80 	 CA  ARG A  15 	    5.782
+ CA  TYR A 499 	 CA  VAL A  16 	    8.271
+ CA  THR A 500 	 CA  ALA A  17 	    5.449
+ CA  VAL A 501 	 CA  ILE A  18 	    5.866
+ CA  TRP A 502 	 CA  THR A  19 	    8.686
+ CA  PHE A 510 	 CA  PRO A  20 	    8.777
+ CA  ILE A 487 	 CA  ALA A  21 	    8.080
+ CA  VAL A 503 	 CA  GLY A  22 	    3.967
+ CA  GLY A 504 	 CA  VAL A  23 	    3.821
+ CA  PHE A 505 	 CA  ALA A  24 	    5.744
+ CA  ASN A 506 	 CA  GLU A  25 	    6.132
+ CA  ASP A 516 	 CA  LEU A  26 	    4.134
+ CA  LYS A 486 	 CA  ARG A  29 	    9.659
+ CA  HIS A 518 	 CA  HIS A  31 	    3.837
+ CA  ILE A 517 	 CA  GLU A  32 	    4.130
+ CA  ASN A 537 	 CA  VAL A  33 	   10.789
+ CA  MET A 549 	 CA  ALA A  37 	    9.494
+ CA  LEU A 548 	 CA  GLY A  38 	    5.634
+ CA  LEU A 460 	 CA  ALA A  39 	   10.240
+ CA  ILE A 461 	 CA  GLY A  40 	    9.121
+ CA  PRO A 457 	 CA  GLU A  41 	    7.554
+ CA  ARG A 458 	 CA  GLY A  42 	    4.073
+ CA  CYS A 422 	 CA  SER A  43 	   11.062
+ CA  VAL A 424 	 CA  ALA A  44 	    7.013
+ CA  ASP A  98 	 CA  ILE A  45 	   10.371
+ CA  LEU A 511 	 CA  ASP A  49 	   10.305
+ CA  ALA A 512 	 CA  PHE A  50 	    7.749
+ CA  PHE A 514 	 CA  ALA A  53 	    4.091
+ CA  SER A 515 	 CA  GLY A  54 	    1.199
+ CA  ASN A 513 	 CA  ALA A  55 	    7.045
+ CA  GLY A 541 	 CA  VAL A  58 	    2.359
+ CA  GLN A 540 	 CA  GLY A  59 	    6.087
+ CA  GLY A 542 	 CA  THR A  60 	    2.330
+ CA  ASP A 543 	 CA  ALA A  61 	    3.559
+ CA  TYR A 497 	 CA  ASP A  62 	    8.399
+ CA  SER A 539 	 CA  GLN A  63 	    1.312
+ CA  LEU A 544 	 CA  VAL A  64 	    8.847
+ CA  ASP A 538 	 CA  ASP A  67 	    3.956
+ CA  ASN A 534 	 CA  ALA A  68 	    6.957
+ CA  ALA A 519 	 CA  ASP A  69 	    5.506
+ CA  PRO A 260 	 CA  LEU A  70 	    3.320
+ CA  GLY A 520 	 CA  LEU A  71 	    3.707
+ CA  GLU A 521 	 CA  LEU A  72 	    5.282
+ CA  LEU A 522 	 CA  LYS A  73 	    8.289
+ CA  ALA A  79 	 CA  VAL A  74 	    7.496
+ CA  ASP A 352 	 CA  LYS A  75 	    3.585
+ CA  PHE A 351 	 CA  GLU A  76 	    3.859
+ CA  PHE A 524 	 CA  PRO A  77 	    6.730
+ CA  VAL A 525 	 CA  ILE A  78 	    3.814
+ CA  ASP A 526 	 CA  ALA A  79 	    4.082
+ CA  SER A 527 	 CA  ALA A  80 	    5.400
+ CA  ASP A 528 	 CA  GLU A  81 	    4.425
+ CA  PRO A 529 	 CA  TYR A  82 	    3.351
+ CA  MET A 535 	 CA  ARG A  84 	    4.921
+ CA  GLN A 531 	 CA  LEU A  85 	    4.661
+ CA  HIS A 533 	 CA  ARG A  86 	    2.201
+ CA  ASP A 257 	 CA  HIS A  87 	    3.813
+ CA  TYR A 536 	 CA  GLY A  88 	   10.544
+ CA  GLY A 258 	 CA  GLN A  89 	    1.198
+ CA  LEU A 259 	 CA  ILE A  90 	    0.915
+ CA  ALA A 263 	 CA  LEU A  91 	    5.422
+ CA  LYS A 347 	 CA  PHE A  92 	    9.948
+ CA  ASN A 350 	 CA  THR A  93 	    1.479
+ CA  THR A 355 	 CA  PHE A  94 	    3.561
+ CA  HIS A 335 	 CA  LEU A  95 	    9.158
+ CA  VAL A 353 	 CA  HIS A  96 	    2.586
+ CA  ARG A  48 	 CA  LEU A  97 	    7.609
+ CA  SER A  50 	 CA  ALA A  98 	    5.798
+ CA  LEU A  51 	 CA  ALA A  99 	    6.856
+ CA  PRO A  49 	 CA  SER A 100 	    7.554
+ CA  GLY A  55 	 CA  ARG A 101 	    9.675
+ CA  ASP A  56 	 CA  ALA A 102 	    9.800
+ CA  ALA A 250 	 CA  THR A 104 	    5.049
+ CA  PRO A 251 	 CA  ASP A 105 	    2.977
+ CA  ASP A 252 	 CA  LEU A 108 	    2.192
+ CA  LEU A 530 	 CA  SER A 110 	    8.004
+ CA  ASP A 532 	 CA  GLY A 111 	    5.800
+ CA  PRO A 256 	 CA  THR A 112 	    1.886
+ CA  TYR A 264 	 CA  ILE A 115 	    3.771
+ CA  SER A 349 	 CA  ALA A 116 	    3.832
+ CA  TYR A 348 	 CA  TYR A 117 	    2.054
+ CA  GLN A  81 	 CA  GLU A 118 	    8.566
+ CA  ALA A 346 	 CA  THR A 119 	    1.837
+ CA  TRP A 267 	 CA  VAL A 120 	    4.000
+ CA  ASP A 269 	 CA  GLN A 121 	    3.899
+ CA  MET A 268 	 CA  THR A 122 	    5.264
+ CA  GLN A 272 	 CA  ALA A 123 	    6.483
+ CA  ASN A 167 	 CA  ASP A 124 	   10.002
+ CA  ILE A 270 	 CA  GLY A 125 	    6.924
+ CA  ILE A 230 	 CA  ALA A 126 	    9.684
+ CA  ASP A  46 	 CA  LEU A 127 	    9.440
+ CA  LYS A 479 	 CA  PRO A 128 	    3.431
+ CA  ALA A  82 	 CA  LEU A 129 	    4.824
+ CA  VAL A  83 	 CA  LEU A 130 	    0.644
+ CA  ALA A  85 	 CA  ALA A 131 	    3.283
+ CA  PRO A  86 	 CA  PRO A 132 	    0.992
+ CA  SER A  87 	 CA  MET A 133 	    1.102
+ CA  ARG A  88 	 CA  SER A 134 	    2.778
+ CA  VAL A  89 	 CA  GLU A 135 	    2.772
+ CA  SER A  90 	 CA  VAL A 136 	    2.144
+ CA  PHE A  91 	 CA  ALA A 137 	    3.342
+ CA  LEU A  92 	 CA  GLY A 138 	    4.150
+ CA  THR A  93 	 CA  ARG A 139 	    4.344
+ CA  GLY A  94 	 CA  LEU A 140 	    4.907
+ CA  ARG A  95 	 CA  ALA A 141 	   11.898
+ CA  SER A 117 	 CA  ALA A 142 	    8.930
+ CA  THR A 118 	 CA AGLN A 143 	    4.817
+ CA  ILE A 119 	 CA  VAL A 144 	    4.949
+ CA  PRO A 120 	 CA  GLY A 145 	    6.096
+ CA  GLN A 121 	 CA  ALA A 146 	    7.180
+ CA  TYR A 122 	 CA  TYR A 147 	    7.103
+ CA  ALA A 414 	 CA  HIS A 148 	    1.840
+ CA  GLN A 417 	 CA  LEU A 149 	   10.215
+ CA  LEU A 416 	 CA  MET A 150 	    4.040
+ CA  ALA A  36 	 CA  ARG A 151 	    2.703
+ CA  THR A  34 	 CA  THR A 152 	    8.465
+ CA  GLY A 415 	 CA  GLN A 153 	    3.036
+ CA  GLY A 365 	 CA  GLY A 154 	    8.387
+ CA  LEU A  37 	 CA  GLY A 155 	    1.050
+ CA  PRO A 218 	 CA  ARG A 156 	    4.678
+ CA  ASP A  35 	 CA  GLY A 157 	    4.659
+ CA  SER A 217 	 CA  VAL A 158 	    5.226
+ CA  PHE A 123 	 CA  LEU A 159 	    5.441
+ CA  LYS A 124 	 CA  MET A 160 	    1.656
+ CA  GLU A 125 	 CA  GLY A 161 	    3.386
+ CA  ASN A 126 	 CA  GLY A 162 	    5.916
+ CA  ALA A 216 	 CA  VAL A 166 	    9.797
+ CA  SER A 215 	 CA  GLU A 167 	    8.511
+ CA  GLY A 127 	 CA  PRO A 168 	    4.636
+ CA  TYR A 128 	 CA  ALA A 169 	    2.406
+ CA  VAL A 129 	 CA  ASP A 170 	    2.345
+ CA  THR A 130 	 CA  VAL A 171 	    2.384
+ CA  MET A 131 	 CA  VAL A 172 	    2.750
+ CA  SER A 132 	 CA  VAL A 173 	    2.012
+ CA  VAL A 133 	 CA  ILE A 174 	    2.550
+ CA  GLY A 134 	 CA  GLY A 175 	    1.219
+ CA  LYS A 135 	 CA  ALA A 176 	    2.944
+ CA  VAL A 136 	 CA  GLY A 177 	    5.783
+ CA  PHE A 137 	 CA  THR A 178 	    4.254
+ CA  HIS A 138 	 CA  ALA A 179 	    4.519
+ CA  PRO A 139 	 CA  GLY A 180 	    7.696
+ CA  GLY A 140 	 CA  TYR A 181 	    8.025
+ CA  SER A 143 	 CA  ASN A 182 	    5.311
+ CA  ASP A 147 	 CA  ARG A 185 	    3.587
+ CA  ASP A 148 	 CA  ILE A 186 	    5.307
+ CA  SER A 149 	 CA  ALA A 187 	    8.182
+ CA  PRO A 150 	 CA  ASN A 188 	    4.644
+ CA  TYR A 151 	 CA  GLY A 189 	    0.983
+ CA  SER A 152 	 CA  MET A 190 	    4.764
+ CA  TRP A 153 	 CA  GLY A 191 	    6.309
+ CA  SER A 154 	 CA  ALA A 192 	    3.520
+ CA  PHE A 155 	 CA  THR A 193 	    4.188
+ CA  PRO A 157 	 CA  THR A 195 	    3.720
+ CA  TYR A 158 	 CA  VAL A 196 	    2.521
+ CA  HIS A 159 	 CA  LEU A 197 	    4.150
+ CA  PRO A 160 	 CA  ASP A 198 	    2.070
+ CA  SER A 162 	 CA  ILE A 199 	    3.876
+ CA  SER A 161 	 CA  ASN A 200 	    2.988
+ CA  GLU A 163 	 CA  ILE A 201 	    6.646
+ CA  LYS A 164 	 CA  ASP A 202 	    5.676
+ CA  TYR A 165 	 CA  LYS A 203 	   11.054
+ CA  PRO A 197 	 CA  LEU A 204 	   11.370
+ CA  HIS A 145 	 CA  PHE A 211 	    7.057
+ CA  ASN A 144 	 CA ACYS A 212 	   11.286
+ CA  THR A 146 	 CA  ILE A 215 	    6.989
+ CA  PRO A 156 	 CA  HIS A 216 	    2.621
+ CA  ASP A 198 	 CA  ARG A 218 	   12.692
+ CA  LYS A 199 	 CA  TYR A 219 	    9.986
+ CA  GLN A 200 	 CA  SER A 220 	    2.871
+ CA  SER A 201 	 CA  SER A 221 	    6.518
+ CA  THR A 202 	 CA  ALA A 222 	    5.570
+ CA  GLU A 203 	 CA  TYR A 223 	    4.521
+ CA  GLN A 204 	 CA  GLU A 224 	    3.260
+ CA  ALA A 205 	 CA  LEU A 225 	    3.187
+ CA  ILE A 206 	 CA  GLU A 226 	    1.930
+ CA  GLN A 207 	 CA  GLY A 227 	    1.051
+ CA  LEU A 208 	 CA  ALA A 228 	    1.196
+ CA  LEU A 209 	 CA  VAL A 229 	    2.512
+ CA  GLU A 210 	 CA  LYS A 230 	    2.381
+ CA  LYS A 211 	 CA  ARG A 231 	    2.844
+ CA  MET A 212 	 CA  ALA A 232 	    4.172
+ CA  PHE A 219 	 CA  ASP A 233 	    1.090
+ CA  PHE A 220 	 CA  LEU A 234 	    1.628
+ CA  LEU A 221 	 CA  VAL A 235 	    1.657
+ CA  ALA A 222 	 CA  ILE A 236 	    1.418
+ CA  VAL A 223 	 CA  GLY A 237 	    2.497
+ CA  GLY A 224 	 CA  ALA A 238 	    1.688
+ CA  TYR A 225 	 CA  VAL A 239 	    1.219
+ CA  ASP A  45 	 CA  LEU A 240 	    1.811
+ CA  LYS A 227 	 CA  VAL A 241 	    2.520
+ CA  HIS A 229 	 CA  PRO A 242 	    1.913
+ CA  PRO A 228 	 CA  GLY A 243 	    4.298
+ CA  PHE A 301 	 CA  ALA A 244 	    4.694
+ CA  VAL A 304 	 CA  LYS A 245 	    2.059
+ CA  LEU A 307 	 CA  ALA A 246 	    3.251
+ CA  ASP A 308 	 CA  PRO A 247 	    4.187
+ CA  GLN A 310 	 CA  LYS A 248 	    2.533
+ CA  VAL A 311 	 CA  LEU A 249 	    3.762
+ CA  ARG A 313 	 CA  VAL A 250 	    4.322
+ CA  LEU A 314 	 CA  SER A 251 	    3.123
+ CA  LEU A 315 	 CA  ASN A 252 	    3.053
+ CA  SER A 316 	 CA  SER A 253 	    2.493
+ CA  ALA A 317 	 CA  LEU A 254 	    0.679
+ CA  LEU A 318 	 CA  VAL A 255 	    0.704
+ CA  ASP A 319 	 CA  ALA A 256 	    1.973
+ CA  LEU A 321 	 CA  HIS A 257 	    0.620
+ CA  LYS A 213 	 CA  MET A 258 	    5.435
+ CA  LEU A 323 	 CA  LYS A 259 	    4.756
+ CA  ASN A 325 	 CA  PRO A 260 	    5.971
+ CA  SER A 326 	 CA  GLY A 261 	    2.546
+ CA  THR A 327 	 CA  ALA A 262 	    3.658
+ CA  ILE A 328 	 CA  VAL A 263 	    3.959
+ CA  ILE A 329 	 CA  LEU A 264 	    3.799
+ CA  ALA A 330 	 CA  VAL A 265 	    3.663
+ CA  PHE A 331 	 CA  ASP A 266 	    3.065
+ CA  THR A 332 	 CA  ILE A 267 	    3.768
+ CA  ASP A 334 	 CA  ALA A 268 	    6.354
+ CA  SER A 333 	 CA  ILE A 269 	    4.687
+ CA  VAL A 357 	 CA  ASP A 270 	    3.678
+ CA  LEU A  47 	 CA  GLN A 271 	    3.236
+ CA  SER A  61 	 CA  GLY A 272 	    6.879
+ CA  LEU A  41 	 CA  GLY A 273 	    9.376
+ CA  ILE A  42 	 CA  CYS A 274 	    5.443
+ CA  ILE A  43 	 CA  PHE A 275 	    8.794
+ CA  ASN A  63 	 CA  GLU A 276 	    4.156
+ CA  LEU A  67 	 CA  GLY A 277 	    2.951
+ CA  ALA A  68 	 CA  SER A 278 	    5.505
+ CA  CYS A  53 	 CA  ARG A 279 	    7.289
+ CA  LEU A 359 	 CA  PRO A 280 	    3.376
+ CA  ILE A 360 	 CA  THR A 281 	    2.987
+ CA  LEU A  72 	 CA  THR A 282 	    6.402
+ CA  LEU A  73 	 CA  TYR A 283 	    9.520
+ CA  LEU A 438 	 CA  ASP A 284 	    4.001
+ CA  PHE A  74 	 CA  HIS A 285 	    9.262
+ CA  SER A  71 	 CA  PRO A 286 	    8.116
+ CA  PHE A 361 	 CA  THR A 287 	    3.725
+ CA  THR A 367 	 CA  PHE A 288 	    4.146
+ CA  ALA A 368 	 CA  ALA A 289 	    5.898
+ CA  HIS A  70 	 CA  VAL A 290 	    7.322
+ CA  PRO A 371 	 CA  HIS A 291 	    5.566
+ CA  GLN A 322 	 CA  ASP A 292 	    6.094
+ CA  ASP A 320 	 CA  THR A 293 	   11.472
+ CA  LEU A 377 	 CA  LEU A 294 	   11.983
+ CA  PHE A 378 	 CA  PHE A 295 	   11.463
+ CA  GLN A 396 	 CA  CYS A 297 	   12.084
+ CA  SER A 397 	 CA  VAL A 298 	   10.625
+ CA  ASN A  76 	 CA  ALA A 299 	    7.809
+ CA  PHE A  78 	 CA  ASN A 300 	    3.735
+ CA  LEU A 403 	 CA  MET A 301 	    1.313
+ CA  VAL A 404 	 CA  PRO A 302 	    3.161
+ CA  SER A 405 	 CA  ALA A 303 	    5.920
+ CA  LEU A 406 	 CA  SER A 304 	    6.198
+ CA  ARG A  96 	 CA  VAL A 305 	    4.495
+ CA  PRO A  97 	 CA  PRO A 306 	    7.032
+ CA  PRO A 425 	 CA  LYS A 307 	    8.347
+ CA  GLU A 434 	 CA  THR A 308 	    7.230
+ CA  GLY A 435 	 CA  SER A 309 	    9.847
+ CA  TYR A 463 	 CA  ALA A 312 	   11.228
+ CA  SER A 464 	 CA  LEU A 313 	    6.608
+ CA  GLN A 465 	 CA  THR A 314 	    4.274
+ CA  TYR A 466 	 CA  ALA A 316 	    5.241
+ CA  PRO A 467 	 CA  THR A 317 	    1.382
+ CA  ARG A 468 	 CA  MET A 318 	    3.198
+ CA  PRO A 469 	 CA  PRO A 319 	    1.637
+ CA  SER A 470 	 CA  LEU A 322 	    3.185
+ CA  ASP A 471 	 CA  GLU A 323 	    2.213
+ CA  ILE A 472 	 CA  LEU A 324 	    3.521
+ CA  VAL A 262 	 CA  GLY A 328 	    6.284
+ CA  PRO A 261 	 CA  TRP A 329 	    2.815
+ CA  PRO A 284 	 CA  ARG A 330 	    6.312
+ CA  PRO A 473 	 CA  ALA A 332 	    2.575
+ CA  GLN A 474 	 CA  ASN A 336 	    2.018
+ CA  TRP A 475 	 CA  PRO A 337 	    4.354
+ CA  ASN A 476 	 CA  ALA A 338 	    5.359
+ CA  SER A 477 	 CA  LEU A 339 	    4.412
+ CA  ASP A 478 	 CA  LYS A 341 	    7.635
+ CA  ASN A 265 	 CA  GLY A 342 	    3.871
+ CA  PRO A 266 	 CA  LEU A 343 	    5.216
+ CA  GLU A 344 	 CA  SER A 344 	    1.766
+ CA  HIS A 342 	 CA  THR A 345 	    2.000
+ CA  VAL A 255 	 CA  HIS A 346 	    1.159
+ CA  GLU A 254 	 CA  ALA A 349 	    2.465
+ CA  PRO A 253 	 CA  LEU A 350 	    1.658
+ CA  GLY A 343 	 CA  LEU A 351 	    3.593
+ CA  GLY A 340 	 CA  SER A 352 	    3.213
+ CA  TRP A 345 	 CA  GLU A 353 	    7.854
+ CA  ALA A 338 	 CA AARG A 354 	    8.069
+ CA  LEU A 339 	 CA  VAL A 355 	    2.534
+ CA  GLU A 341 	 CA  ALA A 356 	    8.571
+ CA  LEU A  58 	 CA  LEU A 359 	    7.592
+ CA  ILE A 247 	 CA  GLY A 360 	    2.098
+ CA  THR A 248 	 CA  VAL A 361 	    1.923
+ CA  LEU A 249 	 CA  PRO A 362 	    3.817
+ CA  VAL A 290 	 CA  PHE A 363 	    2.768
+ CA  PRO A 289 	 CA  THR A 364 	    4.229
+ CA  ILE A 288 	 CA  GLU A 365 	    2.132
+ CA  PRO A 287 	 CA  PRO A 366 	    1.927
+ CA  SER A 282 	 CA  ALA A 367 	    2.730
+ CA  GLY A 286 	 CA  VAL A 369 	    4.893
+ CA  TYR A 285 	 CA  LEU A 370 	    4.313
+ CA  VAL A 283 	 CA  ALA A 371 	    6.722
+###############	###############	#########
+#Total CPU time is  1.38 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0    -274.6641035974   0.3727948382   0.1354380560   0.9179763295
+1     -22.5868410418  -0.2000531735   0.9777565068  -0.0630154049
+2      31.0079759237  -0.9060920132  -0.1601522603   0.3915973917
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

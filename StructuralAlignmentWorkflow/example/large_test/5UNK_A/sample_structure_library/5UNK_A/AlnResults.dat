@@ -1,0 +1,102 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UNK_A.pdb:A (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UNK_A.pdb:A
+Length of Structure_1: 62 residues
+Length of Structure_2: 62 residues
+
+Aligned length= 62, RMSD=   0.00, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 1.00000 (normalized by length of Structure_1: L=62, d0=2.67)
+TM-score= 1.00000 (normalized by length of Structure_2: L=62, d0=2.67)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+ASMVLSPRDERTLVRKVQINPRTTAKDLVKMLEETGTKVSISTVKRVLYRHNLKGRSARKLE
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ASMVLSPRDERTLVRKVQINPRTTAKDLVKMLEETGTKVSISTVKRVLYRHNLKGRSARKLE
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  ALA A   1 	 CA  ALA A   1 	    0.000
+ CA  SER A   2 	 CA  SER A   2 	    0.000
+ CA  MET A   3 	 CA  MET A   3 	    0.000
+ CA  VAL A   4 	 CA  VAL A   4 	    0.000
+ CA  LEU A   5 	 CA  LEU A   5 	    0.000
+ CA  SER A   6 	 CA  SER A   6 	    0.000
+ CA  PRO A   7 	 CA  PRO A   7 	    0.000
+ CA  ARG A   8 	 CA  ARG A   8 	    0.000
+ CA  ASP A   9 	 CA  ASP A   9 	    0.000
+ CA  GLU A  10 	 CA  GLU A  10 	    0.000
+ CA  ARG A  11 	 CA  ARG A  11 	    0.000
+ CA  THR A  12 	 CA  THR A  12 	    0.000
+ CA  LEU A  13 	 CA  LEU A  13 	    0.000
+ CA  VAL A  14 	 CA  VAL A  14 	    0.000
+ CA  ARG A  15 	 CA  ARG A  15 	    0.000
+ CA  LYS A  16 	 CA  LYS A  16 	    0.000
+ CA  VAL A  17 	 CA  VAL A  17 	    0.000
+ CA  GLN A  18 	 CA  GLN A  18 	    0.000
+ CA  ILE A  19 	 CA  ILE A  19 	    0.000
+ CA  ASN A  20 	 CA  ASN A  20 	    0.000
+ CA  PRO A  21 	 CA  PRO A  21 	    0.000
+ CA  ARG A  22 	 CA  ARG A  22 	    0.000
+ CA  THR A  23 	 CA  THR A  23 	    0.000
+ CA  THR A  24 	 CA  THR A  24 	    0.000
+ CA  ALA A  25 	 CA  ALA A  25 	    0.000
+ CA  LYS A  26 	 CA  LYS A  26 	    0.000
+ CA  ASP A  27 	 CA  ASP A  27 	    0.000
+ CA  LEU A  28 	 CA  LEU A  28 	    0.000
+ CA  VAL A  29 	 CA  VAL A  29 	    0.000
+ CA  LYS A  30 	 CA  LYS A  30 	    0.000
+ CA  MET A  31 	 CA  MET A  31 	    0.000
+ CA  LEU A  32 	 CA  LEU A  32 	    0.000
+ CA  GLU A  33 	 CA  GLU A  33 	    0.000
+ CA  GLU A  34 	 CA  GLU A  34 	    0.000
+ CA  THR A  35 	 CA  THR A  35 	    0.000
+ CA  GLY A  36 	 CA  GLY A  36 	    0.000
+ CA  THR A  37 	 CA  THR A  37 	    0.000
+ CA  LYS A  38 	 CA  LYS A  38 	    0.000
+ CA  VAL A  39 	 CA  VAL A  39 	    0.000
+ CA  SER A  40 	 CA  SER A  40 	    0.000
+ CA  ILE A  41 	 CA  ILE A  41 	    0.000
+ CA  SER A  42 	 CA  SER A  42 	    0.000
+ CA  THR A  43 	 CA  THR A  43 	    0.000
+ CA  VAL A  44 	 CA  VAL A  44 	    0.000
+ CA  LYS A  45 	 CA  LYS A  45 	    0.000
+ CA  ARG A  46 	 CA  ARG A  46 	    0.000
+ CA  VAL A  47 	 CA  VAL A  47 	    0.000
+ CA  LEU A  48 	 CA  LEU A  48 	    0.000
+ CA  TYR A  49 	 CA  TYR A  49 	    0.000
+ CA  ARG A  50 	 CA  ARG A  50 	    0.000
+ CA  HIS A  51 	 CA  HIS A  51 	    0.000
+ CA  ASN A  52 	 CA  ASN A  52 	    0.000
+ CA  LEU A  53 	 CA  LEU A  53 	    0.000
+ CA  LYS A  54 	 CA  LYS A  54 	    0.000
+ CA  GLY A  55 	 CA  GLY A  55 	    0.000
+ CA  ARG A  56 	 CA  ARG A  56 	    0.000
+ CA  SER A  57 	 CA  SER A  57 	    0.000
+ CA  ALA A  58 	 CA  ALA A  58 	    0.000
+ CA  ARG A  59 	 CA  ARG A  59 	    0.000
+ CA  LYS A  60 	 CA  LYS A  60 	    0.000
+ CA  LEU A  61 	 CA  LEU A  61 	    0.000
+ CA  GLU A  62 	 CA  GLU A  62 	    0.000
+###############	###############	#########
+#Total CPU time is  0.01 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0       0.0000000000   1.0000000000  -0.0000000000  -0.0000000000
+1      -0.0000000000   0.0000000000   1.0000000000   0.0000000000
+2      -0.0000000000   0.0000000000   0.0000000000   1.0000000000
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

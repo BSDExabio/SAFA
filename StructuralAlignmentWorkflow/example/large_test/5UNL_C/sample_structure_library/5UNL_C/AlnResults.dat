@@ -1,0 +1,304 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UNL_C.pdb:C (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UNL_C.pdb:C
+Length of Structure_1: 264 residues
+Length of Structure_2: 264 residues
+
+Aligned length= 264, RMSD=   0.00, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 1.00000 (normalized by length of Structure_1: L=264, d0=6.00)
+TM-score= 1.00000 (normalized by length of Structure_2: L=264, d0=6.00)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+TASDLLKPYDGLRVLVTGGASGIGLAIADAFAECGARVHVCDASQAAIAALADRPSRAAIGATLADVSDRAAVERVFADVAATLGGLDVLVNNAGIAGPTGGIDEIDPAQWEQTVAINLNAQFEFARRAVPLLRESKHGGAIIALSSVAGRLGYAYRTPYAATKWAVVGLVKSLAIELGPLGIRVNAIQPGIVRGPRIRRVIEARAQQLGIGYDEMEQRYLERISLRRMTEPAEIAATALFLCSPGGHGITGQAISVCGNVEVL
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+TASDLLKPYDGLRVLVTGGASGIGLAIADAFAECGARVHVCDASQAAIAALADRPSRAAIGATLADVSDRAAVERVFADVAATLGGLDVLVNNAGIAGPTGGIDEIDPAQWEQTVAINLNAQFEFARRAVPLLRESKHGGAIIALSSVAGRLGYAYRTPYAATKWAVVGLVKSLAIELGPLGIRVNAIQPGIVRGPRIRRVIEARAQQLGIGYDEMEQRYLERISLRRMTEPAEIAATALFLCSPGGHGITGQAISVCGNVEVL
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  THR C   2 	 CA  THR C   2 	    0.000
+ CA  ALA C   3 	 CA  ALA C   3 	    0.000
+ CA  SER C   4 	 CA  SER C   4 	    0.000
+ CA  ASP C   5 	 CA  ASP C   5 	    0.000
+ CA  LEU C   6 	 CA  LEU C   6 	    0.000
+ CA  LEU C   7 	 CA  LEU C   7 	    0.000
+ CA  LYS C   8 	 CA  LYS C   8 	    0.000
+ CA  PRO C   9 	 CA  PRO C   9 	    0.000
+ CA  TYR C  10 	 CA  TYR C  10 	    0.000
+ CA  ASP C  11 	 CA  ASP C  11 	    0.000
+ CA  GLY C  12 	 CA  GLY C  12 	    0.000
+ CA  LEU C  13 	 CA  LEU C  13 	    0.000
+ CA  ARG C  14 	 CA  ARG C  14 	    0.000
+ CA  VAL C  15 	 CA  VAL C  15 	    0.000
+ CA  LEU C  16 	 CA  LEU C  16 	    0.000
+ CA  VAL C  17 	 CA  VAL C  17 	    0.000
+ CA  THR C  18 	 CA  THR C  18 	    0.000
+ CA  GLY C  19 	 CA  GLY C  19 	    0.000
+ CA  GLY C  20 	 CA  GLY C  20 	    0.000
+ CA  ALA C  21 	 CA  ALA C  21 	    0.000
+ CA  SER C  22 	 CA  SER C  22 	    0.000
+ CA  GLY C  23 	 CA  GLY C  23 	    0.000
+ CA  ILE C  24 	 CA  ILE C  24 	    0.000
+ CA  GLY C  25 	 CA  GLY C  25 	    0.000
+ CA  LEU C  26 	 CA  LEU C  26 	    0.000
+ CA  ALA C  27 	 CA  ALA C  27 	    0.000
+ CA  ILE C  28 	 CA  ILE C  28 	    0.000
+ CA  ALA C  29 	 CA  ALA C  29 	    0.000
+ CA  ASP C  30 	 CA  ASP C  30 	    0.000
+ CA  ALA C  31 	 CA  ALA C  31 	    0.000
+ CA  PHE C  32 	 CA  PHE C  32 	    0.000
+ CA  ALA C  33 	 CA  ALA C  33 	    0.000
+ CA  GLU C  34 	 CA  GLU C  34 	    0.000
+ CA  CYS C  35 	 CA  CYS C  35 	    0.000
+ CA  GLY C  36 	 CA  GLY C  36 	    0.000
+ CA  ALA C  37 	 CA  ALA C  37 	    0.000
+ CA AARG C  38 	 CA AARG C  38 	    0.000
+ CA  VAL C  39 	 CA  VAL C  39 	    0.000
+ CA  HIS C  40 	 CA  HIS C  40 	    0.000
+ CA  VAL C  41 	 CA  VAL C  41 	    0.000
+ CA  CYS C  42 	 CA  CYS C  42 	    0.000
+ CA  ASP C  43 	 CA  ASP C  43 	    0.000
+ CA  ALA C  44 	 CA  ALA C  44 	    0.000
+ CA  SER C  45 	 CA  SER C  45 	    0.000
+ CA  GLN C  46 	 CA  GLN C  46 	    0.000
+ CA  ALA C  47 	 CA  ALA C  47 	    0.000
+ CA  ALA C  48 	 CA  ALA C  48 	    0.000
+ CA  ILE C  49 	 CA  ILE C  49 	    0.000
+ CA  ALA C  50 	 CA  ALA C  50 	    0.000
+ CA  ALA C  51 	 CA  ALA C  51 	    0.000
+ CA  LEU C  52 	 CA  LEU C  52 	    0.000
+ CA  ALA C  53 	 CA  ALA C  53 	    0.000
+ CA  ASP C  54 	 CA  ASP C  54 	    0.000
+ CA  ARG C  55 	 CA  ARG C  55 	    0.000
+ CA  PRO C  56 	 CA  PRO C  56 	    0.000
+ CA  SER C  57 	 CA  SER C  57 	    0.000
+ CA  ARG C  58 	 CA  ARG C  58 	    0.000
+ CA  ALA C  59 	 CA  ALA C  59 	    0.000
+ CA  ALA C  60 	 CA  ALA C  60 	    0.000
+ CA  ILE C  61 	 CA  ILE C  61 	    0.000
+ CA  GLY C  62 	 CA  GLY C  62 	    0.000
+ CA  ALA C  63 	 CA  ALA C  63 	    0.000
+ CA  THR C  64 	 CA  THR C  64 	    0.000
+ CA  LEU C  65 	 CA  LEU C  65 	    0.000
+ CA  ALA C  66 	 CA  ALA C  66 	    0.000
+ CA  ASP C  67 	 CA  ASP C  67 	    0.000
+ CA  VAL C  68 	 CA  VAL C  68 	    0.000
+ CA  SER C  69 	 CA  SER C  69 	    0.000
+ CA  ASP C  70 	 CA  ASP C  70 	    0.000
+ CA  ARG C  71 	 CA  ARG C  71 	    0.000
+ CA  ALA C  72 	 CA  ALA C  72 	    0.000
+ CA  ALA C  73 	 CA  ALA C  73 	    0.000
+ CA  VAL C  74 	 CA  VAL C  74 	    0.000
+ CA  GLU C  75 	 CA  GLU C  75 	    0.000
+ CA  ARG C  76 	 CA  ARG C  76 	    0.000
+ CA  VAL C  77 	 CA  VAL C  77 	    0.000
+ CA  PHE C  78 	 CA  PHE C  78 	    0.000
+ CA  ALA C  79 	 CA  ALA C  79 	    0.000
+ CA  ASP C  80 	 CA  ASP C  80 	    0.000
+ CA  VAL C  81 	 CA  VAL C  81 	    0.000
+ CA  ALA C  82 	 CA  ALA C  82 	    0.000
+ CA  ALA C  83 	 CA  ALA C  83 	    0.000
+ CA  THR C  84 	 CA  THR C  84 	    0.000
+ CA  LEU C  85 	 CA  LEU C  85 	    0.000
+ CA  GLY C  86 	 CA  GLY C  86 	    0.000
+ CA  GLY C  87 	 CA  GLY C  87 	    0.000
+ CA  LEU C  88 	 CA  LEU C  88 	    0.000
+ CA  ASP C  89 	 CA  ASP C  89 	    0.000
+ CA  VAL C  90 	 CA  VAL C  90 	    0.000
+ CA  LEU C  91 	 CA  LEU C  91 	    0.000
+ CA  VAL C  92 	 CA  VAL C  92 	    0.000
+ CA  ASN C  93 	 CA  ASN C  93 	    0.000
+ CA  ASN C  94 	 CA  ASN C  94 	    0.000
+ CA  ALA C  95 	 CA  ALA C  95 	    0.000
+ CA  GLY C  96 	 CA  GLY C  96 	    0.000
+ CA  ILE C  97 	 CA  ILE C  97 	    0.000
+ CA  ALA C  98 	 CA  ALA C  98 	    0.000
+ CA  GLY C  99 	 CA  GLY C  99 	    0.000
+ CA  PRO C 100 	 CA  PRO C 100 	    0.000
+ CA  THR C 101 	 CA  THR C 101 	    0.000
+ CA  GLY C 102 	 CA  GLY C 102 	    0.000
+ CA  GLY C 103 	 CA  GLY C 103 	    0.000
+ CA  ILE C 104 	 CA  ILE C 104 	    0.000
+ CA  ASP C 105 	 CA  ASP C 105 	    0.000
+ CA  GLU C 106 	 CA  GLU C 106 	    0.000
+ CA  ILE C 107 	 CA  ILE C 107 	    0.000
+ CA  ASP C 108 	 CA  ASP C 108 	    0.000
+ CA  PRO C 109 	 CA  PRO C 109 	    0.000
+ CA  ALA C 110 	 CA  ALA C 110 	    0.000
+ CA  GLN C 111 	 CA  GLN C 111 	    0.000
+ CA  TRP C 112 	 CA  TRP C 112 	    0.000
+ CA  GLU C 113 	 CA  GLU C 113 	    0.000
+ CA AGLN C 114 	 CA AGLN C 114 	    0.000
+ CA  THR C 115 	 CA  THR C 115 	    0.000
+ CA  VAL C 116 	 CA  VAL C 116 	    0.000
+ CA  ALA C 117 	 CA  ALA C 117 	    0.000
+ CA AILE C 118 	 CA AILE C 118 	    0.000
+ CA  ASN C 119 	 CA  ASN C 119 	    0.000
+ CA  LEU C 120 	 CA  LEU C 120 	    0.000
+ CA  ASN C 121 	 CA  ASN C 121 	    0.000
+ CA  ALA C 122 	 CA  ALA C 122 	    0.000
+ CA  GLN C 123 	 CA  GLN C 123 	    0.000
+ CA  PHE C 124 	 CA  PHE C 124 	    0.000
+ CA  GLU C 125 	 CA  GLU C 125 	    0.000
+ CA  PHE C 126 	 CA  PHE C 126 	    0.000
+ CA  ALA C 127 	 CA  ALA C 127 	    0.000
+ CA AARG C 128 	 CA AARG C 128 	    0.000
+ CA AARG C 129 	 CA AARG C 129 	    0.000
+ CA  ALA C 130 	 CA  ALA C 130 	    0.000
+ CA  VAL C 131 	 CA  VAL C 131 	    0.000
+ CA  PRO C 132 	 CA  PRO C 132 	    0.000
+ CA  LEU C 133 	 CA  LEU C 133 	    0.000
+ CA  LEU C 134 	 CA  LEU C 134 	    0.000
+ CA  ARG C 135 	 CA  ARG C 135 	    0.000
+ CA  GLU C 136 	 CA  GLU C 136 	    0.000
+ CA  SER C 137 	 CA  SER C 137 	    0.000
+ CA  LYS C 138 	 CA  LYS C 138 	    0.000
+ CA  HIS C 139 	 CA  HIS C 139 	    0.000
+ CA  GLY C 140 	 CA  GLY C 140 	    0.000
+ CA  GLY C 141 	 CA  GLY C 141 	    0.000
+ CA  ALA C 142 	 CA  ALA C 142 	    0.000
+ CA  ILE C 143 	 CA  ILE C 143 	    0.000
+ CA  ILE C 144 	 CA  ILE C 144 	    0.000
+ CA  ALA C 145 	 CA  ALA C 145 	    0.000
+ CA  LEU C 146 	 CA  LEU C 146 	    0.000
+ CA  SER C 147 	 CA  SER C 147 	    0.000
+ CA  SER C 148 	 CA  SER C 148 	    0.000
+ CA  VAL C 149 	 CA  VAL C 149 	    0.000
+ CA  ALA C 150 	 CA  ALA C 150 	    0.000
+ CA  GLY C 151 	 CA  GLY C 151 	    0.000
+ CA  ARG C 152 	 CA  ARG C 152 	    0.000
+ CA  LEU C 153 	 CA  LEU C 153 	    0.000
+ CA  GLY C 154 	 CA  GLY C 154 	    0.000
+ CA  TYR C 155 	 CA  TYR C 155 	    0.000
+ CA  ALA C 156 	 CA  ALA C 156 	    0.000
+ CA  TYR C 157 	 CA  TYR C 157 	    0.000
+ CA  ARG C 158 	 CA  ARG C 158 	    0.000
+ CA  THR C 159 	 CA  THR C 159 	    0.000
+ CA  PRO C 160 	 CA  PRO C 160 	    0.000
+ CA  TYR C 161 	 CA  TYR C 161 	    0.000
+ CA  ALA C 162 	 CA  ALA C 162 	    0.000
+ CA  ALA C 163 	 CA  ALA C 163 	    0.000
+ CA  THR C 164 	 CA  THR C 164 	    0.000
+ CA  LYS C 165 	 CA  LYS C 165 	    0.000
+ CA  TRP C 166 	 CA  TRP C 166 	    0.000
+ CA  ALA C 167 	 CA  ALA C 167 	    0.000
+ CA  VAL C 168 	 CA  VAL C 168 	    0.000
+ CA  VAL C 169 	 CA  VAL C 169 	    0.000
+ CA  GLY C 170 	 CA  GLY C 170 	    0.000
+ CA  LEU C 171 	 CA  LEU C 171 	    0.000
+ CA  VAL C 172 	 CA  VAL C 172 	    0.000
+ CA  LYS C 173 	 CA  LYS C 173 	    0.000
+ CA  SER C 174 	 CA  SER C 174 	    0.000
+ CA  LEU C 175 	 CA  LEU C 175 	    0.000
+ CA  ALA C 176 	 CA  ALA C 176 	    0.000
+ CA  ILE C 177 	 CA  ILE C 177 	    0.000
+ CA  GLU C 178 	 CA  GLU C 178 	    0.000
+ CA  LEU C 179 	 CA  LEU C 179 	    0.000
+ CA  GLY C 180 	 CA  GLY C 180 	    0.000
+ CA  PRO C 181 	 CA  PRO C 181 	    0.000
+ CA  LEU C 182 	 CA  LEU C 182 	    0.000
+ CA  GLY C 183 	 CA  GLY C 183 	    0.000
+ CA  ILE C 184 	 CA  ILE C 184 	    0.000
+ CA  ARG C 185 	 CA  ARG C 185 	    0.000
+ CA  VAL C 186 	 CA  VAL C 186 	    0.000
+ CA  ASN C 187 	 CA  ASN C 187 	    0.000
+ CA  ALA C 188 	 CA  ALA C 188 	    0.000
+ CA  ILE C 189 	 CA  ILE C 189 	    0.000
+ CA  GLN C 190 	 CA  GLN C 190 	    0.000
+ CA  PRO C 191 	 CA  PRO C 191 	    0.000
+ CA  GLY C 192 	 CA  GLY C 192 	    0.000
+ CA  ILE C 193 	 CA  ILE C 193 	    0.000
+ CA  VAL C 194 	 CA  VAL C 194 	    0.000
+ CA  ARG C 195 	 CA  ARG C 195 	    0.000
+ CA  GLY C 196 	 CA  GLY C 196 	    0.000
+ CA  PRO C 197 	 CA  PRO C 197 	    0.000
+ CA  ARG C 198 	 CA  ARG C 198 	    0.000
+ CA  ILE C 199 	 CA  ILE C 199 	    0.000
+ CA  ARG C 200 	 CA  ARG C 200 	    0.000
+ CA  ARG C 201 	 CA  ARG C 201 	    0.000
+ CA  VAL C 202 	 CA  VAL C 202 	    0.000
+ CA  ILE C 203 	 CA  ILE C 203 	    0.000
+ CA  GLU C 204 	 CA  GLU C 204 	    0.000
+ CA  ALA C 205 	 CA  ALA C 205 	    0.000
+ CA  ARG C 206 	 CA  ARG C 206 	    0.000
+ CA  ALA C 207 	 CA  ALA C 207 	    0.000
+ CA  GLN C 208 	 CA  GLN C 208 	    0.000
+ CA  GLN C 209 	 CA  GLN C 209 	    0.000
+ CA  LEU C 210 	 CA  LEU C 210 	    0.000
+ CA  GLY C 211 	 CA  GLY C 211 	    0.000
+ CA  ILE C 212 	 CA  ILE C 212 	    0.000
+ CA  GLY C 213 	 CA  GLY C 213 	    0.000
+ CA  TYR C 214 	 CA  TYR C 214 	    0.000
+ CA  ASP C 215 	 CA  ASP C 215 	    0.000
+ CA  GLU C 216 	 CA  GLU C 216 	    0.000
+ CA  MET C 217 	 CA  MET C 217 	    0.000
+ CA  GLU C 218 	 CA  GLU C 218 	    0.000
+ CA  GLN C 219 	 CA  GLN C 219 	    0.000
+ CA  ARG C 220 	 CA  ARG C 220 	    0.000
+ CA  TYR C 221 	 CA  TYR C 221 	    0.000
+ CA  LEU C 222 	 CA  LEU C 222 	    0.000
+ CA  GLU C 223 	 CA  GLU C 223 	    0.000
+ CA  ARG C 224 	 CA  ARG C 224 	    0.000
+ CA  ILE C 225 	 CA  ILE C 225 	    0.000
+ CA  SER C 226 	 CA  SER C 226 	    0.000
+ CA  LEU C 227 	 CA  LEU C 227 	    0.000
+ CA  ARG C 228 	 CA  ARG C 228 	    0.000
+ CA  ARG C 229 	 CA  ARG C 229 	    0.000
+ CA  MET C 230 	 CA  MET C 230 	    0.000
+ CA  THR C 231 	 CA  THR C 231 	    0.000
+ CA  GLU C 232 	 CA  GLU C 232 	    0.000
+ CA  PRO C 233 	 CA  PRO C 233 	    0.000
+ CA  ALA C 234 	 CA  ALA C 234 	    0.000
+ CA  GLU C 235 	 CA  GLU C 235 	    0.000
+ CA  ILE C 236 	 CA  ILE C 236 	    0.000
+ CA  ALA C 237 	 CA  ALA C 237 	    0.000
+ CA  ALA C 238 	 CA  ALA C 238 	    0.000
+ CA  THR C 239 	 CA  THR C 239 	    0.000
+ CA  ALA C 240 	 CA  ALA C 240 	    0.000
+ CA  LEU C 241 	 CA  LEU C 241 	    0.000
+ CA  PHE C 242 	 CA  PHE C 242 	    0.000
+ CA  LEU C 243 	 CA  LEU C 243 	    0.000
+ CA  CYS C 244 	 CA  CYS C 244 	    0.000
+ CA  SER C 245 	 CA  SER C 245 	    0.000
+ CA  PRO C 246 	 CA  PRO C 246 	    0.000
+ CA  GLY C 247 	 CA  GLY C 247 	    0.000
+ CA  GLY C 248 	 CA  GLY C 248 	    0.000
+ CA  HIS C 249 	 CA  HIS C 249 	    0.000
+ CA  GLY C 250 	 CA  GLY C 250 	    0.000
+ CA  ILE C 251 	 CA  ILE C 251 	    0.000
+ CA  THR C 252 	 CA  THR C 252 	    0.000
+ CA  GLY C 253 	 CA  GLY C 253 	    0.000
+ CA  GLN C 254 	 CA  GLN C 254 	    0.000
+ CA  ALA C 255 	 CA  ALA C 255 	    0.000
+ CA  ILE C 256 	 CA  ILE C 256 	    0.000
+ CA  SER C 257 	 CA  SER C 257 	    0.000
+ CA  VAL C 258 	 CA  VAL C 258 	    0.000
+ CA  CYS C 259 	 CA  CYS C 259 	    0.000
+ CA  GLY C 260 	 CA  GLY C 260 	    0.000
+ CA  ASN C 261 	 CA  ASN C 261 	    0.000
+ CA  VAL C 262 	 CA  VAL C 262 	    0.000
+ CA  GLU C 263 	 CA  GLU C 263 	    0.000
+ CA  VAL C 264 	 CA  VAL C 264 	    0.000
+ CA  LEU C 265 	 CA  LEU C 265 	    0.000
+###############	###############	#########
+#Total CPU time is  0.21 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0       0.0000000000   1.0000000000   0.0000000000  -0.0000000000
+1      -0.0000000000  -0.0000000000   1.0000000000   0.0000000000
+2      -0.0000000000   0.0000000000  -0.0000000000   1.0000000000
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

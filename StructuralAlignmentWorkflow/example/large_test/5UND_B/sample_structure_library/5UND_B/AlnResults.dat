@@ -1,0 +1,185 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UND_B.pdb:B (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UND_B.pdb:B
+Length of Structure_1: 145 residues
+Length of Structure_2: 145 residues
+
+Aligned length= 145, RMSD=   0.00, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 1.00000 (normalized by length of Structure_1: L=145, d0=4.48)
+TM-score= 1.00000 (normalized by length of Structure_2: L=145, d0=4.48)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+EKPFKCSMCDYASVEVSKLKRHIRSHTGERPFQCSLCSYASRDTYKLKRHMRTHSGEKPYECYICHARFTQSGTMKMHILQKHTENVAKFHCPHCDTVIARKSDLGVHLRKQHSYIEQGKKCRYCDAVFHERYALIQHQKSHKNE
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+EKPFKCSMCDYASVEVSKLKRHIRSHTGERPFQCSLCSYASRDTYKLKRHMRTHSGEKPYECYICHARFTQSGTMKMHILQKHTENVAKFHCPHCDTVIARKSDLGVHLRKQHSYIEQGKKCRYCDAVFHERYALIQHQKSHKNE
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  GLU B 348 	 CA  GLU B 348 	    0.000
+ CA  LYS B 349 	 CA  LYS B 349 	    0.000
+ CA  PRO B 350 	 CA  PRO B 350 	    0.000
+ CA  PHE B 351 	 CA  PHE B 351 	    0.000
+ CA  LYS B 352 	 CA  LYS B 352 	    0.000
+ CA  CYS B 353 	 CA  CYS B 353 	    0.000
+ CA  SER B 354 	 CA  SER B 354 	    0.000
+ CA  MET B 355 	 CA  MET B 355 	    0.000
+ CA  CYS B 356 	 CA  CYS B 356 	    0.000
+ CA  ASP B 357 	 CA  ASP B 357 	    0.000
+ CA  TYR B 358 	 CA  TYR B 358 	    0.000
+ CA  ALA B 359 	 CA  ALA B 359 	    0.000
+ CA  SER B 360 	 CA  SER B 360 	    0.000
+ CA  VAL B 361 	 CA  VAL B 361 	    0.000
+ CA  GLU B 362 	 CA  GLU B 362 	    0.000
+ CA  VAL B 363 	 CA  VAL B 363 	    0.000
+ CA  SER B 364 	 CA  SER B 364 	    0.000
+ CA  LYS B 365 	 CA  LYS B 365 	    0.000
+ CA  LEU B 366 	 CA  LEU B 366 	    0.000
+ CA  LYS B 367 	 CA  LYS B 367 	    0.000
+ CA  ARG B 368 	 CA  ARG B 368 	    0.000
+ CA  HIS B 369 	 CA  HIS B 369 	    0.000
+ CA  ILE B 370 	 CA  ILE B 370 	    0.000
+ CA  ARG B 371 	 CA  ARG B 371 	    0.000
+ CA  SER B 372 	 CA  SER B 372 	    0.000
+ CA  HIS B 373 	 CA  HIS B 373 	    0.000
+ CA  THR B 374 	 CA  THR B 374 	    0.000
+ CA  GLY B 375 	 CA  GLY B 375 	    0.000
+ CA  GLU B 376 	 CA  GLU B 376 	    0.000
+ CA  ARG B 377 	 CA  ARG B 377 	    0.000
+ CA  PRO B 378 	 CA  PRO B 378 	    0.000
+ CA  PHE B 379 	 CA  PHE B 379 	    0.000
+ CA  GLN B 380 	 CA  GLN B 380 	    0.000
+ CA  CYS B 381 	 CA  CYS B 381 	    0.000
+ CA  SER B 382 	 CA  SER B 382 	    0.000
+ CA  LEU B 383 	 CA  LEU B 383 	    0.000
+ CA  CYS B 384 	 CA  CYS B 384 	    0.000
+ CA  SER B 385 	 CA  SER B 385 	    0.000
+ CA  TYR B 386 	 CA  TYR B 386 	    0.000
+ CA  ALA B 387 	 CA  ALA B 387 	    0.000
+ CA  SER B 388 	 CA  SER B 388 	    0.000
+ CA  ARG B 389 	 CA  ARG B 389 	    0.000
+ CA  ASP B 390 	 CA  ASP B 390 	    0.000
+ CA  THR B 391 	 CA  THR B 391 	    0.000
+ CA  TYR B 392 	 CA  TYR B 392 	    0.000
+ CA  LYS B 393 	 CA  LYS B 393 	    0.000
+ CA  LEU B 394 	 CA  LEU B 394 	    0.000
+ CA  LYS B 395 	 CA  LYS B 395 	    0.000
+ CA  ARG B 396 	 CA  ARG B 396 	    0.000
+ CA  HIS B 397 	 CA  HIS B 397 	    0.000
+ CA  MET B 398 	 CA  MET B 398 	    0.000
+ CA  ARG B 399 	 CA  ARG B 399 	    0.000
+ CA  THR B 400 	 CA  THR B 400 	    0.000
+ CA  HIS B 401 	 CA  HIS B 401 	    0.000
+ CA  SER B 402 	 CA  SER B 402 	    0.000
+ CA  GLY B 403 	 CA  GLY B 403 	    0.000
+ CA  GLU B 404 	 CA  GLU B 404 	    0.000
+ CA  LYS B 405 	 CA  LYS B 405 	    0.000
+ CA  PRO B 406 	 CA  PRO B 406 	    0.000
+ CA  TYR B 407 	 CA  TYR B 407 	    0.000
+ CA  GLU B 408 	 CA  GLU B 408 	    0.000
+ CA  CYS B 409 	 CA  CYS B 409 	    0.000
+ CA  TYR B 410 	 CA  TYR B 410 	    0.000
+ CA  ILE B 411 	 CA  ILE B 411 	    0.000
+ CA  CYS B 412 	 CA  CYS B 412 	    0.000
+ CA  HIS B 413 	 CA  HIS B 413 	    0.000
+ CA  ALA B 414 	 CA  ALA B 414 	    0.000
+ CA  ARG B 415 	 CA  ARG B 415 	    0.000
+ CA  PHE B 416 	 CA  PHE B 416 	    0.000
+ CA  THR B 417 	 CA  THR B 417 	    0.000
+ CA  GLN B 418 	 CA  GLN B 418 	    0.000
+ CA  SER B 419 	 CA  SER B 419 	    0.000
+ CA  GLY B 420 	 CA  GLY B 420 	    0.000
+ CA  THR B 421 	 CA  THR B 421 	    0.000
+ CA  MET B 422 	 CA  MET B 422 	    0.000
+ CA  LYS B 423 	 CA  LYS B 423 	    0.000
+ CA  MET B 424 	 CA  MET B 424 	    0.000
+ CA  HIS B 425 	 CA  HIS B 425 	    0.000
+ CA  ILE B 426 	 CA  ILE B 426 	    0.000
+ CA  LEU B 427 	 CA  LEU B 427 	    0.000
+ CA  GLN B 428 	 CA  GLN B 428 	    0.000
+ CA  LYS B 429 	 CA  LYS B 429 	    0.000
+ CA  HIS B 430 	 CA  HIS B 430 	    0.000
+ CA  THR B 431 	 CA  THR B 431 	    0.000
+ CA AGLU B 432 	 CA AGLU B 432 	    0.000
+ CA  ASN B 433 	 CA  ASN B 433 	    0.000
+ CA  VAL B 434 	 CA  VAL B 434 	    0.000
+ CA  ALA B 435 	 CA  ALA B 435 	    0.000
+ CA  LYS B 436 	 CA  LYS B 436 	    0.000
+ CA  PHE B 437 	 CA  PHE B 437 	    0.000
+ CA AHIS B 438 	 CA AHIS B 438 	    0.000
+ CA  CYS B 439 	 CA  CYS B 439 	    0.000
+ CA  PRO B 440 	 CA  PRO B 440 	    0.000
+ CA  HIS B 441 	 CA  HIS B 441 	    0.000
+ CA  CYS B 442 	 CA  CYS B 442 	    0.000
+ CA  ASP B 443 	 CA  ASP B 443 	    0.000
+ CA  THR B 444 	 CA  THR B 444 	    0.000
+ CA  VAL B 445 	 CA  VAL B 445 	    0.000
+ CA  ILE B 446 	 CA  ILE B 446 	    0.000
+ CA  ALA B 447 	 CA  ALA B 447 	    0.000
+ CA  ARG B 448 	 CA  ARG B 448 	    0.000
+ CA  LYS B 449 	 CA  LYS B 449 	    0.000
+ CA  SER B 450 	 CA  SER B 450 	    0.000
+ CA  ASP B 451 	 CA  ASP B 451 	    0.000
+ CA  LEU B 452 	 CA  LEU B 452 	    0.000
+ CA  GLY B 453 	 CA  GLY B 453 	    0.000
+ CA  VAL B 454 	 CA  VAL B 454 	    0.000
+ CA  HIS B 455 	 CA  HIS B 455 	    0.000
+ CA  LEU B 456 	 CA  LEU B 456 	    0.000
+ CA  ARG B 457 	 CA  ARG B 457 	    0.000
+ CA  LYS B 458 	 CA  LYS B 458 	    0.000
+ CA  GLN B 459 	 CA  GLN B 459 	    0.000
+ CA  HIS B 460 	 CA  HIS B 460 	    0.000
+ CA  SER B 461 	 CA  SER B 461 	    0.000
+ CA  TYR B 462 	 CA  TYR B 462 	    0.000
+ CA  ILE B 463 	 CA  ILE B 463 	    0.000
+ CA  GLU B 464 	 CA  GLU B 464 	    0.000
+ CA  GLN B 465 	 CA  GLN B 465 	    0.000
+ CA  GLY B 466 	 CA  GLY B 466 	    0.000
+ CA  LYS B 467 	 CA  LYS B 467 	    0.000
+ CA  LYS B 468 	 CA  LYS B 468 	    0.000
+ CA  CYS B 469 	 CA  CYS B 469 	    0.000
+ CA  ARG B 470 	 CA  ARG B 470 	    0.000
+ CA  TYR B 471 	 CA  TYR B 471 	    0.000
+ CA  CYS B 472 	 CA  CYS B 472 	    0.000
+ CA  ASP B 473 	 CA  ASP B 473 	    0.000
+ CA  ALA B 474 	 CA  ALA B 474 	    0.000
+ CA  VAL B 475 	 CA  VAL B 475 	    0.000
+ CA  PHE B 476 	 CA  PHE B 476 	    0.000
+ CA  HIS B 477 	 CA  HIS B 477 	    0.000
+ CA  GLU B 478 	 CA  GLU B 478 	    0.000
+ CA  ARG B 479 	 CA  ARG B 479 	    0.000
+ CA  TYR B 480 	 CA  TYR B 480 	    0.000
+ CA  ALA B 481 	 CA  ALA B 481 	    0.000
+ CA  LEU B 482 	 CA  LEU B 482 	    0.000
+ CA  ILE B 483 	 CA  ILE B 483 	    0.000
+ CA  GLN B 484 	 CA  GLN B 484 	    0.000
+ CA  HIS B 485 	 CA  HIS B 485 	    0.000
+ CA  GLN B 486 	 CA  GLN B 486 	    0.000
+ CA  LYS B 487 	 CA  LYS B 487 	    0.000
+ CA  SER B 488 	 CA  SER B 488 	    0.000
+ CA  HIS B 489 	 CA  HIS B 489 	    0.000
+ CA  LYS B 490 	 CA  LYS B 490 	    0.000
+ CA  ASN B 491 	 CA  ASN B 491 	    0.000
+ CA  GLU B 492 	 CA  GLU B 492 	    0.000
+###############	###############	#########
+#Total CPU time is  0.05 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0      -0.0000000000   1.0000000000   0.0000000000   0.0000000000
+1      -0.0000000000  -0.0000000000   1.0000000000  -0.0000000000
+2      -0.0000000000  -0.0000000000   0.0000000000   1.0000000000
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}

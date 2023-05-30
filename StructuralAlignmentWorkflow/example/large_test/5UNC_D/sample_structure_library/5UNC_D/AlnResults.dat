@@ -1,0 +1,327 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UNC_D.pdb:D (to be superimposed onto Structure_2)
+Name of Structure_2: /home/russ/Scripts/git/2023-bioinf-paper/AnnotatedStructuralLibrary/examples/structure_dir/5UNC_D.pdb:D
+Length of Structure_1: 287 residues
+Length of Structure_2: 287 residues
+
+Aligned length= 287, RMSD=   0.00, Seq_ID=n_identical/n_aligned= 1.000
+TM-score= 1.00000 (normalized by length of Structure_1: L=287, d0=6.23)
+TM-score= 1.00000 (normalized by length of Structure_2: L=287, d0=6.23)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+HGAAQLRALFDAPGTVRIAGAHNPLGARLAERAGFDGIWSSGLEISASQGLPDADILTMTELLGVAGSMASAVGVPVVADCDTGYGNANNVMHMVRRYEAAGIAAVTIEDKRFPKVNSFIPGRQELASVPEFCGRIEAAKDAQRDPDFMVIARIEALIAGWDLDEALRRGEAYAAAGADAVLIHAKSGSPQPVLDFLQRWHLPQPVVVVPTTYHTISAAELGAAGAKMVVYANHGLRAGIQAVSQTFETILKDGRTTAIEDHIAPLTTVFDLQGMDEFQENEKRFVR
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+HGAAQLRALFDAPGTVRIAGAHNPLGARLAERAGFDGIWSSGLEISASQGLPDADILTMTELLGVAGSMASAVGVPVVADCDTGYGNANNVMHMVRRYEAAGIAAVTIEDKRFPKVNSFIPGRQELASVPEFCGRIEAAKDAQRDPDFMVIARIEALIAGWDLDEALRRGEAYAAAGADAVLIHAKSGSPQPVLDFLQRWHLPQPVVVVPTTYHTISAAELGAAGAKMVVYANHGLRAGIQAVSQTFETILKDGRTTAIEDHIAPLTTVFDLQGMDEFQENEKRFVR
+
+###############	###############	#########
+#Aligned atom 1	Aligned atom 2 	Distance#
+ CA  HIS D  19 	 CA  HIS D  19 	    0.000
+ CA  GLY D  20 	 CA  GLY D  20 	    0.000
+ CA  ALA D  21 	 CA  ALA D  21 	    0.000
+ CA  ALA D  22 	 CA  ALA D  22 	    0.000
+ CA  GLN D  23 	 CA  GLN D  23 	    0.000
+ CA  LEU D  24 	 CA  LEU D  24 	    0.000
+ CA  ARG D  25 	 CA  ARG D  25 	    0.000
+ CA  ALA D  26 	 CA  ALA D  26 	    0.000
+ CA  LEU D  27 	 CA  LEU D  27 	    0.000
+ CA  PHE D  28 	 CA  PHE D  28 	    0.000
+ CA  ASP D  29 	 CA  ASP D  29 	    0.000
+ CA  ALA D  30 	 CA  ALA D  30 	    0.000
+ CA  PRO D  31 	 CA  PRO D  31 	    0.000
+ CA  GLY D  32 	 CA  GLY D  32 	    0.000
+ CA  THR D  33 	 CA  THR D  33 	    0.000
+ CA  VAL D  34 	 CA  VAL D  34 	    0.000
+ CA  ARG D  35 	 CA  ARG D  35 	    0.000
+ CA  ILE D  36 	 CA  ILE D  36 	    0.000
+ CA  ALA D  37 	 CA  ALA D  37 	    0.000
+ CA  GLY D  38 	 CA  GLY D  38 	    0.000
+ CA  ALA D  39 	 CA  ALA D  39 	    0.000
+ CA  HIS D  40 	 CA  HIS D  40 	    0.000
+ CA  ASN D  41 	 CA  ASN D  41 	    0.000
+ CA  PRO D  42 	 CA  PRO D  42 	    0.000
+ CA  LEU D  43 	 CA  LEU D  43 	    0.000
+ CA  GLY D  44 	 CA  GLY D  44 	    0.000
+ CA  ALA D  45 	 CA  ALA D  45 	    0.000
+ CA  ARG D  46 	 CA  ARG D  46 	    0.000
+ CA  LEU D  47 	 CA  LEU D  47 	    0.000
+ CA  ALA D  48 	 CA  ALA D  48 	    0.000
+ CA  GLU D  49 	 CA  GLU D  49 	    0.000
+ CA  ARG D  50 	 CA  ARG D  50 	    0.000
+ CA  ALA D  51 	 CA  ALA D  51 	    0.000
+ CA  GLY D  52 	 CA  GLY D  52 	    0.000
+ CA  PHE D  53 	 CA  PHE D  53 	    0.000
+ CA  ASP D  54 	 CA  ASP D  54 	    0.000
+ CA  GLY D  55 	 CA  GLY D  55 	    0.000
+ CA  ILE D  56 	 CA  ILE D  56 	    0.000
+ CA  TRP D  57 	 CA  TRP D  57 	    0.000
+ CA  SER D  58 	 CA  SER D  58 	    0.000
+ CA  SER D  59 	 CA  SER D  59 	    0.000
+ CA  GLY D  60 	 CA  GLY D  60 	    0.000
+ CA  LEU D  61 	 CA  LEU D  61 	    0.000
+ CA  GLU D  62 	 CA  GLU D  62 	    0.000
+ CA  ILE D  63 	 CA  ILE D  63 	    0.000
+ CA ASER D  64 	 CA ASER D  64 	    0.000
+ CA  ALA D  65 	 CA  ALA D  65 	    0.000
+ CA  SER D  66 	 CA  SER D  66 	    0.000
+ CA  GLN D  67 	 CA  GLN D  67 	    0.000
+ CA  GLY D  68 	 CA  GLY D  68 	    0.000
+ CA  LEU D  69 	 CA  LEU D  69 	    0.000
+ CA  PRO D  70 	 CA  PRO D  70 	    0.000
+ CA  ASP D  71 	 CA  ASP D  71 	    0.000
+ CA  ALA D  72 	 CA  ALA D  72 	    0.000
+ CA  ASP D  73 	 CA  ASP D  73 	    0.000
+ CA  ILE D  74 	 CA  ILE D  74 	    0.000
+ CA  LEU D  75 	 CA  LEU D  75 	    0.000
+ CA  THR D  76 	 CA  THR D  76 	    0.000
+ CA  MSE D  77 	 CA  MSE D  77 	    0.000
+ CA  THR D  78 	 CA  THR D  78 	    0.000
+ CA  GLU D  79 	 CA  GLU D  79 	    0.000
+ CA  LEU D  80 	 CA  LEU D  80 	    0.000
+ CA  LEU D  81 	 CA  LEU D  81 	    0.000
+ CA  GLY D  82 	 CA  GLY D  82 	    0.000
+ CA  VAL D  83 	 CA  VAL D  83 	    0.000
+ CA  ALA D  84 	 CA  ALA D  84 	    0.000
+ CA  GLY D  85 	 CA  GLY D  85 	    0.000
+ CA  SER D  86 	 CA  SER D  86 	    0.000
+ CA  MSE D  87 	 CA  MSE D  87 	    0.000
+ CA  ALA D  88 	 CA  ALA D  88 	    0.000
+ CA  SER D  89 	 CA  SER D  89 	    0.000
+ CA  ALA D  90 	 CA  ALA D  90 	    0.000
+ CA  VAL D  91 	 CA  VAL D  91 	    0.000
+ CA  GLY D  92 	 CA  GLY D  92 	    0.000
+ CA  VAL D  93 	 CA  VAL D  93 	    0.000
+ CA  PRO D  94 	 CA  PRO D  94 	    0.000
+ CA  VAL D  95 	 CA  VAL D  95 	    0.000
+ CA  VAL D  96 	 CA  VAL D  96 	    0.000
+ CA  ALA D  97 	 CA  ALA D  97 	    0.000
+ CA  ASP D  98 	 CA  ASP D  98 	    0.000
+ CA  CYS D  99 	 CA  CYS D  99 	    0.000
+ CA  ASP D 100 	 CA  ASP D 100 	    0.000
+ CA  THR D 101 	 CA  THR D 101 	    0.000
+ CA  GLY D 102 	 CA  GLY D 102 	    0.000
+ CA  TYR D 103 	 CA  TYR D 103 	    0.000
+ CA  GLY D 104 	 CA  GLY D 104 	    0.000
+ CA  ASN D 105 	 CA  ASN D 105 	    0.000
+ CA  ALA D 106 	 CA  ALA D 106 	    0.000
+ CA  ASN D 107 	 CA  ASN D 107 	    0.000
+ CA  ASN D 108 	 CA  ASN D 108 	    0.000
+ CA  VAL D 109 	 CA  VAL D 109 	    0.000
+ CA  MSE D 110 	 CA  MSE D 110 	    0.000
+ CA  HIS D 111 	 CA  HIS D 111 	    0.000
+ CA  MSE D 112 	 CA  MSE D 112 	    0.000
+ CA  VAL D 113 	 CA  VAL D 113 	    0.000
+ CA  ARG D 114 	 CA  ARG D 114 	    0.000
+ CA  ARG D 115 	 CA  ARG D 115 	    0.000
+ CA  TYR D 116 	 CA  TYR D 116 	    0.000
+ CA  GLU D 117 	 CA  GLU D 117 	    0.000
+ CA  ALA D 118 	 CA  ALA D 118 	    0.000
+ CA  ALA D 119 	 CA  ALA D 119 	    0.000
+ CA  GLY D 120 	 CA  GLY D 120 	    0.000
+ CA  ILE D 121 	 CA  ILE D 121 	    0.000
+ CA  ALA D 122 	 CA  ALA D 122 	    0.000
+ CA  ALA D 123 	 CA  ALA D 123 	    0.000
+ CA  VAL D 124 	 CA  VAL D 124 	    0.000
+ CA  THR D 125 	 CA  THR D 125 	    0.000
+ CA  ILE D 126 	 CA  ILE D 126 	    0.000
+ CA  GLU D 127 	 CA  GLU D 127 	    0.000
+ CA  ASP D 128 	 CA  ASP D 128 	    0.000
+ CA  LYS D 129 	 CA  LYS D 129 	    0.000
+ CA  ARG D 130 	 CA  ARG D 130 	    0.000
+ CA  PHE D 131 	 CA  PHE D 131 	    0.000
+ CA  PRO D 132 	 CA  PRO D 132 	    0.000
+ CA  LYS D 133 	 CA  LYS D 133 	    0.000
+ CA  VAL D 134 	 CA  VAL D 134 	    0.000
+ CA  ASN D 135 	 CA  ASN D 135 	    0.000
+ CA  SER D 136 	 CA  SER D 136 	    0.000
+ CA  PHE D 137 	 CA  PHE D 137 	    0.000
+ CA  ILE D 138 	 CA  ILE D 138 	    0.000
+ CA  PRO D 139 	 CA  PRO D 139 	    0.000
+ CA  GLY D 140 	 CA  GLY D 140 	    0.000
+ CA  ARG D 141 	 CA  ARG D 141 	    0.000
+ CA  GLN D 142 	 CA  GLN D 142 	    0.000
+ CA  GLU D 143 	 CA  GLU D 143 	    0.000
+ CA  LEU D 144 	 CA  LEU D 144 	    0.000
+ CA  ALA D 145 	 CA  ALA D 145 	    0.000
+ CA  SER D 146 	 CA  SER D 146 	    0.000
+ CA  VAL D 147 	 CA  VAL D 147 	    0.000
+ CA  PRO D 148 	 CA  PRO D 148 	    0.000
+ CA  GLU D 149 	 CA  GLU D 149 	    0.000
+ CA  PHE D 150 	 CA  PHE D 150 	    0.000
+ CA  CYS D 151 	 CA  CYS D 151 	    0.000
+ CA  GLY D 152 	 CA  GLY D 152 	    0.000
+ CA  ARG D 153 	 CA  ARG D 153 	    0.000
+ CA  ILE D 154 	 CA  ILE D 154 	    0.000
+ CA  GLU D 155 	 CA  GLU D 155 	    0.000
+ CA  ALA D 156 	 CA  ALA D 156 	    0.000
+ CA  ALA D 157 	 CA  ALA D 157 	    0.000
+ CA  LYS D 158 	 CA  LYS D 158 	    0.000
+ CA  ASP D 159 	 CA  ASP D 159 	    0.000
+ CA  ALA D 160 	 CA  ALA D 160 	    0.000
+ CA  GLN D 161 	 CA  GLN D 161 	    0.000
+ CA  ARG D 162 	 CA  ARG D 162 	    0.000
+ CA  ASP D 163 	 CA  ASP D 163 	    0.000
+ CA  PRO D 164 	 CA  PRO D 164 	    0.000
+ CA  ASP D 165 	 CA  ASP D 165 	    0.000
+ CA  PHE D 166 	 CA  PHE D 166 	    0.000
+ CA  MSE D 167 	 CA  MSE D 167 	    0.000
+ CA  VAL D 168 	 CA  VAL D 168 	    0.000
+ CA  ILE D 169 	 CA  ILE D 169 	    0.000
+ CA  ALA D 170 	 CA  ALA D 170 	    0.000
+ CA  ARG D 171 	 CA  ARG D 171 	    0.000
+ CA  ILE D 172 	 CA  ILE D 172 	    0.000
+ CA  GLU D 173 	 CA  GLU D 173 	    0.000
+ CA  ALA D 174 	 CA  ALA D 174 	    0.000
+ CA  LEU D 175 	 CA  LEU D 175 	    0.000
+ CA  ILE D 176 	 CA  ILE D 176 	    0.000
+ CA  ALA D 177 	 CA  ALA D 177 	    0.000
+ CA  GLY D 178 	 CA  GLY D 178 	    0.000
+ CA  TRP D 179 	 CA  TRP D 179 	    0.000
+ CA  ASP D 180 	 CA  ASP D 180 	    0.000
+ CA  LEU D 181 	 CA  LEU D 181 	    0.000
+ CA  ASP D 182 	 CA  ASP D 182 	    0.000
+ CA  GLU D 183 	 CA  GLU D 183 	    0.000
+ CA  ALA D 184 	 CA  ALA D 184 	    0.000
+ CA  LEU D 185 	 CA  LEU D 185 	    0.000
+ CA  ARG D 186 	 CA  ARG D 186 	    0.000
+ CA  ARG D 187 	 CA  ARG D 187 	    0.000
+ CA  GLY D 188 	 CA  GLY D 188 	    0.000
+ CA  GLU D 189 	 CA  GLU D 189 	    0.000
+ CA  ALA D 190 	 CA  ALA D 190 	    0.000
+ CA  TYR D 191 	 CA  TYR D 191 	    0.000
+ CA  ALA D 192 	 CA  ALA D 192 	    0.000
+ CA  ALA D 193 	 CA  ALA D 193 	    0.000
+ CA  ALA D 194 	 CA  ALA D 194 	    0.000
+ CA  GLY D 195 	 CA  GLY D 195 	    0.000
+ CA  ALA D 196 	 CA  ALA D 196 	    0.000
+ CA  ASP D 197 	 CA  ASP D 197 	    0.000
+ CA  ALA D 198 	 CA  ALA D 198 	    0.000
+ CA  VAL D 199 	 CA  VAL D 199 	    0.000
+ CA  LEU D 200 	 CA  LEU D 200 	    0.000
+ CA  ILE D 201 	 CA  ILE D 201 	    0.000
+ CA  HIS D 202 	 CA  HIS D 202 	    0.000
+ CA  ALA D 203 	 CA  ALA D 203 	    0.000
+ CA  LYS D 204 	 CA  LYS D 204 	    0.000
+ CA  SER D 205 	 CA  SER D 205 	    0.000
+ CA  GLY D 206 	 CA  GLY D 206 	    0.000
+ CA  SER D 207 	 CA  SER D 207 	    0.000
+ CA  PRO D 208 	 CA  PRO D 208 	    0.000
+ CA  GLN D 209 	 CA  GLN D 209 	    0.000
+ CA  PRO D 210 	 CA  PRO D 210 	    0.000
+ CA  VAL D 211 	 CA  VAL D 211 	    0.000
+ CA  LEU D 212 	 CA  LEU D 212 	    0.000
+ CA  ASP D 213 	 CA  ASP D 213 	    0.000
+ CA  PHE D 214 	 CA  PHE D 214 	    0.000
+ CA  LEU D 215 	 CA  LEU D 215 	    0.000
+ CA  GLN D 216 	 CA  GLN D 216 	    0.000
+ CA  ARG D 217 	 CA  ARG D 217 	    0.000
+ CA  TRP D 218 	 CA  TRP D 218 	    0.000
+ CA  HIS D 219 	 CA  HIS D 219 	    0.000
+ CA  LEU D 220 	 CA  LEU D 220 	    0.000
+ CA  PRO D 221 	 CA  PRO D 221 	    0.000
+ CA  GLN D 222 	 CA  GLN D 222 	    0.000
+ CA  PRO D 223 	 CA  PRO D 223 	    0.000
+ CA  VAL D 224 	 CA  VAL D 224 	    0.000
+ CA  VAL D 225 	 CA  VAL D 225 	    0.000
+ CA  VAL D 226 	 CA  VAL D 226 	    0.000
+ CA  VAL D 227 	 CA  VAL D 227 	    0.000
+ CA  PRO D 228 	 CA  PRO D 228 	    0.000
+ CA  THR D 229 	 CA  THR D 229 	    0.000
+ CA  THR D 230 	 CA  THR D 230 	    0.000
+ CA  TYR D 231 	 CA  TYR D 231 	    0.000
+ CA  HIS D 232 	 CA  HIS D 232 	    0.000
+ CA  THR D 233 	 CA  THR D 233 	    0.000
+ CA  ILE D 234 	 CA  ILE D 234 	    0.000
+ CA  SER D 235 	 CA  SER D 235 	    0.000
+ CA  ALA D 236 	 CA  ALA D 236 	    0.000
+ CA  ALA D 237 	 CA  ALA D 237 	    0.000
+ CA  GLU D 238 	 CA  GLU D 238 	    0.000
+ CA  LEU D 239 	 CA  LEU D 239 	    0.000
+ CA  GLY D 240 	 CA  GLY D 240 	    0.000
+ CA  ALA D 241 	 CA  ALA D 241 	    0.000
+ CA  ALA D 242 	 CA  ALA D 242 	    0.000
+ CA  GLY D 243 	 CA  GLY D 243 	    0.000
+ CA  ALA D 244 	 CA  ALA D 244 	    0.000
+ CA  LYS D 245 	 CA  LYS D 245 	    0.000
+ CA  MSE D 246 	 CA  MSE D 246 	    0.000
+ CA  VAL D 247 	 CA  VAL D 247 	    0.000
+ CA  VAL D 248 	 CA  VAL D 248 	    0.000
+ CA  TYR D 249 	 CA  TYR D 249 	    0.000
+ CA  ALA D 250 	 CA  ALA D 250 	    0.000
+ CA AASN D 251 	 CA AASN D 251 	    0.000
+ CA  HIS D 252 	 CA  HIS D 252 	    0.000
+ CA  GLY D 253 	 CA  GLY D 253 	    0.000
+ CA  LEU D 254 	 CA  LEU D 254 	    0.000
+ CA  ARG D 255 	 CA  ARG D 255 	    0.000
+ CA  ALA D 256 	 CA  ALA D 256 	    0.000
+ CA  GLY D 257 	 CA  GLY D 257 	    0.000
+ CA  ILE D 258 	 CA  ILE D 258 	    0.000
+ CA  GLN D 259 	 CA  GLN D 259 	    0.000
+ CA  ALA D 260 	 CA  ALA D 260 	    0.000
+ CA  VAL D 261 	 CA  VAL D 261 	    0.000
+ CA ASER D 262 	 CA ASER D 262 	    0.000
+ CA  GLN D 263 	 CA  GLN D 263 	    0.000
+ CA  THR D 264 	 CA  THR D 264 	    0.000
+ CA  PHE D 265 	 CA  PHE D 265 	    0.000
+ CA  GLU D 266 	 CA  GLU D 266 	    0.000
+ CA  THR D 267 	 CA  THR D 267 	    0.000
+ CA  ILE D 268 	 CA  ILE D 268 	    0.000
+ CA  LEU D 269 	 CA  LEU D 269 	    0.000
+ CA  LYS D 270 	 CA  LYS D 270 	    0.000
+ CA  ASP D 271 	 CA  ASP D 271 	    0.000
+ CA  GLY D 272 	 CA  GLY D 272 	    0.000
+ CA  ARG D 273 	 CA  ARG D 273 	    0.000
+ CA  THR D 274 	 CA  THR D 274 	    0.000
+ CA  THR D 275 	 CA  THR D 275 	    0.000
+ CA  ALA D 276 	 CA  ALA D 276 	    0.000
+ CA  ILE D 277 	 CA  ILE D 277 	    0.000
+ CA  GLU D 278 	 CA  GLU D 278 	    0.000
+ CA  ASP D 279 	 CA  ASP D 279 	    0.000
+ CA  HIS D 280 	 CA  HIS D 280 	    0.000
+ CA  ILE D 281 	 CA  ILE D 281 	    0.000
+ CA  ALA D 282 	 CA  ALA D 282 	    0.000
+ CA  PRO D 283 	 CA  PRO D 283 	    0.000
+ CA  LEU D 284 	 CA  LEU D 284 	    0.000
+ CA  THR D 285 	 CA  THR D 285 	    0.000
+ CA  THR D 286 	 CA  THR D 286 	    0.000
+ CA  VAL D 287 	 CA  VAL D 287 	    0.000
+ CA  PHE D 288 	 CA  PHE D 288 	    0.000
+ CA  ASP D 289 	 CA  ASP D 289 	    0.000
+ CA  LEU D 290 	 CA  LEU D 290 	    0.000
+ CA  GLN D 291 	 CA  GLN D 291 	    0.000
+ CA  GLY D 292 	 CA  GLY D 292 	    0.000
+ CA  MSE D 293 	 CA  MSE D 293 	    0.000
+ CA  ASP D 294 	 CA  ASP D 294 	    0.000
+ CA  GLU D 295 	 CA  GLU D 295 	    0.000
+ CA  PHE D 296 	 CA  PHE D 296 	    0.000
+ CA  GLN D 297 	 CA  GLN D 297 	    0.000
+ CA  GLU D 298 	 CA  GLU D 298 	    0.000
+ CA  ASN D 299 	 CA  ASN D 299 	    0.000
+ CA  GLU D 300 	 CA  GLU D 300 	    0.000
+ CA  LYS D 301 	 CA  LYS D 301 	    0.000
+ CA  ARG D 302 	 CA  ARG D 302 	    0.000
+ CA  PHE D 303 	 CA  PHE D 303 	    0.000
+ CA  VAL D 304 	 CA  VAL D 304 	    0.000
+ CA  ARG D 305 	 CA  ARG D 305 	    0.000
+###############	###############	#########
+#Total CPU time is  0.26 seconds
+------ The rotation matrix to rotate Structure_1 to Structure_2 ------
+m               t[m]        u[m][0]        u[m][1]        u[m][2]
+0      -0.0000000000   1.0000000000   0.0000000000  -0.0000000000
+1      -0.0000000000   0.0000000000   1.0000000000   0.0000000000
+2      -0.0000000000   0.0000000000  -0.0000000000   1.0000000000
+
+Code for rotating Structure 1 from (x,y,z) to (X,Y,Z):
+for(i=0; i<L; i++)
+{
+   X[i] = t[0] + u[0][0]*x[i] + u[0][1]*y[i] + u[0][2]*z[i];
+   Y[i] = t[1] + u[1][0]*x[i] + u[1][1]*y[i] + u[1][2]*z[i];
+   Z[i] = t[2] + u[2][0]*x[i] + u[2][1]*y[i] + u[2][2]*z[i];
+}
