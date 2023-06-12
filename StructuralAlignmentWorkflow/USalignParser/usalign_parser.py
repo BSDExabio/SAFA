@@ -27,9 +27,11 @@ def parse_usalign_file(file_object,alignment_type):
                            will be gathered and returned, no mapping will be 
                            gathered
     RETURNS:
-    :return: dictionary of quantitative results associated with the alignment. 
-             Keys:
-                'struct1': string, path to the first structure in the alignment; 
+    :return: results, start_time, stop_time, return_value
+    :return results: dictionary of quantitative results associated with the
+                     alignment. 
+            Keys:
+                'struct1': string, path to the first structure in the alignment;
                            the mobile or query structure
                 'struct2': string, path to the second structure in the 
                            alignment; the target structure
@@ -60,6 +62,10 @@ def parse_usalign_file(file_object,alignment_type):
                               SNS and FNS alignments); if alignment_type is not 
                               in ['CP', 'SNS', 'FNS'], this mapping will not be 
                               created
+    :return start_time: float, epoch time when the task began
+    :return stop_time: float, epoch time when the task stopped
+    :return return_value: integer, valued 0 if function returns all quant values
+                          including the alignment mapping; otherwise valued 1. 
     """
     start_time = time.time()
     results = {}
