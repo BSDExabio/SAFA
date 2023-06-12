@@ -1,0 +1,24 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: ./3cna_rcsb.pdb:A (to be superimposed onto Structure_2)
+Name of Structure_2: ./2pel_rcsb.pdb:A
+Length of Structure_1: 237 residues
+Length of Structure_2: 232 residues
+
+Aligned length= 118, RMSD=   1.63, Seq_ID=n_identical/n_aligned= 0.432
+TM-score= 0.47057 (normalized by length of Structure_1: L=237, d0=5.71)
+TM-score= 0.48028 (normalized by length of Structure_2: L=232, d0=5.65)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+------------------------------------------------------------------------------------------A--D---------------------TIVAVELDTYPNTDIGDPSYPHIGIDIKSVRSKKTAKWNMQDGKVGTAHIIYNSVDKRLSAVVSYPNADATSVSYDVDLNDVLPEWVRVGLSASTG-LYKETNTILSWSFTSKLKSNSTHQTDALHFMFNQFSKDQKDLILQGDATTGTDGNLELTRVSSNGSPEGSSVGRALFYAPVHIWESSAATVSFEATFAFLIKSPDSHPADGIAFFISNIDSSIPSGSTGRLLGLFPDAN
+                                                                                          .  .                     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ::::::::::::::::::::                                                                                                                       
+AETVSFNFNSFSEGNPAINFQGDVTVLSNGNIQLTNLNKVNSVGRVLYAMPVRIWSSATGNVASFLTSFSFEMKDIKDYDPADGIIFFIAPEDTQIPAGSIGGGTLGVSDTKGAGHFVGVEFDTYSNSEYNDPPTDHVGIDVNSVDSVKTVPWNSVSGAVVKVTVIYDSSTKTLSVAVTNDNGDITTIAQVVDLKAKLPERVKFGFSASGSLGGRQIHLIRSWSFTSTLITT-----------------------------------------------------------------------------------------------------------------------
+
+#Total CPU time is  0.09 seconds

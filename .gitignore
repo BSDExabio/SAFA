@@ -60,7 +60,7 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
+# *.log	# RBD commented out because we have files with this naming convention
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
