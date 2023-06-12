@@ -1,6 +1,5 @@
 # StructuralAlignmentWorkflow
-*Written by Russell B. Davidson and Mark Coletti*
-Version 1.0.0
+*Written by Russell B. Davidson and Mark Coletti*, Version 1.0.1
 
 A dask.distributed workflow code to automate the alignment of a library of 
 structures against a library of structures. This code was used to automate the 
@@ -30,12 +29,38 @@ the user defined the metric and cutoff for defining what an alignment hit was.
 The full set of results are written to a target-specific output directory.  
 
 ### Simple Example
-
-
-## Container Installation
-
+See the `example` subdirectory that houses two instances of the structural 
+alignment workflow where the total number alignments are 'small' and 'large'.
 
 ## Installation of US-align2
 
+US-align2 is easily installed via the associated github repository. 
+
+```
+git clone https://github.com/pylelab/USalign.git
+```
+
+That repository can also be updated to the most current version by pulling from 
+the remote repository: 
+
+```
+git pull
+```
+
+## Parsing US-align2 output
+Functions used to parse the US-align2 results are provided in the 
+`USalignParser` subdirectory. A jupyter notebook is provided here to demonstrate
+how that set of functions are used in the Alignment workflow to gather the 
+relevant quantitative results for each alignment calculation. 
 
 
+## Post-processing and analysis
+Scripts are provided in the `PostProcessingAnalyses` subdirectory that are used
+to take an ensemble of alignment results and provide novel insights, such as 
+enzyme commission (EC) number annotation hypotheses or visualization codes for 
+high quality alignment results. These codes are often dependent on the 
+structural library with which the structural alignment workflow utilized. See 
+the PDB70 structural library 
+([https://doi.org/10.5281/zenodo.7953087](https://doi.org/10.5281/zenodo.7953087))
+data set for the structural library used to annotate enzymes in the *S. divinum*
+structural proteome. 
