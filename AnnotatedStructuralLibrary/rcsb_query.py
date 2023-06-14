@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 """
-    Query RCSB site Uniprot ID associated with a given protein and chain ID.
+    Query RCSB through various APIs to gather structures and metadata such as 
+    Uniprot ID associated with a given protein and chain ID.
 
-    (Written by Mark Coletti, colettima@ornl.gov.)
+    (Written by Russell Davidson and Mark Coletti)
 """
+import sys
+import datetime
 import requests
+import mmtf
+import warnings
+import MDAnalysis
 
 QUERY_STR = \
 '''
@@ -24,6 +30,100 @@ query($id: String!)
   }
 }
 '''
+
+
+def gather_structure(PDBID):
+    """
+    There are multiple API/access strategies that we can use; here, the mmtf 
+    module is used to gather the structure. If this fails, no structure object 
+    is returned.
+
+    NOTE: Implement other modules or API strategies for downloading structures
+    and associated data.
+    
+    :param PDBID: string, RCSB accession ID for a specific structure.
+    :return: a MDAnalysis Universe object associated with the requested 
+             structure.
+    """
+    try:
+        # fetch the whole PDBID entry using mmtf
+        pdb_obj = mmtf.fetch(PDBID)
+        # gather relevant meta info about the structure
+        PRODUCER  = f'RBD {datetime.datetime.now().date()}'
+        STRUCTURE = pdb_obj.structure_id
+        VERSION   = pdb_obj.mmtf_version
+        TITLE     = pdb_obj.title
+        DEPDATE   = pdb_obj.deposition_date
+        RELDATE   = pdb_obj.release_date
+        EXPMETHOD = pdb_obj.experimental_methods
+        SPCGRP    = pdb_obj.space_group
+        R_FREE    = pdb_obj.r_free
+        R_WORK    = pdb_obj.r_work
+        RESOLUTION= pdb_obj.resolution
+    except Exception as e:
+        print(PDBID, 'failed to grab mmtf obj', str(e), file=sys.stderr, flush=True)
+        return None
+
+    try:
+        with warnings.catch_warnings():
+            # ignore some annoying warnings from sel.write line due to missing information (chainIDs, elements, and record_types). 
+            warnings.simplefilter('ignore',UserWarning)
+
+            # load the mmtf object into MDAnalysis
+            u = MDAnalysis.Universe(pdb_obj)
+            
+            # need to check for non-standard amino acid resnames that MDAnalysis 
+            # cannot parse into a sequence.
+            # replace these nonstandard resnames with their closest analog 
+            # ASN1 -> ASN, CYM  -> CYS, HYP -> PRO, MSE -> MET, PYL -> LYS, 
+            # SEC  -> CYS; PGLU -> GLU 
+            # list may be incomplete and so this may fail due to strange cases
+            # standard "protein" residues that MDAnalysis comprehends: 
+            # https://userguide.mdanalysis.org/1.1.1/standard_selections.html
+            # instances where this code will fail: 
+            # - C or N termini residues with the termini as a prefix to the resname
+            sel = u.select_atoms('protein and not resname ACE ALAD ASF CME CYX DAB NME QLN ORN')
+            for resid in range(sel.n_residues):
+                if sel.residues[resid].resname == 'ASN1':
+                    sel.residues[resid].resname = 'ASN'
+                elif sel.residues[resid].resname == 'CYM':
+                    sel.residues[resid].resname = 'CIS'
+                elif sel.residues[resid].resname == 'HIP':
+                    sel.residues[resid].resname = 'HIS'
+                elif sel.residues[resid].resname == 'HISD':
+                    sel.residues[resid].resname = 'HIS'
+                elif sel.residues[resid].resname == 'HISE':
+                    sel.residues[resid].resname = 'HIS'
+                elif sel.residues[resid].resname == 'HSP':
+                    sel.residues[resid].resname = 'HIS'
+                elif sel.residues[resid].resname == 'HYP':
+                    sel.residues[resid].resname = 'PRO'
+                elif sel.residues[resid].resname == 'MSE':
+                    sel.residues[resid].resname = 'MET'
+                elif sel.residues[resid].resname == 'PGLU':
+                    sel.residues[resid].resname = 'GLU'
+                elif sel.residues[resid].resname == 'PYL':
+                    sel.residues[resid].resname = 'LYS'
+                elif sel.residues[resid].resname == 'SEC':
+                    sel.residues[resid].resname = 'CYS'
+
+            # save meta information as remarks lines that will be written out to PDB
+            u.trajectory.remarks = [f'FILE PRODUCER: {PRODUCER}',
+                                    f'MMTF VERSION: {VERSION}',
+                                    f'STRUCTURE TITLE: {TITLE}',
+                                    f'STRUCTURE PDBID: {STRUCTURE}',
+                                    f'DEPOSITION DATE: {DEPDATE}',
+                                    f'RELEASE DATE: {RELDATE}',
+                                    f'EXPERIMENTAL METHOD: {EXPMETHOD}',
+                                    f'SPACE GROUP: {SPCGRP}',
+                                    f'R_FREE: {R_FREE}',
+                                    f'R_WORK: {R_WORK}',
+                                    f'RESOLUTION: {RESOLUTION}']
+            return u
+    except Exception as e:
+        print(PDBID, 'failed to load/alter the pdb_obj into MDAnalysis', str(e), file=sys.stderr, flush=True)
+        return None
+
 
 def query_uniprot_str(protein_chain):
     """ Get Uniprot ID for the given protein and protein chain
@@ -59,6 +159,7 @@ def query_uniprot(protein, chain):
         #  exception
         return None
 
+    ### NOTE: THIS LINE IS THE CAUSE OF A FEW BUGS IN THE ORIGINAL PDB70 DATASET
     chain = chain.upper() # Normalize to chain IDs being upper case
 
     for entry in data['data']['entries']:

@@ -1,0 +1,378 @@
+2023-06-14 16:35:32,380    INFO       Starting dask pipeline and setting up logging. Time: 1686774932.3808038
+2023-06-14 16:35:32,380    INFO       Timing file: timings.csv
+2023-06-14 16:35:32,381    INFO       Dask parameters:
+'temporary-directory': 'None'
+'visualization': '{'engine': None}'
+'tokenize': '{'ensure-deterministic': False}'
+'dataframe': '{'shuffle-compression': None, 'parquet': {'metadata-task-size-local': 512, 'metadata-task-size-remote': 16}}'
+'array': '{'svg': {'size': 120}, 'slicing': {'split-large-chunks': None}}'
+'optimization': '{'fuse': {'active': None, 'ave-width': 1, 'max-width': None, 'max-height': inf, 'max-depth-new-edges': None, 'subgraphs': None, 'rename-keys': True}}'
+'distributed': '{'version': 2, 'scheduler': {'allowed-failures': 3, 'bandwidth': 100000000, 'blocked-handlers': [], 'contact-address': None, 'default-data-size': '1kiB', 'events-cleanup-delay': '1h', 'idle-timeout': None, 'transition-log-length': 100000, 'events-log-length': 100000, 'work-stealing': True, 'work-stealing-interval': '100ms', 'worker-ttl': '5 minutes', 'pickle': True, 'preload': [], 'preload-argv': [], 'unknown-task-duration': '500ms', 'default-task-durations': {'rechunk-split': '1us', 'split-shuffle': '1us'}, 'validate': False, 'dashboard': {'status': {'task-stream-length': 1000}, 'tasks': {'task-stream-length': 100000}, 'tls': {'ca-file': None, 'key': None, 'cert': None}, 'bokeh-application': {'allow_websocket_origin': ['*'], 'keep_alive_milliseconds': 500, 'check_unused_sessions_milliseconds': 500}}, 'locks': {'lease-validation-interval': '10s', 'lease-timeout': '30s'}, 'http': {'routes': ['distributed.http.scheduler.prometheus', 'distributed.http.scheduler.info', 'distributed.http.scheduler.json', 'distributed.http.health', 'distributed.http.proxy', 'distributed.http.statics']}, 'allowed-imports': ['dask', 'distributed'], 'active-memory-manager': {'start': False, 'interval': '2s', 'policies': [{'class': 'distributed.active_memory_manager.ReduceReplicas'}]}}, 'worker': {'blocked-handlers': [], 'multiprocessing-method': 'spawn', 'use-file-locking': True, 'connections': {'outgoing': 50, 'incoming': 10}, 'preload': [], 'preload-argv': [], 'daemon': True, 'validate': False, 'resources': {}, 'lifetime': {'duration': None, 'stagger': '0 seconds', 'restart': False}, 'profile': {'enabled': True, 'interval': '10ms', 'cycle': '1000ms', 'low-level': False}, 'memory': {'recent-to-old-time': '30s', 'rebalance': {'measure': 'optimistic', 'sender-min': 0.3, 'recipient-max': 0.6, 'sender-recipient-gap': 0.1}, 'target': 0.6, 'spill': 0.7, 'pause': 0.8, 'terminate': 0.95, 'max-spill': False, 'monitor-interval': '100ms'}, 'http': {'routes': ['distributed.http.worker.prometheus', 'distributed.http.health', 'distributed.http.statics']}}, 'nanny': {'preload': [], 'preload-argv': [], 'environ': {'MALLOC_TRIM_THRESHOLD_': 65536, 'OMP_NUM_THREADS': 1, 'MKL_NUM_THREADS': 1}}, 'client': {'heartbeat': '5s', 'scheduler-info-interval': '2s', 'security-loader': None, 'preload': [], 'preload-argv': []}, 'deploy': {'lost-worker-timeout': '15s', 'cluster-repr-interval': '500ms'}, 'adaptive': {'interval': '1s', 'target-duration': '5s', 'minimum': 0, 'maximum': inf, 'wait-count': 3}, 'comm': {'retry': {'count': 0, 'delay': {'min': '1s', 'max': '20s'}}, 'compression': 'auto', 'shard': '64MiB', 'offload': '10MiB', 'default-scheme': 'tcp', 'socket-backlog': 2048, 'recent-messages-log-length': 0, 'ucx': {'cuda-copy': None, 'tcp': None, 'nvlink': None, 'infiniband': None, 'rdmacm': None, 'create-cuda-context': None}, 'zstd': {'level': 3, 'threads': 0}, 'timeouts': {'connect': '30s', 'tcp': '30s'}, 'require-encryption': None, 'tls': {'ciphers': None, 'min-version': 1.2, 'max-version': None, 'ca-file': None, 'scheduler': {'cert': None, 'key': None}, 'worker': {'key': None, 'cert': None}, 'client': {'key': None, 'cert': None}}, 'tcp': {'backend': 'tornado'}, 'websockets': {'shard': '8MiB'}}, 'diagnostics': {'nvml': True, 'computations': {'max-history': 100, 'ignore-modules': ['distributed', 'dask', 'xarray', 'cudf', 'cuml', 'prefect', 'xgboost']}}, 'dashboard': {'link': '{scheme}://{host}:{port}/status', 'export-tool': False, 'graph-max-items': 5000, 'prometheus': {'namespace': 'dask'}}, 'admin': {'tick': {'interval': '20ms', 'limit': '3s', 'cycle': '1s'}, 'max-error-length': 10000, 'log-length': 10000, 'log-format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s', 'pdb-on-err': False, 'system-monitor': {'interval': '500ms', 'disk': True}, 'event-loop': 'tornado'}, 'rmm': {'pool-size': None}}'
+'scheduler': 'dask.distributed'
+'shuffle': 'tasks'
+Client information: <Client: 'tcp://127.0.0.1:42603' processes=4 threads=8, memory=30.31 GiB>
+################################################################################
+2023-06-14 16:35:32,381    INFO       100 PDBID_CHAINID files will be gathered from 84 unique PDB IDs.
+2023-06-14 16:35:33,380    INFO       The structure file(s) associated with 2EVE have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8556725978851318 seconds.
+2023-06-14 16:35:33,412    INFO       The structure file(s) associated with 3V2B have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8760566711425781 seconds.
+2023-06-14 16:35:33,428    INFO       The structure file(s) associated with 5CKQ have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9172606468200684 seconds.
+2023-06-14 16:35:33,518    INFO       The structure file(s) associated with 3HD6 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.0111420154571533 seconds.
+2023-06-14 16:35:33,770    INFO       The structure file(s) associated with 3HCY have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.2574775218963623 seconds.
+2023-06-14 16:35:33,896    INFO       The structure file(s) associated with 5UNI have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.3782336711883545 seconds.
+2023-06-14 16:35:34,014    INFO       The structure file(s) associated with 3HDE have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.490586519241333 seconds.
+2023-06-14 16:35:34,263    INFO       The structure file(s) associated with 2RFM have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8969168663024902 seconds.
+2023-06-14 16:35:34,408    INFO       The structure file(s) associated with 16PK have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9980523586273193 seconds.
+2023-06-14 16:35:34,451    INFO       The structure file(s) associated with 2EVX have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.0223770141601562 seconds.
+2023-06-14 16:35:34,515    INFO       The structure file(s) associated with 6IOY have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.9936740398406982 seconds.
+2023-06-14 16:35:34,738    INFO       The structure file(s) associated with 3V1V have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9726154804229736 seconds.
+2023-06-14 16:35:35,130    INFO       The structure file(s) associated with 1RQJ have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.2398195266723633 seconds.
+2023-06-14 16:35:35,372    INFO       The structure file(s) associated with 11AS have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.082634449005127 seconds.
+2023-06-14 16:35:35,399    INFO       The structure file(s) associated with 3V2I have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8762176036834717 seconds.
+2023-06-14 16:35:35,633    INFO       The structure file(s) associated with 1RQG have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.178922176361084 seconds.
+2023-06-14 16:35:36,605    INFO       The structure file(s) associated with 3HDC have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.969196081161499 seconds.
+2023-06-14 16:35:36,613    INFO       The structure file(s) associated with 1RQ6 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.8656737804412842 seconds.
+2023-06-14 16:35:36,736    INFO       The structure file(s) associated with 6WNG have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 2.714925527572632 seconds.
+2023-06-14 16:35:37,100    INFO       The structure file(s) associated with 4LMO have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.7416400909423828 seconds.
+2023-06-14 16:35:37,400    INFO       The structure file(s) associated with 2RFQ have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 2.985907793045044 seconds.
+2023-06-14 16:35:37,525    INFO       The structure file(s) associated with 3HCZ have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8956639766693115 seconds.
+2023-06-14 16:35:37,575    INFO       The structure file(s) associated with 6WN9 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9710607528686523 seconds.
+2023-06-14 16:35:37,839    INFO       The structure file(s) associated with 2EVN have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 4.304609298706055 seconds.
+2023-06-14 16:35:38,026    INFO       The structure file(s) associated with 2EVG have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9325096607208252 seconds.
+2023-06-14 16:35:38,096    INFO       The structure file(s) associated with 2EW2 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.3656370639801025 seconds.
+2023-06-14 16:35:38,241    INFO       The structure file(s) associated with 5CKL have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8448784351348877 seconds.
+2023-06-14 16:35:38,304    INFO       The structure file(s) associated with 4LMV have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 2.9118616580963135 seconds.
+2023-06-14 16:35:38,619    INFO       The structure file(s) associated with 19HC have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.0455470085144043 seconds.
+2023-06-14 16:35:38,626    INFO       The structure file(s) associated with 12AS have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.120579719543457 seconds.
+2023-06-14 16:35:38,890    INFO       The structure file(s) associated with 3V2U have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 3. Took 3.7554128170013428 seconds.
+2023-06-14 16:35:38,943    INFO       The structure file(s) associated with 6IOX have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.119276762008667 seconds.
+2023-06-14 16:35:39,061    INFO       The structure file(s) associated with 6IP0 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9627785682678223 seconds.
+2023-06-14 16:35:39,115    INFO       The structure file(s) associated with 2EW0 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8085176944732666 seconds.
+2023-06-14 16:35:39,470    INFO       The structure file(s) associated with 4LMS have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.2286772727966309 seconds.
+2023-06-14 16:35:39,621    INFO       The structure file(s) associated with 5CKR have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9969384670257568 seconds.
+2023-06-14 16:35:39,655    INFO       The structure file(s) associated with 5CK4 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.0309371948242188 seconds.
+2023-06-14 16:35:39,701    INFO       The structure file(s) associated with 3V1Y have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.6753125190734863 seconds.
+2023-06-14 16:35:39,769    INFO       The structure file(s) associated with 3V2G have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8243770599365234 seconds.
+2023-06-14 16:35:39,824    INFO       The structure file(s) associated with 3V2L have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.7084500789642334 seconds.
+2023-06-14 16:35:40,398    INFO       The structure file(s) associated with 3HDF have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.335536241531372 seconds.
+2023-06-14 16:35:40,564    INFO       The structure file(s) associated with 5CKW have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.676539659500122 seconds.
+2023-06-14 16:35:40,645    INFO       The structure file(s) associated with 1RQI have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.028299331665039 seconds.
+2023-06-14 16:35:40,746    INFO       The structure file(s) associated with 1RQB have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9771218299865723 seconds.
+2023-06-14 16:35:40,781    INFO       The structure file(s) associated with 4LMP have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.0785348415374756 seconds.
+2023-06-14 16:35:40,802    INFO       The structure file(s) associated with 5UNG have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9772467613220215 seconds.
+2023-06-14 16:35:40,945    INFO       The structure file(s) associated with 3HD7 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.473597526550293 seconds.
+2023-06-14 16:35:41,318    INFO       The structure file(s) associated with 2RFO have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.661909818649292 seconds.
+2023-06-14 16:35:41,438    INFO       The structure file(s) associated with 3HDD have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.7910313606262207 seconds.
+2023-06-14 16:35:41,577    INFO       The structure file(s) associated with 5UNK have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.1773715019226074 seconds.
+2023-06-14 16:35:41,600    INFO       The structure file(s) associated with 16VP have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.853226900100708 seconds.
+2023-06-14 16:35:41,675    INFO       The structure file(s) associated with 4LMW have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8727426528930664 seconds.
+2023-06-14 16:35:41,763    INFO       The structure file(s) associated with 2RFR have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8173906803131104 seconds.
+2023-06-14 16:35:41,995    INFO       The structure file(s) associated with 155C have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.675849199295044 seconds.
+2023-06-14 16:35:42,189    INFO       The structure file(s) associated with 3HD5 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.4081594944000244 seconds.
+2023-06-14 16:35:42,505    INFO       The structure file(s) associated with 2EW1 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8285031318664551 seconds.
+2023-06-14 16:35:42,661    INFO       The structure file(s) associated with 1A02 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.2177493572235107 seconds.
+2023-06-14 16:35:42,718    INFO       The structure file(s) associated with 2RFY have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 2.1533918380737305 seconds.
+2023-06-14 16:35:42,792    INFO       The structure file(s) associated with 5UND have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.189103364944458 seconds.
+2023-06-14 16:35:42,898    INFO       The structure file(s) associated with 1RQP have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.319627285003662 seconds.
+2023-06-14 16:35:42,907    INFO       The structure file(s) associated with 3V2A have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9115903377532959 seconds.
+2023-06-14 16:35:43,171    INFO       The structure file(s) associated with 5CK7 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9756064414978027 seconds.
+2023-06-14 16:35:43,318    INFO       The structure file(s) associated with 2EVV have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.5530178546905518 seconds.
+2023-06-14 16:35:43,574    INFO       The structure file(s) associated with 2EW6 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8550891876220703 seconds.
+2023-06-14 16:35:43,657    INFO       The structure file(s) associated with 5CKM have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8654241561889648 seconds.
+2023-06-14 16:35:43,818    INFO       The structure file(s) associated with 5CKT have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.1551482677459717 seconds.
+2023-06-14 16:35:43,907    INFO       The structure file(s) associated with 6WNH have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.006361484527588 seconds.
+2023-06-14 16:35:43,949    INFO       The structure file(s) associated with 4LMR have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.0415830612182617 seconds.
+2023-06-14 16:35:44,212    INFO       The structure file(s) associated with 3V2H have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.8939776420593262 seconds.
+2023-06-14 16:35:44,446    INFO       The structure file(s) associated with 1914 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.7876179218292236 seconds.
+2023-06-14 16:35:44,652    INFO       The structure file(s) associated with 2RFW have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 2.156377077102661 seconds.
+2023-06-14 16:35:44,973    INFO       The structure file(s) associated with 5UNC have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 1.8153276443481445 seconds.
+2023-06-14 16:35:45,007    INFO       The structure file(s) associated with 6IOZ have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.2053337097167969 seconds.
+2023-06-14 16:35:45,180    INFO       The structure file(s) associated with 3HDB have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.965911865234375 seconds.
+2023-06-14 16:35:45,707    INFO       The structure file(s) associated with 1RQ8 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.766298532485962 seconds.
+2023-06-14 16:35:45,934    INFO       The flat file associated with Q8CHN8 has been parsed. Took 1.2808740139007568 seconds.
+2023-06-14 16:35:46,201    INFO       The structure file(s) associated with 4LMX have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 2.6266207695007324 seconds.
+2023-06-14 16:35:46,204    INFO       The structure file(s) associated with 2RFV have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.0336813926696777 seconds.
+2023-06-14 16:35:46,245    INFO       The flat file associated with P13744 has been parsed. Took 1.2366724014282227 seconds.
+2023-06-14 16:35:46,258    INFO       The flat file associated with Q87UR7 has been parsed. Took 1.2840919494628906 seconds.
+2023-06-14 16:35:46,493    INFO       The structure file(s) associated with 6IP1 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 2. Took 2.5868096351623535 seconds.
+2023-06-14 16:35:46,899    INFO       The structure file(s) associated with 6WN8 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 2.4620237350463867 seconds.
+2023-06-14 16:35:47,000    INFO       The flat file associated with Q92UP1 has been parsed. Took 1.2933447360992432 seconds.
+2023-06-14 16:35:47,122    INFO       The structure file(s) associated with 3HDG have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9194579124450684 seconds.
+2023-06-14 16:35:47,214    INFO       The flat file associated with B2RK02 has been parsed. Took 1.2773663997650146 seconds.
+2023-06-14 16:35:47,484    INFO       The structure file(s) associated with 3V2Y have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 0.9904396533966064 seconds.
+2023-06-14 16:35:47,487    INFO       The flat file associated with Q460N3 has been parsed. Took 1.2790493965148926 seconds.
+2023-06-14 16:35:47,521    INFO       The flat file associated with Q2T1B9 has been parsed. Took 1.2733561992645264 seconds.
+2023-06-14 16:35:47,526    INFO       The flat file associated with Q72GR9 has been parsed. Took 1.2669966220855713 seconds.
+2023-06-14 16:35:48,209    INFO       The flat file associated with Q9UBD6 has been parsed. Took 1.30769681930542 seconds.
+2023-06-14 16:35:48,344    INFO       The flat file associated with Q978J0 has been parsed. Took 1.3418054580688477 seconds.
+2023-06-14 16:35:48,515    INFO       The flat file associated with Q9V011 has been parsed. Took 1.3003144264221191 seconds.
+2023-06-14 16:35:48,780    INFO       The flat file associated with O26894 has been parsed. Took 1.258011817932129 seconds.
+2023-06-14 16:35:48,782    INFO       The flat file associated with Q72GS0 has been parsed. Took 1.2966148853302002 seconds.
+2023-06-14 16:35:48,796    INFO       The flat file associated with Q9F1Y6 has been parsed. Took 1.2692368030548096 seconds.
+2023-06-14 16:35:49,033    INFO       The structure file(s) associated with 5UNL have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 1.5477454662322998 seconds.
+2023-06-14 16:35:49,506    INFO       The flat file associated with P07378 has been parsed. Took 1.2981674671173096 seconds.
+2023-06-14 16:35:49,671    INFO       The flat file associated with P00963 has been parsed. Took 1.3248906135559082 seconds.
+2023-06-14 16:35:49,843    INFO       The flat file associated with Q39VV7 has been parsed. Took 1.3268959522247314 seconds.
+2023-06-14 16:35:50,059    INFO       The flat file associated with B2RK03 has been parsed. Took 1.2769930362701416 seconds.
+2023-06-14 16:35:50,064    INFO       The flat file associated with A0A077EBQ3 has been parsed. Took 1.2663490772247314 seconds.
+2023-06-14 16:35:50,067    INFO       The flat file associated with Q9CAQ2 has been parsed. Took 1.2837193012237549 seconds.
+2023-06-14 16:35:50,829    INFO       The flat file associated with U5T880 has been parsed. Took 1.3204357624053955 seconds.
+2023-06-14 16:35:50,957    INFO       The flat file associated with Q4KTA7 has been parsed. Took 1.2851617336273193 seconds.
+2023-06-14 16:35:51,210    INFO       The flat file associated with A0A067XG72 has been parsed. Took 1.3672363758087158 seconds.
+2023-06-14 16:35:51,407    INFO       The flat file associated with Q0S811 has been parsed. Took 1.341822862625122 seconds.
+2023-06-14 16:35:51,410    INFO       The flat file associated with P13045 has been parsed. Took 1.3410334587097168 seconds.
+2023-06-14 16:35:51,437    INFO       The flat file associated with G0S401 has been parsed. Took 1.376610279083252 seconds.
+2023-06-14 16:35:52,097    INFO       The flat file associated with Q92WA6 has been parsed. Took 1.2669453620910645 seconds.
+2023-06-14 16:35:52,241    INFO       The flat file associated with Q2FV54 has been parsed. Took 1.2824969291687012 seconds.
+2023-06-14 16:35:52,496    INFO       The flat file associated with P04387 has been parsed. Took 1.2843971252441406 seconds.
+2023-06-14 16:35:52,669    INFO       The flat file associated with Q6FF54 has been parsed. Took 1.2584891319274902 seconds.
+2023-06-14 16:35:52,675    INFO       The flat file associated with P63045 has been parsed. Took 1.2374534606933594 seconds.
+2023-06-14 16:35:52,678    INFO       The flat file associated with Q831Q5 has been parsed. Took 1.267340898513794 seconds.
+2023-06-14 16:35:53,381    INFO       The flat file associated with P32851 has been parsed. Took 1.2813563346862793 seconds.
+2023-06-14 16:35:53,516    INFO       The flat file associated with P38830 has been parsed. Took 1.2744402885437012 seconds.
+2023-06-14 16:35:53,790    INFO       The flat file associated with O66465 has been parsed. Took 1.2930493354797363 seconds.
+2023-06-14 16:35:53,963    INFO       The flat file associated with Q7DDR9 has been parsed. Took 1.2867701053619385 seconds.
+2023-06-14 16:35:53,979    INFO       The flat file associated with Q7Q9J3 has been parsed. Took 1.3113467693328857 seconds.
+2023-06-14 16:35:53,992    INFO       The flat file associated with P06492 has been parsed. Took 1.3164455890655518 seconds.
+2023-06-14 16:35:54,333    INFO       The structure file(s) associated with 6ORB have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 5.3093061447143555 seconds.
+2023-06-14 16:35:54,723    INFO       The flat file associated with A4XF70 has been parsed. Took 1.3422496318817139 seconds.
+2023-06-14 16:35:54,799    INFO       The flat file associated with Q9RN68 has been parsed. Took 1.2826030254364014 seconds.
+2023-06-14 16:35:55,164    INFO       The structure file(s) associated with 1A03 have been gathered, parsed, and saved to storage. Associated UniprotIDs were gathered too. nStructures: 1. Took 8.052557706832886 seconds.
+2023-06-14 16:35:55,199    INFO       The flat file associated with P0ABE7 has been parsed. Took 1.4079017639160156 seconds.
+2023-06-14 16:35:55,312    INFO       The flat file associated with Q70AC7 has been parsed. Took 1.3301618099212646 seconds.
+2023-06-14 16:35:55,315    INFO       The flat file associated with Q0J8A4 has been parsed. Took 1.3464562892913818 seconds.
+2023-06-14 16:35:55,550    INFO       The flat file associated with P49711 has been parsed. Took 1.5013742446899414 seconds.
+2023-06-14 16:35:55,734    INFO       The flat file associated with P27359 has been parsed. Took 1.3954591751098633 seconds.
+2023-06-14 16:35:56,144    INFO       The flat file associated with O25006 has been parsed. Took 1.4042820930480957 seconds.
+2023-06-14 16:35:56,174    INFO       The flat file associated with P34077 has been parsed. Took 1.3635644912719727 seconds.
+2023-06-14 16:35:56,572    INFO       The flat file associated with P22939 has been parsed. Took 1.391589641571045 seconds.
+2023-06-14 16:35:56,580    INFO       The flat file associated with P02836 has been parsed. Took 1.3594062328338623 seconds.
+2023-06-14 16:35:56,751    INFO       The flat file associated with A0A067XG73 has been parsed. Took 1.423584222793579 seconds.
+2023-06-14 16:35:56,776    INFO       The flat file associated with Q7W2Q0 has been parsed. Took 1.4640276432037354 seconds.
+2023-06-14 16:35:56,933    INFO       The flat file associated with P03052 has been parsed. Took 1.4253363609313965 seconds.
+2023-06-14 16:35:57,124    INFO       The flat file associated with F4KIX0 has been parsed. Took 1.392305850982666 seconds.
+2023-06-14 16:35:57,501    INFO       The flat file associated with O86034 has been parsed. Took 1.3516428470611572 seconds.
+2023-06-14 16:35:57,639    INFO       The flat file associated with P35968 has been parsed. Took 1.4615788459777832 seconds.
+2023-06-14 16:35:57,912    INFO       The flat file associated with Q15771 has been parsed. Took 1.3384997844696045 seconds.
+2023-06-14 16:35:57,919    INFO       The flat file associated with U5T8W5 has been parsed. Took 1.343083381652832 seconds.
+2023-06-14 16:35:58,096    INFO       The flat file associated with Q8J0K6 has been parsed. Took 1.3407220840454102 seconds.
+2023-06-14 16:35:58,102    INFO       The flat file associated with Q70GK9 has been parsed. Took 1.3114044666290283 seconds.
+2023-06-14 16:35:58,257    INFO       The flat file associated with P16254 has been parsed. Took 1.3117220401763916 seconds.
+2023-06-14 16:35:58,473    INFO       The flat file associated with Q5WZW9 has been parsed. Took 1.347475528717041 seconds.
+2023-06-14 16:35:58,846    INFO       The flat file associated with A0A0H3JRP0 has been parsed. Took 1.3415417671203613 seconds.
+2023-06-14 16:35:59,015    INFO       The flat file associated with Q8VDL4 has been parsed. Took 1.369913101196289 seconds.
+2023-06-14 16:35:59,232    INFO       The flat file associated with A0A060ZAA1 has been parsed. Took 1.3239834308624268 seconds.
+2023-06-14 16:35:59,399    INFO       The flat file associated with P05412 has been parsed. Took 1.4830560684204102 seconds.
+2023-06-14 16:35:59,424    INFO       The flat file associated with Q672W7 has been parsed. Took 1.329108476638794 seconds.
+2023-06-14 16:35:59,483    INFO       The flat file associated with P01100 has been parsed. Took 1.3807010650634766 seconds.
+2023-06-14 16:35:59,606    INFO       The flat file associated with A6TCB0 has been parsed. Took 1.3600192070007324 seconds.
+2023-06-14 16:35:59,808    INFO       The flat file associated with Q81EP4 has been parsed. Took 1.327312707901001 seconds.
+2023-06-14 16:36:00,188    INFO       The flat file associated with Q7MRH8 has been parsed. Took 1.3291902542114258 seconds.
+2023-06-14 16:36:00,379    INFO       The flat file associated with A0A0A0V023 has been parsed. Took 1.346747875213623 seconds.
+2023-06-14 16:36:00,559    INFO       The flat file associated with U5TBJ3 has been parsed. Took 1.3224849700927734 seconds.
+2023-06-14 16:36:00,757    INFO       The flat file associated with P30801 has been parsed. Took 1.323225498199463 seconds.
+2023-06-14 16:36:00,762    INFO       The flat file associated with P00096 has been parsed. Took 1.355064868927002 seconds.
+2023-06-14 16:36:00,773    INFO       The flat file associated with Q9JJS8 has been parsed. Took 1.29994797706604 seconds.
+2023-06-14 16:36:00,957    INFO       The flat file associated with O94248 has been parsed. Took 1.3426976203918457 seconds.
+2023-06-14 16:36:01,152    INFO       The flat file associated with P81125 has been parsed. Took 1.342350721359253 seconds.
+2023-06-14 16:36:01,527    INFO       The flat file associated with P60881 has been parsed. Took 1.3287112712860107 seconds.
+2023-06-14 16:36:01,894    INFO       The flat file associated with O00255 has been parsed. Took 1.5295789241790771 seconds.
+2023-06-14 16:36:01,909    INFO       The flat file associated with P21453 has been parsed. Took 1.3511757850646973 seconds.
+2023-06-14 16:36:02,128    INFO       The flat file associated with Q84AR1 has been parsed. Took 1.3428382873535156 seconds.
+2023-06-14 16:36:02,420    INFO       The flat file associated with P22304 has been parsed. Took 1.649101972579956 seconds.
+2023-06-14 16:36:02,421    INFO       Done gathering/parsing PDBID_CHAINID files and parsing UniProt flat files. Writing map and uniprot metadata dictionaries to file. 1686774962.4211562
+2023-06-14 16:36:02,440    INFO       Beginning to run blastp alignments between structure and uniprot sequences to get residue index mapping. 1686774962.440782
+2023-06-14 16:36:02,441    INFO       2EVE_A maps to Q87UR7. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,444    INFO       3V2B_A maps to Q460N3. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,445    INFO       5CKQ_A maps to Q8CHN8. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,446    INFO       3HD6_A maps to Q9UBD6. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,447    INFO       3HCY_A maps to Q92UP1. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,448    INFO       3HCY_B maps to Q92UP1. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,449    INFO       5UNI_A maps to Q72GR9. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,450    INFO       5UNI_B maps to Q72GS0. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,451    INFO       3HDE_B maps to P27359. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,452    INFO       3HDE_C maps to P27359. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,452    INFO       2RFM_B maps to Q978J0. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,453    INFO       16PK_A maps to P07378. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,453    INFO       2EVX_A maps to P13744. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,454    INFO       6IOY_B maps to B2RK02. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,456    INFO       3V1V_A maps to Q9F1Y6. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,457    INFO       1RQJ_B maps to P22939. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,460    INFO       11AS_B maps to P00963. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,461    INFO       3V2I_A maps to Q2T1B9. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,462    INFO       1RQG_A maps to Q9V011. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,463    INFO       3HDC_A maps to Q39VV7. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,464    INFO       1RQ6_A maps to O26894. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,465    INFO       6WNG_D maps to A0A077EBQ3. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,471    INFO       4LMO_A maps to Q4KTA7. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,472    INFO       2RFQ_A maps to Q0S811. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,472    INFO       6WN9_A maps to Q2FV54. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,472    INFO       2EVN_A maps to Q9CAQ2. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,473    INFO       2EVG_A maps to P38830. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,473    INFO       2EW2_B maps to Q831Q5. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,474    INFO       5CKL_A maps to Q7DDR9. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,474    INFO       4LMV_A maps to A0A067XG72. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,482    INFO       19HC_A maps to Q9RN68. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,482    INFO       12AS_B maps to P00963. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,483    INFO       3V2U_A maps to P04387. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,483    INFO       3V2U_B maps to P04387. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,484    INFO       3V2U_C maps to P13045. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,484    INFO       6IOX_B maps to B2RK03. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,484    INFO       6IP0_A maps to F4KIX0. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,484    INFO       2EW0_A maps to Q6FF54. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,485    INFO       4LMS_A maps to U5T880. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,485    INFO       4LMS_C maps to U5T8W5. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,485    INFO       5CKR_A maps to O66465. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,486    INFO       5CK4_B maps to G0S401. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,486    INFO       3V1Y_A maps to Q0J8A4. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,493    INFO       3V2G_A maps to Q92WA6. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,496    INFO       3V2L_A maps to Q7Q9J3. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,496    INFO       3HDF_A maps to P27359. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,496    INFO       3HDF_B maps to P27359. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,497    INFO       5CKW_A maps to Q5WZW9. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,497    INFO       5CKW_B maps to Q5WZW9. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,497    INFO       1RQI_A maps to P22939. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,498    INFO       1RQB_A maps to Q70AC7. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,499    INFO       5UNG_B maps to P0ABE7. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,501    INFO       3HD7_B maps to P32851. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,503    INFO       3HD7_E maps to P63045. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,504    INFO       2RFO_A maps to P34077. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,504    INFO       3HDD_B maps to P02836. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,504    INFO       5UNK_A maps to A0A060ZAA1. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,505    INFO       16VP_A maps to P06492. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,505    INFO       4LMW_A maps to A0A067XG73. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,506    INFO       2RFR_A maps to A4XF70. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,506    INFO       155C_A maps to P00096. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,506    INFO       3HD5_A maps to Q7W2Q0. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,506    INFO       3HD5_C maps to Q7W2Q0. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,507    INFO       2EW1_A maps to Q15771. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,507    INFO       1A02_F maps to P01100. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,507    INFO       1A02_J maps to P05412. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,508    INFO       2RFY_A maps to Q8J0K6. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,508    INFO       5UND_A maps to P49711. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,508    INFO       5UND_B maps to P49711. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,509    INFO       1RQP_C maps to Q70GK9. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,509    INFO       3V2A_R maps to P35968. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,510    INFO       5CK7_A maps to Q8VDL4. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,510    INFO       2EVV_A maps to O25006. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,511    INFO       2EVV_B maps to O25006. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,513    INFO       2EW6_A maps to Q672W7. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,514    INFO       5CKM_A maps to Q9JJS8. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,514    INFO       5CKT_A maps to P03052. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,514    INFO       6WNH_A maps to O00255. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,514    INFO       4LMR_B maps to Q81EP4. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,515    INFO       3V2H_A maps to O86034. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,515    INFO       1914_A maps to P16254. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,515    INFO       2RFW_D maps to Q8J0K6. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,516    INFO       5UNC_A maps to A0A0A0V023. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,516    INFO       5UNC_D maps to A0A0A0V023. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,516    INFO       6IOZ_A maps to P22304. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,516    INFO       1RQ8_A maps to A0A0H3JRP0. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,517    INFO       4LMX_A maps to U5TBJ3. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,517    INFO       4LMX_G maps to U5TBJ3. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,517    INFO       2RFV_A maps to Q84AR1. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,517    INFO       6IP1_C maps to P60881. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,517    INFO       6IP1_E maps to P81125. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,518    INFO       6WN8_H maps to A6TCB0. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,518    INFO       3HDG_D maps to Q7MRH8. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,518    INFO       3V2Y_A maps to P21453. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,519    INFO       6ORB_A maps to O94248. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,519    INFO       1A03_A maps to P30801. Submitting a blastp task to align the two sequences.
+2023-06-14 16:36:02,920    INFO       The blastp alignment run between 5UNI_B and Q72GS0 sequences has completed. Return code: 0. Took 0.4336841106414795 seconds.
+2023-06-14 16:36:02,984    INFO       The blastp alignment run between 5CKQ_A and Q8CHN8 sequences has completed. Return code: 0. Took 0.434039831161499 seconds.
+2023-06-14 16:36:02,985    INFO       Q8CHN8: ['CARBOHYD', 'Q8CHN8-2:538', '/note="N-linked (GlcNAc...) asparagine"', '/evidence="ECO:0000305"'] was not parsed.
+2023-06-14 16:36:02,985    INFO       Q8CHN8: ['CARBOHYD', 'Q8CHN8-2:604', '/note="N-linked (GlcNAc...) asparagine"', '/evidence="ECO:0000305"'] was not parsed.
+2023-06-14 16:36:02,989    INFO       The blastp alignment run between 3HCY_B and Q92UP1 sequences has completed. Return code: 0. Took 0.43459272384643555 seconds.
+2023-06-14 16:36:02,991    INFO       The blastp alignment run between 5UNI_A and Q72GR9 sequences has completed. Return code: 0. Took 0.43073368072509766 seconds.
+2023-06-14 16:36:02,994    INFO       The blastp alignment run between 2EVE_A and Q87UR7 sequences has completed. Return code: 0. Took 0.4477393627166748 seconds.
+2023-06-14 16:36:02,996    INFO       The blastp alignment run between 3HD6_A and Q9UBD6 sequences has completed. Return code: 0. Took 0.4379234313964844 seconds.
+2023-06-14 16:36:02,999    INFO       The blastp alignment run between 3V2B_A and Q460N3 sequences has completed. Return code: 0. Took 0.47625160217285156 seconds.
+2023-06-14 16:36:03,002    INFO       The blastp alignment run between 3HCY_A and Q92UP1 sequences has completed. Return code: 0. Took 0.5187053680419922 seconds.
+2023-06-14 16:36:03,259    INFO       The blastp alignment run between 1A03_A and P30801 sequences has completed. Return code: 0. Took 0.3232691287994385 seconds.
+2023-06-14 16:36:03,290    INFO       The blastp alignment run between 6WN8_H and A6TCB0 sequences has completed. Return code: 0. Took 0.3670995235443115 seconds.
+2023-06-14 16:36:03,301    INFO       The blastp alignment run between 3V2Y_A and P21453 sequences has completed. Return code: 0. Took 0.36873960494995117 seconds.
+2023-06-14 16:36:03,304    INFO       The blastp alignment run between 6IP1_C and P60881 sequences has completed. Return code: 0. Took 0.3702981472015381 seconds.
+2023-06-14 16:36:03,307    INFO       The blastp alignment run between 6IP1_E and P81125 sequences has completed. Return code: 0. Took 0.34523963928222656 seconds.
+2023-06-14 16:36:03,329    INFO       The blastp alignment run between 3HDG_D and Q7MRH8 sequences has completed. Return code: 0. Took 0.4208657741546631 seconds.
+2023-06-14 16:36:03,341    INFO       The blastp alignment run between 2RFV_A and Q84AR1 sequences has completed. Return code: 0. Took 0.34743499755859375 seconds.
+2023-06-14 16:36:03,436    INFO       The blastp alignment run between 6ORB_A and O94248 sequences has completed. Return code: 0. Took 0.5196127891540527 seconds.
+2023-06-14 16:36:03,609    INFO       The blastp alignment run between 4LMX_G and U5TBJ3 sequences has completed. Return code: 0. Took 0.3387482166290283 seconds.
+2023-06-14 16:36:03,626    INFO       The blastp alignment run between 5UNC_D and A0A0A0V023 sequences has completed. Return code: 0. Took 0.3288693428039551 seconds.
+2023-06-14 16:36:03,647    INFO       The blastp alignment run between 2RFW_D and Q8J0K6 sequences has completed. Return code: 0. Took 0.35596561431884766 seconds.
+2023-06-14 16:36:03,661    INFO       The blastp alignment run between 6IOZ_A and P22304 sequences has completed. Return code: 0. Took 0.32645416259765625 seconds.
+2023-06-14 16:36:03,671    INFO       The blastp alignment run between 1RQ8_A and A0A0H3JRP0 sequences has completed. Return code: 0. Took 0.3742246627807617 seconds.
+2023-06-14 16:36:03,675    INFO       The blastp alignment run between 4LMX_A and U5TBJ3 sequences has completed. Return code: 0. Took 0.368680477142334 seconds.
+2023-06-14 16:36:03,677    INFO       The blastp alignment run between 1914_A and P16254 sequences has completed. Return code: 0. Took 0.32871198654174805 seconds.
+2023-06-14 16:36:03,777    INFO       The blastp alignment run between 5UNC_A and A0A0A0V023 sequences has completed. Return code: 0. Took 0.3405148983001709 seconds.
+2023-06-14 16:36:03,992    INFO       The blastp alignment run between 3V2H_A and O86034 sequences has completed. Return code: 0. Took 0.3749663829803467 seconds.
+2023-06-14 16:36:04,012    INFO       The blastp alignment run between 2EVV_B and O25006 sequences has completed. Return code: 0. Took 0.3376281261444092 seconds.
+2023-06-14 16:36:04,019    INFO       The blastp alignment run between 5CKM_A and Q9JJS8 sequences has completed. Return code: 0. Took 0.38391542434692383 seconds.
+2023-06-14 16:36:04,029    INFO       The blastp alignment run between 5CKT_A and P03052 sequences has completed. Return code: 0. Took 0.3480496406555176 seconds.
+2023-06-14 16:36:04,033    INFO       The blastp alignment run between 6WNH_A and O00255 sequences has completed. Return code: 0. Took 0.3767213821411133 seconds.
+2023-06-14 16:36:04,038    INFO       The blastp alignment run between 2EVV_A and O25006 sequences has completed. Return code: 0. Took 0.3412809371948242 seconds.
+2023-06-14 16:36:04,050    INFO       The blastp alignment run between 4LMR_B and Q81EP4 sequences has completed. Return code: 0. Took 0.3830413818359375 seconds.
+2023-06-14 16:36:04,128    INFO       The blastp alignment run between 2EW6_A and Q672W7 sequences has completed. Return code: 0. Took 0.3597133159637451 seconds.
+2023-06-14 16:36:04,384    INFO       The blastp alignment run between 1RQP_C and Q70GK9 sequences has completed. Return code: 0. Took 0.3334317207336426 seconds.
+2023-06-14 16:36:04,398    INFO       The blastp alignment run between 5CK7_A and Q8VDL4 sequences has completed. Return code: 0. Took 0.38219285011291504 seconds.
+2023-06-14 16:36:04,404    INFO       The blastp alignment run between 5UND_B and P49711 sequences has completed. Return code: 0. Took 0.33762645721435547 seconds.
+2023-06-14 16:36:04,408    INFO       The blastp alignment run between 5UND_A and P49711 sequences has completed. Return code: 0. Took 0.3491048812866211 seconds.
+2023-06-14 16:36:04,412    INFO       The blastp alignment run between 1A02_J and P05412 sequences has completed. Return code: 0. Took 0.3506293296813965 seconds.
+2023-06-14 16:36:04,414    INFO       The blastp alignment run between 1A02_F and P01100 sequences has completed. Return code: 0. Took 0.35539722442626953 seconds.
+2023-06-14 16:36:04,417    INFO       The blastp alignment run between 3V2A_R and P35968 sequences has completed. Return code: 0. Took 0.3365001678466797 seconds.
+2023-06-14 16:36:04,512    INFO       The blastp alignment run between 2RFY_A and Q8J0K6 sequences has completed. Return code: 0. Took 0.372255802154541 seconds.
+2023-06-14 16:36:04,752    INFO       The blastp alignment run between 3HD5_A and Q7W2Q0 sequences has completed. Return code: 0. Took 0.3773791790008545 seconds.
+2023-06-14 16:36:04,776    INFO       The blastp alignment run between 155C_A and P00096 sequences has completed. Return code: 0. Took 0.3685896396636963 seconds.
+2023-06-14 16:36:04,784    INFO       The blastp alignment run between 2EW1_A and Q15771 sequences has completed. Return code: 0. Took 0.39480113983154297 seconds.
+2023-06-14 16:36:04,790    INFO       The blastp alignment run between 3HD5_C and Q7W2Q0 sequences has completed. Return code: 0. Took 0.35717225074768066 seconds.
+2023-06-14 16:36:04,794    INFO       The blastp alignment run between 2RFR_A and A4XF70 sequences has completed. Return code: 0. Took 0.3933255672454834 seconds.
+2023-06-14 16:36:04,796    INFO       The blastp alignment run between 5UNK_A and A0A060ZAA1 sequences has completed. Return code: 0. Took 0.3701746463775635 seconds.
+2023-06-14 16:36:04,800    INFO       The blastp alignment run between 16VP_A and P06492 sequences has completed. Return code: 0. Took 0.38170647621154785 seconds.
+2023-06-14 16:36:04,868    INFO       The blastp alignment run between 4LMW_A and A0A067XG73 sequences has completed. Return code: 0. Took 0.3525989055633545 seconds.
+2023-06-14 16:36:05,143    INFO       The blastp alignment run between 3HD7_B and P32851 sequences has completed. Return code: 0. Took 0.38587045669555664 seconds.
+2023-06-14 16:36:05,152    INFO       The blastp alignment run between 5UNG_B and P0ABE7 sequences has completed. Return code: 0. Took 0.3712882995605469 seconds.
+2023-06-14 16:36:05,160    INFO       The blastp alignment run between 2RFO_A and P34077 sequences has completed. Return code: 0. Took 0.37537384033203125 seconds.
+2023-06-14 16:36:05,173    INFO       The blastp alignment run between 1RQI_A and P22939 sequences has completed. Return code: 0. Took 0.36464357376098633 seconds.
+2023-06-14 16:36:05,179    INFO       The blastp alignment run between 5CKW_B and Q5WZW9 sequences has completed. Return code: 0. Took 0.3918883800506592 seconds.
+2023-06-14 16:36:05,181    INFO       The blastp alignment run between 3HD7_E and P63045 sequences has completed. Return code: 0. Took 0.43075084686279297 seconds.
+2023-06-14 16:36:05,184    INFO       The blastp alignment run between 3HDD_B and P02836 sequences has completed. Return code: 0. Took 0.40106701850891113 seconds.
+2023-06-14 16:36:05,197    INFO       The blastp alignment run between 1RQB_A and Q70AC7 sequences has completed. Return code: 0. Took 0.33441781997680664 seconds.
+2023-06-14 16:36:05,536    INFO       The blastp alignment run between 5CKR_A and O66465 sequences has completed. Return code: 0. Took 0.359973669052124 seconds.
+2023-06-14 16:36:05,575    INFO       The blastp alignment run between 5CK4_B and G0S401 sequences has completed. Return code: 0. Took 0.366504430770874 seconds.
+2023-06-14 16:36:05,607    INFO       The blastp alignment run between 3V2L_A and Q7Q9J3 sequences has completed. Return code: 0. Took 0.4056992530822754 seconds.
+2023-06-14 16:36:05,616    INFO       The blastp alignment run between 3HDF_B and P27359 sequences has completed. Return code: 0. Took 0.39963293075561523 seconds.
+2023-06-14 16:36:05,621    INFO       The blastp alignment run between 3V2G_A and Q92WA6 sequences has completed. Return code: 0. Took 0.40067291259765625 seconds.
+2023-06-14 16:36:05,624    INFO       The blastp alignment run between 3V1Y_A and Q0J8A4 sequences has completed. Return code: 0. Took 0.38938117027282715 seconds.
+2023-06-14 16:36:05,628    INFO       The blastp alignment run between 3HDF_A and P27359 sequences has completed. Return code: 0. Took 0.43656015396118164 seconds.
+2023-06-14 16:36:05,841    INFO       The blastp alignment run between 5CKW_A and Q5WZW9 sequences has completed. Return code: 0. Took 0.6977641582489014 seconds.
+2023-06-14 16:36:05,915    INFO       The blastp alignment run between 2EW0_A and Q6FF54 sequences has completed. Return code: 0. Took 0.3665006160736084 seconds.
+2023-06-14 16:36:05,964    INFO       The blastp alignment run between 6IP0_A and F4KIX0 sequences has completed. Return code: 0. Took 0.42577219009399414 seconds.
+2023-06-14 16:36:05,997    INFO       The blastp alignment run between 3V2U_C and P13045 sequences has completed. Return code: 0. Took 0.36129188537597656 seconds.
+2023-06-14 16:36:06,007    INFO       The blastp alignment run between 4LMS_C and U5T8W5 sequences has completed. Return code: 0. Took 0.38895511627197266 seconds.
+2023-06-14 16:36:06,015    INFO       The blastp alignment run between 3V2U_B and P04387 sequences has completed. Return code: 0. Took 0.3614523410797119 seconds.
+2023-06-14 16:36:06,020    INFO       The blastp alignment run between 3V2U_A and P04387 sequences has completed. Return code: 0. Took 0.42370152473449707 seconds.
+2023-06-14 16:36:06,024    INFO       The blastp alignment run between 4LMS_A and U5T880 sequences has completed. Return code: 0. Took 0.42206478118896484 seconds.
+2023-06-14 16:36:06,266    INFO       The blastp alignment run between 6IOX_B and B2RK03 sequences has completed. Return code: 0. Took 0.39876317977905273 seconds.
+2023-06-14 16:36:06,338    INFO       The blastp alignment run between 4LMV_A and A0A067XG72 sequences has completed. Return code: 0. Took 0.42379307746887207 seconds.
+2023-06-14 16:36:06,363    INFO       The blastp alignment run between 2EVN_A and Q9CAQ2 sequences has completed. Return code: 0. Took 0.38548851013183594 seconds.
+2023-06-14 16:36:06,395    INFO       The blastp alignment run between 6WN9_A and Q2FV54 sequences has completed. Return code: 0. Took 0.3974583148956299 seconds.
+2023-06-14 16:36:06,408    INFO       The blastp alignment run between 12AS_B and P00963 sequences has completed. Return code: 0. Took 0.402820348739624 seconds.
+2023-06-14 16:36:06,416    INFO       The blastp alignment run between 2EVG_A and P38830 sequences has completed. Return code: 0. Took 0.40109944343566895 seconds.
+2023-06-14 16:36:06,455    INFO       The blastp alignment run between 5CKL_A and Q7DDR9 sequences has completed. Return code: 0. Took 0.4861457347869873 seconds.
+2023-06-14 16:36:06,721    INFO       The blastp alignment run between 6WNG_D and A0A077EBQ3 sequences has completed. Return code: 0. Took 0.36399316787719727 seconds.
+2023-06-14 16:36:06,736    INFO       The blastp alignment run between 4LMO_A and Q4KTA7 sequences has completed. Return code: 0. Took 0.34270620346069336 seconds.
+2023-06-14 16:36:06,743    INFO       The blastp alignment run between 1RQ6_A and O26894 sequences has completed. Return code: 0. Took 0.3616201877593994 seconds.
+2023-06-14 16:36:06,747    INFO       The blastp alignment run between 3V2I_A and Q2T1B9 sequences has completed. Return code: 0. Took 0.3814201354980469 seconds.
+2023-06-14 16:36:06,753    INFO       The blastp alignment run between 2RFQ_A and Q0S811 sequences has completed. Return code: 0. Took 0.36959362030029297 seconds.
+2023-06-14 16:36:06,764    INFO       The blastp alignment run between 19HC_A and Q9RN68 sequences has completed. Return code: 0. Took 0.8031723499298096 seconds.
+2023-06-14 16:36:06,768    INFO       The blastp alignment run between 2EW2_B and Q831Q5 sequences has completed. Return code: 0. Took 0.5255489349365234 seconds.
+2023-06-14 16:36:06,800    INFO       The blastp alignment run between 11AS_B and P00963 sequences has completed. Return code: 0. Took 0.3549356460571289 seconds.
+2023-06-14 16:36:07,080    INFO       The blastp alignment run between 6IOY_B and B2RK02 sequences has completed. Return code: 0. Took 0.3737461566925049 seconds.
+2023-06-14 16:36:07,090    INFO       The blastp alignment run between 2EVX_A and P13744 sequences has completed. Return code: 0. Took 0.3541254997253418 seconds.
+2023-06-14 16:36:07,097    INFO       The blastp alignment run between 3HDC_A and Q39VV7 sequences has completed. Return code: 0. Took 0.34678053855895996 seconds.
+2023-06-14 16:36:07,126    INFO       The blastp alignment run between 3HDE_B and P27359 sequences has completed. Return code: 0. Took 0.3303353786468506 seconds.
+2023-06-14 16:36:07,128    INFO       The blastp alignment run between 3V1V_A and Q9F1Y6 sequences has completed. Return code: 0. Took 0.36638760566711426 seconds.
+2023-06-14 16:36:07,255    INFO       The blastp alignment run between 3HDE_C and P27359 sequences has completed. Return code: 0. Took 0.5103154182434082 seconds.
+2023-06-14 16:36:07,272    INFO       The blastp alignment run between 1RQJ_B and P22939 sequences has completed. Return code: 0. Took 0.48369431495666504 seconds.
+2023-06-14 16:36:07,544    INFO       The blastp alignment run between 2RFM_B and Q978J0 sequences has completed. Return code: 0. Took 0.44721341133117676 seconds.
+2023-06-14 16:36:07,664    INFO       The blastp alignment run between 16PK_A and P07378 sequences has completed. Return code: 0. Took 0.4030442237854004 seconds.
+2023-06-14 16:36:08,160    INFO       The blastp alignment run between 1RQG_A and Q9V011 sequences has completed. Return code: 0. Took 1.434678077697754 seconds.
+2023-06-14 16:36:08,463    INFO       Done. Shutting down the cluster. Time: 1686774968.4638371

@@ -1,15 +1,21 @@
 # Structure Library and Metadata Gathering
 *Written by Russell B. Davidson and Mark Coletti*
-Version 1.0.0
+Version 1.0.1
 
 Bash and python scripts to automate the download of structure files from the 
-RCSB database and gather the associated metadata from the UniProtKB database 
-when available. Residue-level feature metadata is transferred to the associated
-structure. This metadata is then used to garner insights from structural 
-alignments against the annotated library of structures developed from this code.
+RCSB database (``) as well as gather the associated metadata 
+(`processing_pdb_library.py`) from the UniProtKB database, when available. 
+Residue-level feature metadata is transferred to the associated structure. 
+This metadata can then be used in a broad range of analyses such as functional
+annotation.  
 
 ## Using the Workflow
 
+
+
+The only user-made input necessary for running this workflow is a list of RCSB 
+PDB identifiers as well as the chain identifier. An example of such a file is 
+provided in the `examples` subdirectory. 
 
 
 ### Workflow Steps:
