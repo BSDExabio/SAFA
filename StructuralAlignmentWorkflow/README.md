@@ -1,5 +1,5 @@
 # StructuralAlignmentWorkflow
-*Written by Russell B. Davidson and Mark Coletti*, Version 1.0.1
+*Written by Russell B. Davidson and Mark Coletti*, Version 1.1.0
 
 A dask.distributed workflow code to automate the alignment of a library of 
 structures against a library of structures. This code was used to automate the 
@@ -9,6 +9,8 @@ perform the single-chain to single-chain protein structural alignment
 calculations. 
 
 ## Using the Workflow
+
+
 
 ### Workflow Steps:
 1) Gather the lists of structures to be aligned. A set of query structures (ex: 
@@ -31,6 +33,7 @@ The full set of results are written to a target-specific output directory.
 ### Simple Example
 See the `example` subdirectory that houses two instances of the structural 
 alignment workflow where the total number alignments are 'small' and 'large'.
+The two bash scripts were used to run the workflow for these two examples. 
 
 ## Installation of US-align2
 
