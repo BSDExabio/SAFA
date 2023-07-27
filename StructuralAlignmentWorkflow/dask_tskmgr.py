@@ -324,7 +324,7 @@ def post_analysis_pipeline(target_str, result_files_list, outputdir_str, subdir_
         df['avgTMscore'] = np.mean(df[['TMscore1','TMscore2']],axis=1)
     # check that sorted_by is one of the column names of the panda dataframe
     elif sorted_by.upper() not in ['TMSCORE1','TMSCORE2']: #sorted_by not in list(df.columns):
-        print(f'{sort_by} not in pandas dataframe columns {list(df.columns)}. No ranked_alignment_results.dat file is written.', file=sys.stderr, flush=True)
+        print(f'{sorted_by} not in pandas dataframe columns {list(df.columns)}. No ranked_alignment_results.dat file is written.', file=sys.stderr, flush=True)
         stop_time = time.time()
         return start_time, stop_time, target_str
 
@@ -374,8 +374,12 @@ if __name__ == '__main__':
     main_logger.info(f'Alignment results will be saved within subdirectories named {args.subdirectory_string}')
     if args.scoring_metric:
         main_logger.info(f'All alignment results will be ranked by the {args.scoring_metric} metric')
+    else:
+        args.scoring_metric = ''
+
     if args.cutoff_threshold:
         main_logger.info(f'The metric threshold value of {args.cutoff_threshold} will be used to save high-quality alignment results to storage.')
+
     dask_parameter_string = ''
     for key, value in dask.config.config.items():
         dask_parameter_string += f"'{key}': '{value}'\n"
@@ -383,10 +387,17 @@ if __name__ == '__main__':
     main_logger.info(f'Dask parameters:\n{dask_parameter_string}')
 
     # start dask client.
+    # if a scheduler file is input, then the CLI is being used, where the user 
+    # has defined a scheduler and number of workers. Likely has also defined 
+    # what resources each worker gets.
     if args.scheduler_file:
-        client = Client(scheduler_file=args.scheduler_file,timeout=5000,name='AlignmentTaskMgr')
+        client = Client(scheduler_file=args.scheduler_file,timeout=120,name='AlignmentTaskMgr')
+    # no scheduler file, so assume that the default Client behavior is expected
+    # (spin up a scheduler and worker within the Client call); since tasks in 
+    # this workflow are known to only need 1 thread, we hard wire the client to
+    # spin up the appropriate resourced workers.
     else:
-        client = Client(timeout=5000,name='AlignmentTaskMgr')
+        client = Client(timeout=120,name='AlignmentTaskMgr',threads_per_worker=1)
    
     # set up timing log file.
     main_logger.info(f'Opening the timing file.')
@@ -429,7 +440,7 @@ if __name__ == '__main__':
     # if total number of alignment tasks is relatively small, 
     # then create the full iterable list and map directly to client
     ############
-    if nAlignments < 10**4:
+    if nAlignments < 10**6:
         main_logger.info(f'The total number of alignments is relatively small. Running all alignments as individual tasks.')
         
         # do the thing.
@@ -465,19 +476,20 @@ if __name__ == '__main__':
         main_logger.info(f'The total number of alignments ({nAlignments:,}) is large. Will run the alignments in batches of query structures.')
         # get number of workers associated with client
         NUM_WORKERS = len(client.scheduler_info()['workers'].keys())
+        main_logger.info(f'There are {NUM_WORKERS} workers on which tasks will be run.')
         # break the query_list into sublists
         query_sublists = [sorted_query_list[i::NUM_WORKERS*5] for i in range(NUM_WORKERS*5)]
         # approx how many structures in each sublist
         nQueries_per_sublist = int(np.mean([len(sublist) for sublist in query_sublists]))
         # calc the number of tasks, where tasks are now multiple alignments 
         nTasks = len(sorted_target_list)*len(query_sublists)
-        main_logger.info(f'The total number of tasks is {nTasks:,} where each task is the alignment of multiple query structures to target structures. Average lengths of sublists is {nQueries_per_sublist}).')
+        main_logger.info(f'The total number of tasks is {nTasks:,} where each task is the alignment of multiple query structures to target structures. Average lengths of sublists is {nQueries_per_sublist}.')
         # loop over target structures; submit tasks associated with that target
         for target in sorted_target_list:
             target_start = time.time()
 
             # do the thing.
-            alignment_lists = [list(zip(query_sublist,[target]*len(query_sublists))) for query_sublist in query_sublists]
+            alignment_lists = [list(zip(query_sublist,[target]*len(query_sublist))) for query_sublist in query_sublists]
             aln_futures = client.map(submit_pipeline, alignment_lists, script = args.script_path, working_dir = args.working_dir, scoring_metric = args.scoring_metric, cutoff_threshold = args.cutoff_threshold, pure=False)
             
             # gather target's alignment results.
